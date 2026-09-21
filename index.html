@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OU Dining Menus | University of Oklahoma</title>
+  <meta name="description" content="University of Oklahoma campus dining menus with day selection and split lunch and dinner cards for Residential Colleges, Couch Restaurants, and Wagner Dining Hall.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-group">
+        <div class="brand-badge">OU</div>
+        <div class="brand-text">
+          <div class="sub-title">The University of Oklahoma &bull; Housing &amp; Food Services</div>
+          <h1 class="main-title">Campus Dining Menus</h1>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="status-pill" id="current-week-pill">
+          <span class="status-dot"></span>
+          <span id="week-label">Week of Sept 21 - 27</span>
+        </div>
+        <button id="btn-today-shortcut" class="btn-secondary" title="Jump to Today">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          Today
+        </button>
+        <button id="btn-everyday-modal" class="btn-secondary" title="View Everyday Restaurant Stations">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+          Everyday Stations
+        </button>
+        <button id="btn-print" class="btn-secondary" title="Print Menus">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          Print
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Day Selector & Filter Bar -->
+  <section class="control-panel-wrapper">
+    <div class="control-panel">
+      <!-- Search & Highlights -->
+      <div class="search-box-wrapper">
+        <div class="search-input-container">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="dish-search" placeholder="Search dishes (e.g. Salmon, Chick-fil-A, Tofu, Steak, Pork, Cod, Pasta)..." autocomplete="off">
+          <button id="clear-search" class="clear-btn" title="Clear search" style="display:none;">&times;</button>
+        </div>
+        <div id="search-match-count" class="search-match-badge" style="display:none;">0 dishes found</div>
+      </div>
+
+      <!-- Day Navigation Bar -->
+      <div class="day-navigation-bar">
+        <div class="day-nav-label">Day of Week:</div>
+        <div class="day-buttons-group" id="day-nav-buttons">
+          <button class="day-nav-btn active" data-day="Monday">
+            <span class="day-abbr">Mon</span>
+            <span class="day-full">Monday</span>
+          </button>
+          <button class="day-nav-btn" data-day="Tuesday">
+            <span class="day-abbr">Tue</span>
+            <span class="day-full">Tuesday</span>
+          </button>
+          <button class="day-nav-btn" data-day="Wednesday">
+            <span class="day-abbr">Wed</span>
+            <span class="day-full">Wednesday</span>
+          </button>
+          <button class="day-nav-btn" data-day="Thursday">
+            <span class="day-abbr">Thu</span>
+            <span class="day-full">Thursday</span>
+          </button>
+          <button class="day-nav-btn" data-day="Friday">
+            <span class="day-abbr">Fri</span>
+            <span class="day-full">Friday</span>
+          </button>
+          <button class="day-nav-btn" data-day="Saturday">
+            <span class="day-abbr">Sat</span>
+            <span class="day-full">Saturday</span>
+          </button>
+          <button class="day-nav-btn" data-day="Sunday">
+            <span class="day-abbr">Sun</span>
+            <span class="day-full">Sunday</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Secondary Filters: Split Meal View & Dietary Tags -->
+      <div class="filters-row">
+        <!-- Meal Split Switcher -->
+        <div class="filter-group">
+          <label class="filter-label">Meal View:</label>
+          <div class="segmented-control" id="meal-filter">
+            <button class="seg-btn active" data-meal="all" title="View both Lunch and Dinner in split sections">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+              Split View (Both)
+            </button>
+            <button class="seg-btn" data-meal="lunch" title="View Lunch only">
+              <span class="meal-icon lunch-icon">☀️</span> Lunch Only
+            </button>
+            <button class="seg-btn" data-meal="dinner" title="View Dinner only">
+              <span class="meal-icon dinner-icon">🌙</span> Dinner Only
+            </button>
+          </div>
+        </div>
+
+        <!-- Dietary Chips -->
+        <div class="filter-group dietary-group">
+          <label class="filter-label">Dietary Tags:</label>
+          <div class="dietary-chips-container" id="dietary-filter">
+            <button class="diet-chip" data-tag="vegan">🌱 Vegan</button>
+            <button class="diet-chip" data-tag="vegetarian">🥗 Vegetarian</button>
+            <button class="diet-chip" data-tag="seafood">🐟 Seafood</button>
+            <button class="diet-chip" data-tag="poultry">🍗 Poultry</button>
+            <button class="diet-chip" data-tag="meat">🥩 Meat / Pork</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container: SPLIT LUNCH & DINNER SECTIONS -->
+  <main class="main-container">
+    <!-- Active Day Banner -->
+    <div class="active-day-banner">
+      <div class="active-day-title-wrap">
+        <h2 id="active-day-heading" class="active-day-heading">Monday</h2>
+        <span id="active-today-badge" class="today-badge" style="display:none;">Today</span>
+      </div>
+      <div class="active-day-subtitle">
+        Split into dedicated <strong>☀️ Lunch</strong> and <strong>🌙 Dinner</strong> cards across all 3 dining locations
+      </div>
+    </div>
+
+    <!-- Main Menus Split Container -->
+    <div class="split-menus-container" id="split-menus-container">
+      <!-- SECTION 1: ☀️ LUNCH SECTION (3 location cards side-by-side) -->
+      <section class="meal-split-block lunch-block" id="lunch-split-block">
+        <div class="meal-split-header lunch-header">
+          <div class="meal-header-title">
+            <span class="meal-header-icon">☀️</span>
+            <span class="meal-header-text">Lunch Menus</span>
+            <span class="meal-header-day" id="lunch-day-label">Monday</span>
+          </div>
+          <span class="meal-header-pill">10:30 AM &ndash; 2:30 PM (Varies by location)</span>
+        </div>
+        <div class="meal-cards-row" id="lunch-cards-row">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </section>
+
+      <!-- SECTION 2: 🌙 DINNER SECTION (3 location cards side-by-side) -->
+      <section class="meal-split-block dinner-block" id="dinner-split-block">
+        <div class="meal-split-header dinner-header">
+          <div class="meal-header-title">
+            <span class="meal-header-icon">🌙</span>
+            <span class="meal-header-text">Dinner Menus</span>
+            <span class="meal-header-day" id="dinner-day-label">Monday</span>
+          </div>
+          <span class="meal-header-pill">4:30 PM &ndash; 9:00 PM (Varies by location)</span>
+        </div>
+        <div class="meal-cards-row" id="dinner-cards-row">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Location Information & Station Directory -->
+    <section class="stations-directory">
+      <div class="section-title-row">
+        <h2>Campus Dining Halls &amp; Stations Overview</h2>
+        <span class="section-sub">Official venues featured in the University of Oklahoma dining program</span>
+      </div>
+      <div class="directory-cards-container">
+        <!-- Residential Colleges -->
+        <div class="venue-card">
+          <div class="venue-card-header">
+            <span class="venue-icon">🏛️</span>
+            <div>
+              <h3>Residential Colleges</h3>
+              <p class="venue-sub">Headington &amp; Dunham Colleges</p>
+            </div>
+          </div>
+          <p class="venue-desc">
+            Features Dunham’s daily hot scratch entrees, vegan specials, and Headington’s rotating specialty bars (Wing Bar, Breakfast Bar, Mac &amp; Cheese Bar, Seafood Bar) along with everyday made-to-order grill, pizza, salad, and pasta stations.
+          </p>
+          <div class="venue-links">
+            <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/residential-colleges-lunch-menu" target="_blank" rel="noopener" class="venue-link">Official Lunch Page &rarr;</a>
+            <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/residential-colleges-dinner-menu" target="_blank" rel="noopener" class="venue-link">Official Dinner Page &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Couch Restaurants -->
+        <div class="venue-card">
+          <div class="venue-card-header">
+            <span class="venue-icon">🍽️</span>
+            <div>
+              <h3>Couch Restaurants</h3>
+              <p class="venue-sub">All-You-Care-To-Eat Center</p>
+            </div>
+          </div>
+          <p class="venue-desc">
+            The flagship OU dining center home to the <strong>world's only all-you-care-to-eat Chick-fil-A</strong>, wok-cooked Shanghai Stir-Fry, Chef’s Choice entrees, Athens Café (gyros &amp; falafel), Casa Del Sol (burritos &amp; tacos), Sooner Smokehouse BBQ, La Roma Pizza, and The Crimson Creamery.
+          </p>
+          <div class="venue-links">
+            <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/couch-restaurants-lunch" target="_blank" rel="noopener" class="venue-link">Official Lunch Page &rarr;</a>
+            <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/couch-restaurants-dinner" target="_blank" rel="noopener" class="venue-link">Official Dinner Page &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Wagner Dining Hall -->
+        <div class="venue-card">
+          <div class="venue-card-header">
+            <span class="venue-icon">🏆</span>
+            <div>
+              <h3>Wagner Dining Hall</h3>
+              <p class="venue-sub">Athletics &amp; Student Dining</p>
+            </div>
+          </div>
+          <p class="venue-desc">
+            Focuses on fresh, high-quality, nutrient-dense scratch cooking with rotating hot entrees, whole grains, Lawry's smashed potatoes, fresh vegetables, custom Made-to-Order stir-fry, pasta, curry, and grill lines, plus full salad and deli bars.
+          </p>
+          <div class="venue-links">
+            <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-lunch" target="_blank" rel="noopener" class="venue-link">Official Lunch Page &rarr;</a>
+            <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-dinner" target="_blank" rel="noopener" class="venue-link">Official Dinner Page &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for Everyday Stations -->
+  <div id="everyday-modal" class="modal-backdrop" style="display:none;">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>Permanent Daily Stations</h3>
+        <button id="modal-close-btn" class="modal-close" title="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-location-section">
+          <h4>🏛️ Residential Colleges Everyday Classics</h4>
+          <p class="modal-sub">Available daily alongside the Dunham Hot Line &amp; Headington Specialty Bars:</p>
+          <ul class="modal-list">
+            <li><strong>The Grill</strong>: Fresh made-to-order burgers, chicken sandwiches, and fries.</li>
+            <li><strong>Pizza by the slice</strong>: Fresh baked artisan pizzas.</li>
+            <li><strong>Salad Bar</strong>: Wide selection of greens, fresh toppings, and house dressings.</li>
+            <li><strong>Pasta Bar</strong>: Fresh pasta and assorted sauces.</li>
+            <li><strong>Stir-Fry &amp; Deli Bar</strong>: Custom wraps, sandwiches, and wok creations.</li>
+            <li><strong>Desserts &amp; Ice Cream</strong>: Assorted cakes, pies, cookies, and soft-serve ice cream machine.</li>
+          </ul>
+        </div>
+        <div class="modal-location-section">
+          <h4>🍽️ Couch Restaurants Daily Specialties</h4>
+          <p class="modal-sub">All-you-care-to-eat stations open daily:</p>
+          <ul class="modal-list">
+            <li><strong>Chick-fil-A</strong>: The only all-you-care-to-eat Chick-fil-A in the world! Sandwiches, nuggets, and waffle fries.</li>
+            <li><strong>Athens Café</strong>: Beef &amp; chicken gyros, falafel, hummus, and Mediterranean favorites.</li>
+            <li><strong>Casa Del Sol</strong>: Made-to-order burritos, tacos, quesadillas, nachos, and enchiladas.</li>
+            <li><strong>Sooner Smokehouse</strong>: Gourmet made-to-order hamburgers, BBQ, and hearty sides.</li>
+            <li><strong>La Roma Pizza &amp; Pasta</strong>: Fresh brick-oven pizza and build-your-own pasta bake (Gluten-free and Halal options upon request).</li>
+            <li><strong>Vegetation Station</strong>: Dedicated vegan and vegetarian specialty bar.</li>
+            <li><strong>The Crimson Creamery &amp; Sweet Shoppe</strong>: Frozen yogurt with toppings, assorted cookies, and Starbucks coffee.</li>
+          </ul>
+        </div>
+        <div class="modal-location-section">
+          <h4>🏆 Wagner Dining Hall Custom Kitchens</h4>
+          <p class="modal-sub">Scratch-made athletic and student performance dining:</p>
+          <ul class="modal-list">
+            <li><strong>Made-to-Order Line</strong>: Custom stir-fry, grill specialties, hot pasta, and savory curry.</li>
+            <li><strong>Make-Your-Own Bar</strong>: Fresh deli sandwich counter and high-protein salad bar.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-info">
+        <p><strong>The University of Oklahoma &bull; Housing and Food Services</strong></p>
+        <p class="footer-disclaimer">
+          Menus, ingredients, and station offerings are subject to change. For allergen and dietary consultations, contact the OU Registered Dietician and Ingredient Specialist.
+        </p>
+      </div>
+      <div class="footer-source-links">
+        <span class="footer-sources-title">Official Sources:</span>
+        <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/residential-colleges-lunch-menu" target="_blank" rel="noopener">Res Colleges Lunch</a> &bull;
+        <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/residential-colleges-dinner-menu" target="_blank" rel="noopener">Res Colleges Dinner</a> &bull;
+        <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/couch-restaurants-lunch" target="_blank" rel="noopener">Couch Lunch</a> &bull;
+        <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/couch-restaurants-dinner" target="_blank" rel="noopener">Couch Dinner</a> &bull;
+        <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-lunch" target="_blank" rel="noopener">Wagner Lunch</a> &bull;
+        <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-dinner" target="_blank" rel="noopener">Wagner Dinner</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
