@@ -30,6 +30,11 @@
   --text-inverse: #ffffff;
 
   /* Meal Period Colors */
+  --breakfast-accent: #ea580c;
+  --breakfast-bg: #fff7ed;
+  --breakfast-border: #fed7aa;
+  --breakfast-text: #9a3412;
+
   --lunch-accent: #d97706;
   --lunch-bg: #fffbeb;
   --lunch-border: #fde68a;
@@ -530,6 +535,12 @@ body {
   box-shadow: var(--shadow-sm);
 }
 
+.meal-split-header.breakfast-header {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1.5px solid var(--breakfast-border);
+  border-left: 6px solid var(--breakfast-accent);
+}
+
 .meal-split-header.lunch-header {
   background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
   border: 1.5px solid var(--lunch-border);
@@ -559,6 +570,7 @@ body {
   letter-spacing: -0.3px;
 }
 
+.breakfast-header .meal-header-text { color: var(--breakfast-text); }
 .lunch-header .meal-header-text { color: var(--lunch-text); }
 .dinner-header .meal-header-text { color: var(--dinner-text); }
 

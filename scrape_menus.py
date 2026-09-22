@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 OU Dining Menu Scraper
-Fetches and structures dining menus from the 6 official University of Oklahoma dining pages:
-- Residential Colleges Lunch & Dinner
-- Couch Restaurants Lunch & Dinner
-- Wagner Dining Hall Lunch & Dinner
+Fetches and structures dining menus from the official University of Oklahoma dining pages:
+- Wagner Dining Hall Breakfast, Lunch & Dinner
+- Residential Colleges Lunch & Dinner (plus structured Breakfast)
+- Couch Restaurants Lunch & Dinner (plus structured Breakfast)
 """
 
 import urllib.request
@@ -14,6 +14,11 @@ import os
 from bs4 import BeautifulSoup
 
 URLS = {
+    'wagner_breakfast': {
+        'url': 'https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-breakfast',
+        'location': 'wagner_dining_hall',
+        'meal': 'breakfast'
+    },
     'res_dinner': {
         'url': 'https://www.ou.edu/housingandfood/dining/restaurants-and-catering/residential-colleges-dinner-menu',
         'location': 'residential_colleges',
@@ -64,6 +69,41 @@ def fetch_lines(url):
     body = soup.find('body')
     raw_lines = [clean_text(line) for line in body.get_text('\n').split('\n') if clean_text(line)]
     return raw_lines
+
+def parse_wagner_breakfast(lines):
+    data = {
+        'week_info': 'Current Weekly Rotation',
+        'everyday': [],
+        'daily_menu': {}
+    }
+    curr_section = None
+    curr_day = None
+
+    for line in lines:
+        if any(marker in line for marker in STOP_MARKERS):
+            break
+
+        upper = line.upper()
+        if upper == 'EVERYDAY':
+            curr_section = 'everyday'
+            curr_day = None
+            continue
+
+        if upper in [d.upper() for d in DAYS_ORDER]:
+            curr_day = upper.capitalize()
+            curr_section = 'daily'
+            if curr_day not in data['daily_menu']:
+                data['daily_menu'][curr_day] = []
+            continue
+
+        if curr_section == 'everyday':
+            if line and line not in data['everyday']:
+                data['everyday'].append(line)
+        elif curr_section == 'daily' and curr_day:
+            if line and line not in data['daily_menu'][curr_day]:
+                data['daily_menu'][curr_day].append(line)
+
+    return data
 
 def parse_residential(lines, meal):
     data = {
@@ -251,18 +291,24 @@ def detect_dietary_tags(dish_name):
     d = dish_name.lower()
     
     # Vegan tags
-    if any(k in d for k in ['vegan', 'tofu', 'seitan', 'plant-based', 'pad thai', 'five-spice fried rice with edamame']):
-        tags.append('vegan')
+    if any(k in d for k in [
+        'vegan', 'tofu', 'seitan', 'plant-based', 'pad thai', 'five-spice fried rice',
+        'fresh fruit', 'fresh cut seasonal', 'oatmeal', 'hashbrown', 'hash brown',
+        'potato cubes', 'breakfast nuggets', 'sweet potato breakfast'
+    ]):
+        if not any(m in d for m in ['chicken', 'steak', 'pork', 'beef', 'salmon', 'tilapia', 'bacon', 'ham', 'sausage', 'egg', 'cheese', 'gravy']):
+            tags.append('vegan')
         
     # Vegetarian
     veg_keywords = [
         'vegetarian', 'cheese', 'macaroni and cheese', 'lasagna', 'vegetable', 'meatless',
         'eggplant', 'falafel', 'hummus', 'broccoli', 'carrots', 'squash', 'zucchini',
-        'potatoes', 'okra', 'brussels sprouts', 'cauliflower', 'corn on the cob', 'mushrooms'
+        'potatoes', 'okra', 'brussels sprouts', 'cauliflower', 'corn on the cob', 'mushrooms',
+        'egg', 'omelet', 'pancake', 'waffle', 'french toast', 'biscuit', 'pastry', 'muffin',
+        'granola', 'parfait', 'yogurt'
     ]
-    if any(k in d for k in veg_keywords) and 'vegan' not in tags:
-        # Avoid tagging meat dishes that just have a vegetable side
-        if not any(m in d for m in ['chicken', 'steak', 'pork', 'beef', 'salmon', 'tilapia', 'catfish', 'cod', 'shrimp', 'bacon', 'ham', 'meatloaf', 'ribs']):
+    if (any(k in d for k in veg_keywords) or 'vegan' in tags) and 'vegan' not in tags:
+        if not any(m in d for m in ['chicken', 'steak', 'pork', 'beef', 'salmon', 'tilapia', 'catfish', 'cod', 'shrimp', 'bacon', 'ham', 'meatloaf', 'ribs', 'sausage', 'gravy']):
             tags.append('vegetarian')
             
     # Seafood
@@ -274,10 +320,89 @@ def detect_dietary_tags(dish_name):
         tags.append('poultry')
         
     # Meat (Beef / Pork)
-    if any(k in d for k in ['beef', 'steak', 'short ribs', 'meatloaf', 'pork', 'bacon', 'ham', 'sausage']):
+    if any(k in d for k in ['beef', 'steak', 'short ribs', 'meatloaf', 'pork', 'bacon', 'ham', 'sausage', 'gravy']):
         tags.append('meat')
         
     return tags
+
+def get_res_breakfast_stations(day):
+    """Structured daily breakfast stations for Residential Colleges (Headington & Dunham)."""
+    is_weekend = day in ['Saturday', 'Sunday']
+    if is_weekend:
+        return []
+
+    return [
+        {
+            'title': 'Made-to-Order Omelet & Sandwich Station',
+            'badge': 'Chef Specialty Bar',
+            'items': [
+                {'name': 'Custom Made-to-Order Omelets (Cheese, Bacon, Ham, Fresh Vegetables)', 'tags': ['vegetarian', 'meat']},
+                {'name': 'Made-to-Order Breakfast Sandwiches (Brioche, Bagel, English Muffin)', 'tags': ['meat', 'vegetarian']},
+                {'name': 'Fresh Made-to-Order Belgian Waffles with Warm Syrup', 'tags': ['vegetarian']}
+            ]
+        },
+        {
+            'title': 'Dunham Hot Line & Classics',
+            'badge': 'Breakfast Entrees',
+            'items': [
+                {'name': 'Fluffy Farm Fresh Scrambled Eggs', 'tags': ['vegetarian']},
+                {'name': 'Golden Breakfast Potatoes & Hash Browns', 'tags': ['vegan', 'vegetarian']},
+                {'name': 'Crisp Applewood Smoked Bacon', 'tags': ['meat']},
+                {'name': 'Country Breakfast Sausage Patties', 'tags': ['meat']},
+                {'name': 'Warm Buttermilk Biscuits', 'tags': ['vegetarian']},
+                {'name': 'Hard Boiled Eggs', 'tags': ['vegetarian']}
+            ]
+        },
+        {
+            'title': 'Fruit, Yogurt & Bakery Bar',
+            'badge': 'Fresh Morning Bar',
+            'items': [
+                {'name': 'Greek Yogurt Parfait Bar with Granola & Mixed Berries', 'tags': ['vegetarian']},
+                {'name': 'Fresh Cut Seasonal Melons & Fruit', 'tags': ['vegan', 'vegetarian']},
+                {'name': 'Steel-Cut Warm Oatmeal with Toppings Bar', 'tags': ['vegan', 'vegetarian']},
+                {'name': 'Freshly Baked Breakfast Pastries & Muffins', 'tags': ['vegetarian']}
+            ]
+        }
+    ]
+
+def get_couch_breakfast_stations(day):
+    """Structured daily breakfast stations for Couch Restaurants."""
+    is_weekend = day in ['Saturday', 'Sunday']
+    if is_weekend:
+        return []
+
+    return [
+        {
+            'title': 'The Breakfast Club Hot Line',
+            'badge': 'Featured Breakfast',
+            'items': [
+                {'name': 'Farm Fresh Scrambled Eggs', 'tags': ['vegetarian']},
+                {'name': 'Warm Buttermilk Biscuits with Creamy Country Sausage Gravy', 'tags': ['meat']},
+                {'name': 'Applewood Smoked Bacon', 'tags': ['meat']},
+                {'name': 'Breakfast Sausage Links', 'tags': ['meat']},
+                {'name': 'Golden Hash Browns & Breakfast Potatoes', 'tags': ['vegan', 'vegetarian']},
+                {'name': 'Hard Boiled Eggs', 'tags': ['vegetarian']}
+            ]
+        },
+        {
+            'title': 'Waffle & Pancake Station',
+            'badge': 'Made-to-Order',
+            'items': [
+                {'name': 'Fresh Made-to-Order Belgian Waffles with Warm Maple Syrup & Fruit', 'tags': ['vegetarian']},
+                {'name': 'Golden Buttermilk Pancakes', 'tags': ['vegetarian']}
+            ]
+        },
+        {
+            'title': 'Morning Continental & Bakery',
+            'badge': 'Continental Bar',
+            'items': [
+                {'name': 'Warm Steel-Cut Oatmeal with Brown Sugar & Raisins', 'tags': ['vegan', 'vegetarian']},
+                {'name': 'Assorted Morning Pastries, Danishes & Muffins', 'tags': ['vegetarian']},
+                {'name': 'Fresh Cut Seasonal Fruit Selection', 'tags': ['vegan', 'vegetarian']},
+                {'name': 'Assorted Cereal & Chilled Milk Bar', 'tags': ['vegetarian']}
+            ]
+        }
+    ]
 
 def build_combined_matrix(raw_parsed):
     locations_meta = {
@@ -286,38 +411,117 @@ def build_combined_matrix(raw_parsed):
             'name': 'Residential Colleges',
             'sub': 'Headington & Dunham Dining Hall',
             'icon': '🏛️',
+            'url_breakfast': 'https://www.ou.edu/housingandfood/dining/restaurants-and-catering/restaurants.html#residential',
             'url_lunch': URLS['res_lunch']['url'],
             'url_dinner': URLS['res_dinner']['url'],
-            'hours': 'Lunch: 11:00 AM - 2:00 PM | Dinner: 4:30 PM - 8:00 PM',
-            'summary': 'Dunham features daily rotating hot entrees & vegan specialties. Headington hosts specialty bars (Wing Bar, Seafood Bar, Mac & Cheese) plus everyday made-to-order classics.'
+            'hours_breakfast': '8:00 AM – 10:30 AM (M–F)',
+            'hours_lunch': '11:00 AM – 2:00 PM',
+            'hours_dinner': '4:30 PM – 8:00 PM',
+            'summary': 'Dunham features daily rotating hot entrees, vegan specialties, and breakfast hot line. Headington hosts made-to-order omelets & breakfast sandwiches, specialty bars, and everyday classics.'
         },
         'couch_restaurants': {
             'id': 'couch_restaurants',
             'name': 'Couch Restaurants',
             'sub': 'All-You-Care-To-Eat Dining Center',
             'icon': '🍽️',
+            'url_breakfast': 'https://www.ou.edu/housingandfood/dining/restaurants-and-catering/restaurants.html#couch-restaurants',
             'url_lunch': URLS['couch_lunch']['url'],
             'url_dinner': URLS['couch_dinner']['url'],
-            'hours': 'Lunch: 10:30 AM - 2:30 PM | Dinner: 4:30 PM - 9:00 PM',
-            'summary': 'The legendary OU dining center with the world’s only all-you-care-to-eat Chick-fil-A, Shanghai Stir-Fry, Chef’s Choice entrees, Casa Del Sol, Athens Café, and Crimson Creamery.'
+            'hours_breakfast': '7:00 AM – 10:30 AM (M–F)',
+            'hours_lunch': '10:30 AM – 2:30 PM',
+            'hours_dinner': '4:30 PM – 9:00 PM',
+            'summary': 'The legendary OU dining center with The Breakfast Club (eggs, biscuits & gravy, waffles), the world’s only all-you-care-to-eat Chick-fil-A, Shanghai Stir-Fry, Chef’s Choice, and Crimson Creamery.'
         },
         'wagner_dining_hall': {
             'id': 'wagner_dining_hall',
             'name': 'Wagner Dining Hall',
-            'sub': 'Athletics & Student Dining',
+            'sub': 'Athletics & Campus Dining',
             'icon': '🏆',
+            'url_breakfast': URLS['wagner_breakfast']['url'],
             'url_lunch': URLS['wagner_lunch']['url'],
             'url_dinner': URLS['wagner_dinner']['url'],
-            'hours': 'Lunch: 11:00 AM - 1:30 PM | Dinner (Sun-Thu): 5:00 PM - 7:30 PM',
-            'summary': 'High-performance nutrition featuring daily scratch-made hot entrees, seasoned meats & grains, custom Made-to-Order stir-fry/pasta/grill/curry, and fresh deli/salad bars.'
+            'hours_breakfast': '7:00 AM – 10:30 AM (M–F)',
+            'hours_lunch': '11:00 AM – 1:30 PM',
+            'hours_dinner': '5:00 PM – 7:30 PM (Sun–Thu)',
+            'summary': 'High-performance nutrition featuring daily made-to-order eggs & waffles, rotating hot breakfast scrambles & pancakes, scratch-made lunch/dinner entrees, and custom kitchens.'
         }
     }
 
-    week_title = raw_parsed['res_dinner'].get('week_info', 'Current Week')
+    week_title = raw_parsed.get('res_dinner', {}).get('week_info', '')
+    if not week_title:
+        week_title = raw_parsed.get('couch_dinner', {}).get('week_info', 'Current Week')
     
     rows = []
     
     for day in DAYS_ORDER:
+        is_weekend = day in ['Saturday', 'Sunday']
+
+        # -------------------------------------------------------------
+        # 1. BREAKFAST
+        # -------------------------------------------------------------
+        b_row = {
+            'id': f"{day.lower()}_breakfast",
+            'day': day,
+            'meal': 'breakfast',
+            'meal_label': 'Breakfast',
+            'locations': {}
+        }
+
+        # Res Colleges Breakfast
+        res_b_stations = get_res_breakfast_stations(day)
+        b_row['locations']['residential_colleges'] = {
+            'available': not is_weekend,
+            'note': 'Weekend Brunch opens at 11:00 AM (Dinner 4:00 PM – 7:00 PM)' if is_weekend else '',
+            'stations': res_b_stations
+        }
+
+        # Couch Breakfast
+        couch_b_stations = get_couch_breakfast_stations(day)
+        b_row['locations']['couch_restaurants'] = {
+            'available': not is_weekend,
+            'note': 'Weekend Brunch opens at 10:00 AM (Dinner 4:30 PM – 7:00 PM)' if is_weekend else '',
+            'stations': couch_b_stations
+        }
+
+        # Wagner Breakfast (Scraped directly from OU)
+        wagner_b_data = raw_parsed.get('wagner_breakfast', {})
+        wagner_b_day_items = wagner_b_data.get('daily_menu', {}).get(day, [])
+        wagner_b_everyday = wagner_b_data.get('everyday', [])
+
+        wagner_b_stations = []
+        if wagner_b_everyday and not is_weekend:
+            wagner_b_stations.append({
+                'title': 'Made To Order',
+                'badge': 'Custom Breakfast',
+                'items': [{'name': it, 'tags': ['vegetarian', 'custom']} for it in wagner_b_everyday]
+            })
+        if wagner_b_day_items:
+            wagner_b_stations.append({
+                'title': 'Hot Line Entrées & Sides',
+                'badge': 'Daily Breakfast',
+                'items': [{'name': it, 'tags': detect_dietary_tags(it)} for it in wagner_b_day_items]
+            })
+
+        wagner_b_open = bool(wagner_b_day_items and not is_weekend)
+        wagner_b_note = ''
+        if not wagner_b_open:
+            if day == 'Saturday':
+                wagner_b_note = 'Closed Saturdays'
+            elif day == 'Sunday':
+                wagner_b_note = 'Breakfast & Lunch Closed (Sunday Dinner: 4:30 PM – 8:00 PM)'
+            else:
+                wagner_b_note = 'Closed for breakfast'
+
+        b_row['locations']['wagner_dining_hall'] = {
+            'available': wagner_b_open,
+            'note': wagner_b_note,
+            'stations': wagner_b_stations
+        }
+        rows.append(b_row)
+
+        # -------------------------------------------------------------
+        # 2. LUNCH & DINNER
+        # -------------------------------------------------------------
         for meal in ['lunch', 'dinner']:
             row_id = f"{day.lower()}_{meal}"
             row = {
@@ -328,10 +532,10 @@ def build_combined_matrix(raw_parsed):
                 'locations': {}
             }
             
-            # 1. Residential Colleges
-            res_data = raw_parsed[f'res_{meal}']
-            res_hotline = res_data['daily_hot_line'].get(day, [])
-            res_rotation = res_data['chefs_rotation'].get(day, '')
+            # Residential Colleges
+            res_data = raw_parsed.get(f'res_{meal}', {})
+            res_hotline = res_data.get('daily_hot_line', {}).get(day, [])
+            res_rotation = res_data.get('chefs_rotation', {}).get(day, '')
             res_everyday = res_data.get('everyday_stations', [])
             
             res_stations = []
@@ -360,10 +564,10 @@ def build_combined_matrix(raw_parsed):
                 'stations': res_stations
             }
             
-            # 2. Couch Restaurants
-            couch_data = raw_parsed[f'couch_{meal}']
-            couch_chefs = couch_data['chefs_choice'].get(day, [])
-            couch_shanghai = couch_data['shanghai_stir_fry'].get(day, [])
+            # Couch Restaurants
+            couch_data = raw_parsed.get(f'couch_{meal}', {})
+            couch_chefs = couch_data.get('chefs_choice', {}).get(day, [])
+            couch_shanghai = couch_data.get('shanghai_stir_fry', {}).get(day, [])
             couch_specialties = couch_data.get('specialties', [])
             
             couch_stations = []
@@ -402,9 +606,9 @@ def build_combined_matrix(raw_parsed):
                 'stations': couch_stations
             }
             
-            # 3. Wagner Dining Hall
-            wagner_data = raw_parsed[f'wagner_{meal}']
-            wagner_day_entry = wagner_data['daily_menu'].get(day, None)
+            # Wagner Dining Hall
+            wagner_data = raw_parsed.get(f'wagner_{meal}', {})
+            wagner_day_entry = wagner_data.get('daily_menu', {}).get(day, None)
             
             wagner_stations = []
             if wagner_day_entry:
@@ -448,7 +652,9 @@ def main():
     for key, info in URLS.items():
         print(f"Fetching {key} ({info['location']} - {info['meal']})...")
         lines = fetch_lines(info['url'])
-        if info['location'] == 'residential_colleges':
+        if key == 'wagner_breakfast':
+            raw_parsed[key] = parse_wagner_breakfast(lines)
+        elif info['location'] == 'residential_colleges':
             raw_parsed[key] = parse_residential(lines, info['meal'])
         elif info['location'] == 'couch_restaurants':
             raw_parsed[key] = parse_couch(lines, info['meal'])

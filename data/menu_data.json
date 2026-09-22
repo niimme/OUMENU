@@ -7,30 +7,39 @@
       "name": "Residential Colleges",
       "sub": "Headington & Dunham Dining Hall",
       "icon": "🏛️",
+      "url_breakfast": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/restaurants.html#residential",
       "url_lunch": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/residential-colleges-lunch-menu",
       "url_dinner": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/residential-colleges-dinner-menu",
-      "hours": "Lunch: 11:00 AM - 2:00 PM | Dinner: 4:30 PM - 8:00 PM",
-      "summary": "Dunham features daily rotating hot entrees & vegan specialties. Headington hosts specialty bars (Wing Bar, Seafood Bar, Mac & Cheese) plus everyday made-to-order classics."
+      "hours_breakfast": "8:00 AM – 10:30 AM (M–F)",
+      "hours_lunch": "11:00 AM – 2:00 PM",
+      "hours_dinner": "4:30 PM – 8:00 PM",
+      "summary": "Dunham features daily rotating hot entrees, vegan specialties, and breakfast hot line. Headington hosts made-to-order omelets & breakfast sandwiches, specialty bars, and everyday classics."
     },
     "couch_restaurants": {
       "id": "couch_restaurants",
       "name": "Couch Restaurants",
       "sub": "All-You-Care-To-Eat Dining Center",
       "icon": "🍽️",
+      "url_breakfast": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/restaurants.html#couch-restaurants",
       "url_lunch": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/couch-restaurants-lunch",
       "url_dinner": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/couch-restaurants-dinner",
-      "hours": "Lunch: 10:30 AM - 2:30 PM | Dinner: 4:30 PM - 9:00 PM",
-      "summary": "The legendary OU dining center with the world’s only all-you-care-to-eat Chick-fil-A, Shanghai Stir-Fry, Chef’s Choice entrees, Casa Del Sol, Athens Café, and Crimson Creamery."
+      "hours_breakfast": "7:00 AM – 10:30 AM (M–F)",
+      "hours_lunch": "10:30 AM – 2:30 PM",
+      "hours_dinner": "4:30 PM – 9:00 PM",
+      "summary": "The legendary OU dining center with The Breakfast Club (eggs, biscuits & gravy, waffles), the world’s only all-you-care-to-eat Chick-fil-A, Shanghai Stir-Fry, Chef’s Choice, and Crimson Creamery."
     },
     "wagner_dining_hall": {
       "id": "wagner_dining_hall",
       "name": "Wagner Dining Hall",
-      "sub": "Athletics & Student Dining",
+      "sub": "Athletics & Campus Dining",
       "icon": "🏆",
+      "url_breakfast": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-breakfast",
       "url_lunch": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-lunch",
       "url_dinner": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-dinner",
-      "hours": "Lunch: 11:00 AM - 1:30 PM | Dinner (Sun-Thu): 5:00 PM - 7:30 PM",
-      "summary": "High-performance nutrition featuring daily scratch-made hot entrees, seasoned meats & grains, custom Made-to-Order stir-fry/pasta/grill/curry, and fresh deli/salad bars."
+      "hours_breakfast": "7:00 AM – 10:30 AM (M–F)",
+      "hours_lunch": "11:00 AM – 1:30 PM",
+      "hours_dinner": "5:00 PM – 7:30 PM (Sun–Thu)",
+      "summary": "High-performance nutrition featuring daily made-to-order eggs & waffles, rotating hot breakfast scrambles & pancakes, scratch-made lunch/dinner entrees, and custom kitchens."
     }
   },
   "days_order": [
@@ -43,6 +52,293 @@
     "Sunday"
   ],
   "rows": [
+    {
+      "id": "monday_breakfast",
+      "day": "Monday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made-to-Order Omelet & Sandwich Station",
+              "badge": "Chef Specialty Bar",
+              "items": [
+                {
+                  "name": "Custom Made-to-Order Omelets (Cheese, Bacon, Ham, Fresh Vegetables)",
+                  "tags": [
+                    "vegetarian",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Made-to-Order Breakfast Sandwiches (Brioche, Bagel, English Muffin)",
+                  "tags": [
+                    "meat",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Syrup",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Dunham Hot Line & Classics",
+              "badge": "Breakfast Entrees",
+              "items": [
+                {
+                  "name": "Fluffy Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Breakfast Potatoes & Hash Browns",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Crisp Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Country Breakfast Sausage Patties",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Fruit, Yogurt & Bakery Bar",
+              "badge": "Fresh Morning Bar",
+              "items": [
+                {
+                  "name": "Greek Yogurt Parfait Bar with Granola & Mixed Berries",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Melons & Fruit",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Steel-Cut Warm Oatmeal with Toppings Bar",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Freshly Baked Breakfast Pastries & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "The Breakfast Club Hot Line",
+              "badge": "Featured Breakfast",
+              "items": [
+                {
+                  "name": "Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits with Creamy Country Sausage Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Breakfast Sausage Links",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Golden Hash Browns & Breakfast Potatoes",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Waffle & Pancake Station",
+              "badge": "Made-to-Order",
+              "items": [
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Maple Syrup & Fruit",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Morning Continental & Bakery",
+              "badge": "Continental Bar",
+              "items": [
+                {
+                  "name": "Warm Steel-Cut Oatmeal with Brown Sugar & Raisins",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Morning Pastries, Danishes & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Fruit Selection",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Cereal & Chilled Milk Bar",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made To Order",
+              "badge": "Custom Breakfast",
+              "items": [
+                {
+                  "name": "Made to Order Eggs, Waffles and More.",
+                  "tags": [
+                    "vegetarian",
+                    "custom"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Breakfast",
+              "items": [
+                {
+                  "name": "Egg Scramble of the Day",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Oatmeal",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Ham Steaks",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Triangle Hashbrowns",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
     {
       "id": "monday_lunch",
       "day": "Monday",
@@ -203,7 +499,9 @@
                 },
                 {
                   "name": "Egg Roll",
-                  "tags": []
+                  "tags": [
+                    "vegetarian"
+                  ]
                 },
                 {
                   "name": "Spring Roll",
@@ -507,7 +805,9 @@
                 },
                 {
                   "name": "Egg Roll",
-                  "tags": []
+                  "tags": [
+                    "vegetarian"
+                  ]
                 },
                 {
                   "name": "Spring Roll",
@@ -639,6 +939,294 @@
                   "name": "Make Your Own: Salad/Deli",
                   "tags": [
                     "custom"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "tuesday_breakfast",
+      "day": "Tuesday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made-to-Order Omelet & Sandwich Station",
+              "badge": "Chef Specialty Bar",
+              "items": [
+                {
+                  "name": "Custom Made-to-Order Omelets (Cheese, Bacon, Ham, Fresh Vegetables)",
+                  "tags": [
+                    "vegetarian",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Made-to-Order Breakfast Sandwiches (Brioche, Bagel, English Muffin)",
+                  "tags": [
+                    "meat",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Syrup",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Dunham Hot Line & Classics",
+              "badge": "Breakfast Entrees",
+              "items": [
+                {
+                  "name": "Fluffy Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Breakfast Potatoes & Hash Browns",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Crisp Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Country Breakfast Sausage Patties",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Fruit, Yogurt & Bakery Bar",
+              "badge": "Fresh Morning Bar",
+              "items": [
+                {
+                  "name": "Greek Yogurt Parfait Bar with Granola & Mixed Berries",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Melons & Fruit",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Steel-Cut Warm Oatmeal with Toppings Bar",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Freshly Baked Breakfast Pastries & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "The Breakfast Club Hot Line",
+              "badge": "Featured Breakfast",
+              "items": [
+                {
+                  "name": "Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits with Creamy Country Sausage Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Breakfast Sausage Links",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Golden Hash Browns & Breakfast Potatoes",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Waffle & Pancake Station",
+              "badge": "Made-to-Order",
+              "items": [
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Maple Syrup & Fruit",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Morning Continental & Bakery",
+              "badge": "Continental Bar",
+              "items": [
+                {
+                  "name": "Warm Steel-Cut Oatmeal with Brown Sugar & Raisins",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Morning Pastries, Danishes & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Fruit Selection",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Cereal & Chilled Milk Bar",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made To Order",
+              "badge": "Custom Breakfast",
+              "items": [
+                {
+                  "name": "Made to Order Eggs, Waffles and More.",
+                  "tags": [
+                    "vegetarian",
+                    "custom"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Breakfast",
+              "items": [
+                {
+                  "name": "Breakfast Chicken Sausage Links",
+                  "tags": [
+                    "poultry",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Egg Scramble of the Day",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "French Toast",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Oatmeal",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Potato Cubes",
+                  "tags": [
+                    "vegan"
                   ]
                 }
               ]
@@ -801,7 +1389,9 @@
                 },
                 {
                   "name": "Egg Roll",
-                  "tags": []
+                  "tags": [
+                    "vegetarian"
+                  ]
                 },
                 {
                   "name": "Spring Roll",
@@ -911,7 +1501,7 @@
                 {
                   "name": "Mashed Potatoes and White Pepper Gravy",
                   "tags": [
-                    "vegetarian"
+                    "meat"
                   ]
                 },
                 {
@@ -921,7 +1511,6 @@
                 {
                   "name": "Vegan Chick'n Fried Steak",
                   "tags": [
-                    "vegan",
                     "meat"
                   ]
                 }
@@ -982,7 +1571,6 @@
                 {
                   "name": "Vegan Chicken Nuggets",
                   "tags": [
-                    "vegan",
                     "poultry"
                   ]
                 },
@@ -1108,7 +1696,9 @@
                 },
                 {
                   "name": "Egg Roll",
-                  "tags": []
+                  "tags": [
+                    "vegetarian"
+                  ]
                 },
                 {
                   "name": "Spring Roll",
@@ -1242,6 +1832,293 @@
                   "name": "Make Your Own: Salad/Deli",
                   "tags": [
                     "custom"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "wednesday_breakfast",
+      "day": "Wednesday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made-to-Order Omelet & Sandwich Station",
+              "badge": "Chef Specialty Bar",
+              "items": [
+                {
+                  "name": "Custom Made-to-Order Omelets (Cheese, Bacon, Ham, Fresh Vegetables)",
+                  "tags": [
+                    "vegetarian",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Made-to-Order Breakfast Sandwiches (Brioche, Bagel, English Muffin)",
+                  "tags": [
+                    "meat",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Syrup",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Dunham Hot Line & Classics",
+              "badge": "Breakfast Entrees",
+              "items": [
+                {
+                  "name": "Fluffy Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Breakfast Potatoes & Hash Browns",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Crisp Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Country Breakfast Sausage Patties",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Fruit, Yogurt & Bakery Bar",
+              "badge": "Fresh Morning Bar",
+              "items": [
+                {
+                  "name": "Greek Yogurt Parfait Bar with Granola & Mixed Berries",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Melons & Fruit",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Steel-Cut Warm Oatmeal with Toppings Bar",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Freshly Baked Breakfast Pastries & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "The Breakfast Club Hot Line",
+              "badge": "Featured Breakfast",
+              "items": [
+                {
+                  "name": "Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits with Creamy Country Sausage Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Breakfast Sausage Links",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Golden Hash Browns & Breakfast Potatoes",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Waffle & Pancake Station",
+              "badge": "Made-to-Order",
+              "items": [
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Maple Syrup & Fruit",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Morning Continental & Bakery",
+              "badge": "Continental Bar",
+              "items": [
+                {
+                  "name": "Warm Steel-Cut Oatmeal with Brown Sugar & Raisins",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Morning Pastries, Danishes & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Fruit Selection",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Cereal & Chilled Milk Bar",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made To Order",
+              "badge": "Custom Breakfast",
+              "items": [
+                {
+                  "name": "Made to Order Eggs, Waffles and More.",
+                  "tags": [
+                    "vegetarian",
+                    "custom"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Breakfast",
+              "items": [
+                {
+                  "name": "Breakfast Sausage",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Egg Scramble of the Day",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Oatmeal",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Shredded Hashbrowns",
+                  "tags": [
+                    "vegan"
                   ]
                 }
               ]
@@ -1422,7 +2299,9 @@
                 },
                 {
                   "name": "Egg Roll",
-                  "tags": []
+                  "tags": [
+                    "vegetarian"
+                  ]
                 },
                 {
                   "name": "Spring Roll",
@@ -1603,7 +2482,7 @@
                 {
                   "name": "Vegan Macaroni and Cheese",
                   "tags": [
-                    "vegan"
+                    "vegetarian"
                   ]
                 },
                 {
@@ -1728,7 +2607,9 @@
                 },
                 {
                   "name": "Egg Roll",
-                  "tags": []
+                  "tags": [
+                    "vegetarian"
+                  ]
                 },
                 {
                   "name": "Spring Roll",
@@ -1862,6 +2743,293 @@
                   "name": "Make Your Own: Salad/Deli",
                   "tags": [
                     "custom"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "thursday_breakfast",
+      "day": "Thursday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made-to-Order Omelet & Sandwich Station",
+              "badge": "Chef Specialty Bar",
+              "items": [
+                {
+                  "name": "Custom Made-to-Order Omelets (Cheese, Bacon, Ham, Fresh Vegetables)",
+                  "tags": [
+                    "vegetarian",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Made-to-Order Breakfast Sandwiches (Brioche, Bagel, English Muffin)",
+                  "tags": [
+                    "meat",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Syrup",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Dunham Hot Line & Classics",
+              "badge": "Breakfast Entrees",
+              "items": [
+                {
+                  "name": "Fluffy Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Breakfast Potatoes & Hash Browns",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Crisp Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Country Breakfast Sausage Patties",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Fruit, Yogurt & Bakery Bar",
+              "badge": "Fresh Morning Bar",
+              "items": [
+                {
+                  "name": "Greek Yogurt Parfait Bar with Granola & Mixed Berries",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Melons & Fruit",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Steel-Cut Warm Oatmeal with Toppings Bar",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Freshly Baked Breakfast Pastries & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "The Breakfast Club Hot Line",
+              "badge": "Featured Breakfast",
+              "items": [
+                {
+                  "name": "Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits with Creamy Country Sausage Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Breakfast Sausage Links",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Golden Hash Browns & Breakfast Potatoes",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Waffle & Pancake Station",
+              "badge": "Made-to-Order",
+              "items": [
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Maple Syrup & Fruit",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Morning Continental & Bakery",
+              "badge": "Continental Bar",
+              "items": [
+                {
+                  "name": "Warm Steel-Cut Oatmeal with Brown Sugar & Raisins",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Morning Pastries, Danishes & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Fruit Selection",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Cereal & Chilled Milk Bar",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made To Order",
+              "badge": "Custom Breakfast",
+              "items": [
+                {
+                  "name": "Made to Order Eggs, Waffles and More.",
+                  "tags": [
+                    "vegetarian",
+                    "custom"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Breakfast",
+              "items": [
+                {
+                  "name": "Breakfast Pork Sausage Links",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Egg Scramble of the Day",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "French Toast",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Oatmeal",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Sweet Potato Breakfast Nuggets",
+                  "tags": [
+                    "vegan"
                   ]
                 }
               ]
@@ -2026,7 +3194,9 @@
                 },
                 {
                   "name": "Egg Roll",
-                  "tags": []
+                  "tags": [
+                    "vegetarian"
+                  ]
                 },
                 {
                   "name": "Spring Roll",
@@ -2443,6 +3613,293 @@
       }
     },
     {
+      "id": "friday_breakfast",
+      "day": "Friday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made-to-Order Omelet & Sandwich Station",
+              "badge": "Chef Specialty Bar",
+              "items": [
+                {
+                  "name": "Custom Made-to-Order Omelets (Cheese, Bacon, Ham, Fresh Vegetables)",
+                  "tags": [
+                    "vegetarian",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Made-to-Order Breakfast Sandwiches (Brioche, Bagel, English Muffin)",
+                  "tags": [
+                    "meat",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Syrup",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Dunham Hot Line & Classics",
+              "badge": "Breakfast Entrees",
+              "items": [
+                {
+                  "name": "Fluffy Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Breakfast Potatoes & Hash Browns",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Crisp Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Country Breakfast Sausage Patties",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Fruit, Yogurt & Bakery Bar",
+              "badge": "Fresh Morning Bar",
+              "items": [
+                {
+                  "name": "Greek Yogurt Parfait Bar with Granola & Mixed Berries",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Melons & Fruit",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Steel-Cut Warm Oatmeal with Toppings Bar",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Freshly Baked Breakfast Pastries & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "The Breakfast Club Hot Line",
+              "badge": "Featured Breakfast",
+              "items": [
+                {
+                  "name": "Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits with Creamy Country Sausage Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Breakfast Sausage Links",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Golden Hash Browns & Breakfast Potatoes",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Waffle & Pancake Station",
+              "badge": "Made-to-Order",
+              "items": [
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Maple Syrup & Fruit",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Morning Continental & Bakery",
+              "badge": "Continental Bar",
+              "items": [
+                {
+                  "name": "Warm Steel-Cut Oatmeal with Brown Sugar & Raisins",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Morning Pastries, Danishes & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Fruit Selection",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Cereal & Chilled Milk Bar",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made To Order",
+              "badge": "Custom Breakfast",
+              "items": [
+                {
+                  "name": "Made to Order Eggs, Waffles and More.",
+                  "tags": [
+                    "vegetarian",
+                    "custom"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Breakfast",
+              "items": [
+                {
+                  "name": "Egg Scramble of the Day",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Oatmeal",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Jalapeño Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Triangle Hashbrowns",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "id": "friday_lunch",
       "day": "Friday",
       "meal": "lunch",
@@ -2470,7 +3927,9 @@
                 },
                 {
                   "name": "Cream Gravy",
-                  "tags": []
+                  "tags": [
+                    "meat"
+                  ]
                 },
                 {
                   "name": "California Normandy Vegetable Blend",
@@ -2952,6 +4411,29 @@
       }
     },
     {
+      "id": "saturday_breakfast",
+      "day": "Saturday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": false,
+          "note": "Weekend Brunch opens at 11:00 AM (Dinner 4:00 PM – 7:00 PM)",
+          "stations": []
+        },
+        "couch_restaurants": {
+          "available": false,
+          "note": "Weekend Brunch opens at 10:00 AM (Dinner 4:30 PM – 7:00 PM)",
+          "stations": []
+        },
+        "wagner_dining_hall": {
+          "available": false,
+          "note": "Closed Saturdays",
+          "stations": []
+        }
+      }
+    },
+    {
       "id": "saturday_lunch",
       "day": "Saturday",
       "meal": "lunch",
@@ -3225,6 +4707,29 @@
         "wagner_dining_hall": {
           "available": false,
           "note": "Closed (Dinner served Sun-Thu only; Closed weekends)",
+          "stations": []
+        }
+      }
+    },
+    {
+      "id": "sunday_breakfast",
+      "day": "Sunday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": false,
+          "note": "Weekend Brunch opens at 11:00 AM (Dinner 4:00 PM – 7:00 PM)",
+          "stations": []
+        },
+        "couch_restaurants": {
+          "available": false,
+          "note": "Weekend Brunch opens at 10:00 AM (Dinner 4:30 PM – 7:00 PM)",
+          "stations": []
+        },
+        "wagner_dining_hall": {
+          "available": false,
+          "note": "Breakfast & Lunch Closed (Sunday Dinner: 4:30 PM – 8:00 PM)",
           "stations": []
         }
       }

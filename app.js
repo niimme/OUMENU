@@ -14,10 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const weekLabel = document.getElementById('week-label');
   const activeDayHeading = document.getElementById('active-day-heading');
   const activeTodayBadge = document.getElementById('active-today-badge');
+  const breakfastDayLabel = document.getElementById('breakfast-day-label');
   const lunchDayLabel = document.getElementById('lunch-day-label');
   const dinnerDayLabel = document.getElementById('dinner-day-label');
+  const breakfastSplitBlock = document.getElementById('breakfast-split-block');
   const lunchSplitBlock = document.getElementById('lunch-split-block');
   const dinnerSplitBlock = document.getElementById('dinner-split-block');
+  const breakfastCardsRow = document.getElementById('breakfast-cards-row');
   const lunchCardsRow = document.getElementById('lunch-cards-row');
   const dinnerCardsRow = document.getElementById('dinner-cards-row');
   const dayNavButtonsContainer = document.getElementById('day-nav-buttons');
@@ -43,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Residential Colleges',
       sub: 'Headington & Dunham',
       icon: '🏛️',
+      hoursBreakfast: '8:00 AM – 10:30 AM (M–F)',
       hoursLunch: '11:00 AM – 2:00 PM',
       hoursDinner: '4:30 PM – 8:00 PM'
     },
@@ -52,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Couch Restaurants',
       sub: 'Couch Center',
       icon: '🍽️',
+      hoursBreakfast: '7:00 AM – 10:30 AM (M–F)',
       hoursLunch: '10:30 AM – 2:30 PM',
       hoursDinner: '4:30 PM – 9:00 PM'
     },
@@ -61,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Wagner Dining Hall',
       sub: 'Athletics & Campus',
       icon: '🏆',
+      hoursBreakfast: '7:00 AM – 10:30 AM (M–F)',
       hoursLunch: '11:00 AM – 1:30 PM',
       hoursDinner: '5:00 PM – 7:30 PM (Sun–Thu)'
     }
@@ -210,21 +216,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // Render Day Menus: Split into ☀️ Lunch Row and 🌙 Dinner Row
+  // Render Day Menus: Split into 🥞 Breakfast, ☀️ Lunch, and 🌙 Dinner Rows
   // =========================================================================
   function renderDayMenus(day) {
     activeDayHeading.textContent = day;
+    if (breakfastDayLabel) breakfastDayLabel.textContent = `• ${day}`;
     lunchDayLabel.textContent = `• ${day}`;
     dinnerDayLabel.textContent = `• ${day}`;
 
     const isToday = day.toLowerCase() === todayDayName.toLowerCase();
     activeTodayBadge.style.display = isToday ? 'inline-block' : 'none';
 
+    if (breakfastCardsRow) breakfastCardsRow.innerHTML = '';
     lunchCardsRow.innerHTML = '';
     dinnerCardsRow.innerHTML = '';
 
+    const breakfastRow = menuData.rows.find(r => r.day === day && r.meal === 'breakfast');
     const lunchRow = menuData.rows.find(r => r.day === day && r.meal === 'lunch');
     const dinnerRow = menuData.rows.find(r => r.day === day && r.meal === 'dinner');
+
+    // 0. Populate Breakfast Cards Row
+    if (breakfastCardsRow) {
+      locationsMeta.forEach(loc => {
+        const locData = breakfastRow ? breakfastRow.locations[loc.key] : null;
+        breakfastCardsRow.appendChild(createLocationCard(loc, 'breakfast', locData));
+      });
+    }
 
     // 1. Populate Lunch Cards Row
     locationsMeta.forEach(loc => {
@@ -248,7 +265,9 @@ document.addEventListener('DOMContentLoaded', () => {
     card.dataset.meal = mealType;
 
     const isOpen = locData && locData.available;
-    const hours = mealType === 'lunch' ? loc.hoursLunch : loc.hoursDinner;
+    let hours = loc.hoursLunch;
+    if (mealType === 'breakfast') hours = loc.hoursBreakfast;
+    else if (mealType === 'dinner') hours = loc.hoursDinner;
 
     // Card Venue Header
     const headerDiv = document.createElement('div');
@@ -303,11 +322,11 @@ document.addEventListener('DOMContentLoaded', () => {
       group.className = 'station-group-block';
 
       let badgeClass = '';
-      if (station.title.includes('Hot Line') || station.title.includes("Chef's Choice")) {
+      if (station.title.includes('Hot Line') || station.title.includes("Chef's Choice") || station.title.includes('Breakfast')) {
         badgeClass = 'featured';
       } else if (station.title.includes('Shanghai') || station.title.includes('Asian')) {
         badgeClass = 'asian';
-      } else if (station.title.includes('Made To Order')) {
+      } else if (station.title.includes('Made To Order') || station.title.includes('Made-to-Order') || station.title.includes('Specialty')) {
         badgeClass = 'custom';
       }
 
@@ -354,17 +373,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // Meal Filter Visibility (Split View vs Lunch Only vs Dinner Only)
+  // Meal Filter Visibility (Split View vs Breakfast vs Lunch vs Dinner)
   // =========================================================================
   function updateMealSectionVisibility() {
-    if (activeMealFilter === 'lunch') {
+    if (activeMealFilter === 'breakfast') {
+      if (breakfastSplitBlock) breakfastSplitBlock.classList.remove('hidden-by-filter');
+      lunchSplitBlock.classList.add('hidden-by-filter');
+      dinnerSplitBlock.classList.add('hidden-by-filter');
+    } else if (activeMealFilter === 'lunch') {
+      if (breakfastSplitBlock) breakfastSplitBlock.classList.add('hidden-by-filter');
       lunchSplitBlock.classList.remove('hidden-by-filter');
       dinnerSplitBlock.classList.add('hidden-by-filter');
     } else if (activeMealFilter === 'dinner') {
+      if (breakfastSplitBlock) breakfastSplitBlock.classList.add('hidden-by-filter');
       lunchSplitBlock.classList.add('hidden-by-filter');
       dinnerSplitBlock.classList.remove('hidden-by-filter');
     } else {
-      // Both (Split View)
+      // All (Split View: Breakfast, Lunch, Dinner)
+      if (breakfastSplitBlock) breakfastSplitBlock.classList.remove('hidden-by-filter');
       lunchSplitBlock.classList.remove('hidden-by-filter');
       dinnerSplitBlock.classList.remove('hidden-by-filter');
     }
