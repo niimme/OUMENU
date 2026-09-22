@@ -65,6 +65,10 @@
       <div class="day-navigation-bar">
         <div class="day-nav-label">Day of Week:</div>
         <div class="day-buttons-group" id="day-nav-buttons">
+          <button class="day-nav-btn all-days-btn" data-day="all">
+            <span class="day-abbr">All</span>
+            <span class="day-full">All Days</span>
+          </button>
           <button class="day-nav-btn active" data-day="Monday">
             <span class="day-abbr">Mon</span>
             <span class="day-full">Monday</span>
@@ -141,7 +145,7 @@
         <h2 id="active-day-heading" class="active-day-heading">Monday</h2>
         <span id="active-today-badge" class="today-badge" style="display:none;">Today</span>
       </div>
-      <div class="active-day-subtitle">
+      <div class="active-day-subtitle" id="active-day-subtitle">
         Split into dedicated <strong>🥞 Breakfast</strong>, <strong>☀️ Lunch</strong>, and <strong>🌙 Dinner</strong> cards across all 3 dining locations
       </div>
     </div>

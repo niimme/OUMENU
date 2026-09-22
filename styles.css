@@ -503,12 +503,72 @@ body {
 }
 
 /* ==========================================================================
-   SPLIT MENUS LAYOUT: Lunch & Dinner in Distinct Sections
+   SPLIT MENUS LAYOUT: Breakfast, Lunch & Dinner in Distinct Sections
    ========================================================================== */
 .split-menus-container {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+}
+
+/* Full Week Day Grouping (When 'All Days' is active) */
+.day-group-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding-bottom: 2.75rem;
+  border-bottom: 2px dashed var(--border-light);
+  margin-bottom: 0.5rem;
+  transition: opacity var(--transition-fast);
+}
+
+.day-group-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.day-group-section.dimmed-day {
+  opacity: 0.35;
+}
+
+.day-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-light);
+  border-left: 6px solid var(--ou-crimson);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.day-group-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.day-group-title h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--ou-crimson-dark);
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.day-group-pill {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--bg-page);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
 }
 
 /* Section Container */
