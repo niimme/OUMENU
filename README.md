@@ -24,9 +24,9 @@ A modern, fast, and responsive web application providing daily menus and nutriti
 
 ## 📍 Covered Dining Locations
 
-1. **Residential Colleges** (Dunham & Headington Colleges)
-2. **Couch Restaurants** (Couch Restaurants)
-3. **Wagner Dining Hall** (Headington Hall)
+1. **Residential Colleges** (Dunham College &amp; Headington College)
+2. **Couch Restaurants** (Couch Center)
+3. **Wagner Dining Hall** (Located inside **Headington Hall** &ndash; *not to be confused with Headington College*)
 
 ---
 

@@ -409,7 +409,7 @@ def build_combined_matrix(raw_parsed):
         'residential_colleges': {
             'id': 'residential_colleges',
             'name': 'Residential Colleges',
-            'sub': 'Headington & Dunham Dining Hall',
+            'sub': 'Headington College & Dunham College',
             'icon': '🏛️',
             'url_breakfast': 'https://www.ou.edu/housingandfood/dining/restaurants-and-catering/restaurants.html#residential',
             'url_lunch': URLS['res_lunch']['url'],
@@ -417,7 +417,7 @@ def build_combined_matrix(raw_parsed):
             'hours_breakfast': '8:00 AM – 10:30 AM (M–F)',
             'hours_lunch': '11:00 AM – 2:00 PM',
             'hours_dinner': '4:30 PM – 8:00 PM',
-            'summary': 'Dunham features daily rotating hot entrees, vegan specialties, and breakfast hot line. Headington hosts made-to-order omelets & breakfast sandwiches, specialty bars, and everyday classics.'
+            'summary': 'Dunham College features daily rotating hot entrees, vegan specialties, and breakfast hot line. Headington College hosts made-to-order omelets & breakfast sandwiches, specialty bars, and everyday classics.'
         },
         'couch_restaurants': {
             'id': 'couch_restaurants',
@@ -435,7 +435,7 @@ def build_combined_matrix(raw_parsed):
         'wagner_dining_hall': {
             'id': 'wagner_dining_hall',
             'name': 'Wagner Dining Hall',
-            'sub': 'Athletics & Campus Dining',
+            'sub': 'Headington Hall (Athletic & Campus Dining)',
             'icon': '🏆',
             'url_breakfast': URLS['wagner_breakfast']['url'],
             'url_lunch': URLS['wagner_lunch']['url'],
@@ -443,7 +443,7 @@ def build_combined_matrix(raw_parsed):
             'hours_breakfast': '7:00 AM – 10:30 AM (M–F)',
             'hours_lunch': '11:00 AM – 1:30 PM',
             'hours_dinner': '5:00 PM – 7:30 PM (Sun–Thu)',
-            'summary': 'High-performance nutrition featuring daily made-to-order eggs & waffles, rotating hot breakfast scrambles & pancakes, scratch-made lunch/dinner entrees, and custom kitchens.'
+            'summary': 'Located inside Headington Hall (not to be confused with Headington College). Features high-performance scratch cooking with daily made-to-order eggs & waffles, hot breakfast scrambles, fresh lunch/dinner entrees, and custom kitchens.'
         }
     }
 
