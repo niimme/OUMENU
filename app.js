@@ -177,6 +177,22 @@ document.addEventListener('DOMContentLoaded', () => {
     btnPrint.addEventListener('click', () => {
       window.print();
     });
+
+    // Back to top floating button
+    const btnBackToTop = document.getElementById('btn-back-to-top');
+    if (btnBackToTop) {
+      btnBackToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 280) {
+          btnBackToTop.classList.add('visible');
+        } else {
+          btnBackToTop.classList.remove('visible');
+        }
+      }, { passive: true });
+    }
   }
 
   // =========================================================================
@@ -220,12 +236,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
       dayNavButtonsContainer.appendChild(btn);
     });
+
+    // Auto-scroll active day into view on mobile
+    setTimeout(() => {
+      const activeBtn = dayNavButtonsContainer.querySelector('.day-nav-btn.active');
+      if (activeBtn) {
+        activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+    }, 150);
   }
 
   function switchDay(day) {
     activeDay = day;
     dayNavButtonsContainer.querySelectorAll('.day-nav-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.day === day);
+      const isMatch = btn.dataset.day === day;
+      btn.classList.toggle('active', isMatch);
+      if (isMatch) {
+        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
     });
     renderDayMenus(day);
     applyFiltersAndHighlights();
