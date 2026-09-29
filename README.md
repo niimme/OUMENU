@@ -61,9 +61,22 @@ A modern, fast, and responsive web application providing daily menus and nutriti
 
 ## 🔄 Updating Menus
 
-To refresh dining menu data from official OU sources:
+### 🤖 Automatic Updates (GitHub Actions)
+The repository includes an automated workflow ([`.github/workflows/update-menu.yml`](.github/workflows/update-menu.yml)) that runs daily via GitHub Actions:
+- **Schedule**: Automatically runs every day at 11:00 UTC (6:00 AM Central Time / Norman, OK).
+- **Execution**: Checks out the repo, sets up Python, installs dependencies, runs `scrape_menus.py`, and commits changes to `data/menu_data.json` if new items or weeks are found.
+- **Auto-Deployment**: When GitHub Actions pushes changes to `main`, Vercel immediately deploys the new menu live to [oumenu.vercel.app](https://oumenu.vercel.app).
+- **Manual Trigger**: You can also trigger an update at any time directly in GitHub by navigating to the **Actions** tab → **Update Dining Menus** → click **Run workflow**.
+
+> **Note on Permissions**: Ensure your GitHub repository allows actions to write commits:  
+> Go to **Settings** → **Actions** → **General** → **Workflow permissions** → Select **"Read and write permissions"** and click **Save**.
+
+### 💻 Manual Local Update
+To refresh dining menu data locally from official OU sources:
 
 ```bash
+pip install -r requirements.txt
 python3 scrape_menus.py
 ```
 This updates `data/menu_data.json` with the latest scraped weekly offerings.
+
