@@ -1,7 +1,17 @@
 {
   "version": 2,
-  "name": "oumenu",
   "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/data/menu_data.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",

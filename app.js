@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function loadMenuData() {
     try {
-      const response = await fetch('data/menu_data.json');
+      const response = await fetch(`data/menu_data.json?v=${Date.now()}`, { cache: 'no-cache' });
       if (!response.ok) throw new Error(`HTTP error ${response.status}`);
       menuData = await response.json();
       initApp();
