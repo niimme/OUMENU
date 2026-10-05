@@ -62,8 +62,8 @@ A modern, fast, and responsive web application providing daily menus and nutriti
 ## 🔄 Updating Menus
 
 ### 🤖 Automatic Updates (GitHub Actions)
-The repository includes an automated workflow ([`.github/workflows/update-menu.yml`](.github/workflows/update-menu.yml)) that runs daily via GitHub Actions:
-- **Schedule**: Automatically runs every Monday at 4:00 PM Central Time (21:00 UTC / Norman, OK).
+The repository includes an automated workflow ([`.github/workflows/update-menu.yml`](.github/workflows/update-menu.yml)) that runs weekly via GitHub Actions:
+- **Schedule**: Automatically runs every Monday at 11:00 AM Central Time (16:00 UTC / Norman, OK).
 - **Execution**: Checks out the repo, sets up Python, installs dependencies, runs `scrape_menus.py`, and commits changes to `data/menu_data.json` if new items or weeks are found.
 - **Auto-Deployment**: When GitHub Actions pushes changes to `main`, Vercel immediately deploys the new menu live to [oumenu.vercel.app](https://oumenu.vercel.app).
 - **Manual Trigger**: You can also trigger an update at any time directly in GitHub by navigating to the **Actions** tab → **Update Dining Menus** → click **Run workflow**.
