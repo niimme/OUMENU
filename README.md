@@ -1,6 +1,6 @@
 # 🍽️ OU Dining Menus
 
-- I created this website to combine all the OU restarant menus into one website so I don't have to click through multiple website to check the menu at the dining halls
+I created this website to combine all the OU restarant menus into one website so I don't have to click through multiple website to check the menu at the dining halls
 
 ## 🌟 Features
 
