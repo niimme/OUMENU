@@ -4,8 +4,6 @@ Live Website: **[https://oumenu.vercel.app](https://oumenu.vercel.app)**
 
 A modern, fast, and responsive web application providing daily menus and nutritional options across all University of Oklahoma campus dining facilities.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-oumenu.vercel.app-crimson?style=for-the-badge&logo=vercel)](https://oumenu.vercel.app)
-
 ---
 
 ## 🌟 Features
