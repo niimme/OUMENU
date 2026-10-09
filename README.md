@@ -8,7 +8,7 @@
 - 🥗 **Dietary Filters & Badges**: Filter menus by Vegetarian, Vegan, Meat, Poultry, and Seafood tags.
 - 🏛️ **Everyday Stations Guide**: Quick modal access to daily permanent stations (Couch's all-you-care-to-eat Chick-fil-A, Athens Café, Dunham Grill, Salad Bars, Waffle & Omelet bars, etc.).
 - 🖨️ **Print-Ready Styles**: Clean print layout formatted for physical copies or offline reading.
-- 📱 **Mobile & Responsive**: Built with responsive vanilla CSS.
+- 📱 **Mobile & Responsive**: Built with responsive CSS.
 
 ---
 
