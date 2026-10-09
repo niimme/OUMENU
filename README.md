@@ -1,7 +1,5 @@
 # 🍽️ OU Dining Menus
 
-I created this website to combine all the OU restarant menus into one website so I don't have to click through multiple website to check the menu at the dining halls
-
 ## 🌟 Features
 
 - 🥞 **Breakfast, Lunch & Dinner Coverage**: Full daily breakfast offerings including made-to-order omelets & sandwiches at Residential Colleges, The Breakfast Club at Couch, and scraped hot line scrambles & pancakes at Wagner.
