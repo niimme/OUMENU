@@ -1,5 +1,5 @@
 {
-  "week_info": "Week of October 5 - 11",
+  "week_info": "Week of October 12 - 18",
   "last_updated": "Current Weekly Rotation",
   "locations_meta": {
     "residential_colleges": {
@@ -354,27 +354,31 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Hawaiian Flank Steak with Apple Pineapple Pico",
+                  "name": "Grilled Chicken Marsala",
                   "tags": [
-                    "meat"
+                    "poultry"
                   ]
                 },
                 {
-                  "name": "Cilantro Lime Rice",
+                  "name": "Rice Pilaf",
                   "tags": []
                 },
                 {
-                  "name": "Caribbean Vegetable Blend",
+                  "name": "Capri Vegetable Blend",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Garlic Sesame Noodles",
+                  "name": "Chickpea Tikka Masala",
                   "tags": []
                 },
                 {
-                  "name": "Vegetable Lasagna",
+                  "name": "Basmati Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Cheesy Lasagna Rollups",
                   "tags": [
                     "vegetarian"
                   ]
@@ -432,28 +436,26 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Chicken Cordon Bleu",
+                  "name": "Chicken Fried Chicken",
                   "tags": [
                     "poultry"
                   ]
                 },
                 {
-                  "name": "Beef Lasagna",
+                  "name": "Beef Flank Steak with Poblano Sauce",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Rosemary Pork Loin",
+                  "name": "Barbecue Pork Chops",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Herb and Lemon Cod",
-                  "tags": [
-                    "seafood"
-                  ]
+                  "name": "Lemon Pepper Trout",
+                  "tags": []
                 }
               ]
             },
@@ -582,37 +584,37 @@
               "badge": "Daily Entrees",
               "items": [
                 {
-                  "name": "Grilled Poblano Steak",
-                  "tags": [
-                    "meat"
-                  ]
-                },
-                {
-                  "name": "Roasted Chipotle Ranch Chicken",
+                  "name": "Honey Sriracha Chicken with Honey Sriracha Glaze",
                   "tags": [
                     "poultry"
                   ]
                 },
                 {
-                  "name": "Elotes",
+                  "name": "Sweet Chili Miso Wings",
                   "tags": []
                 },
                 {
-                  "name": "Sauteed Peppers and Onions",
+                  "name": "Jasmine Rice",
                   "tags": []
                 },
                 {
-                  "name": "Cilantro Lime Rice",
-                  "tags": []
-                },
-                {
-                  "name": "Whole Baked Sweet Potatoes",
+                  "name": "Chinese 5-Spice Potatoes",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Vegan Chile Relleno",
+                  "name": "Sauteed Greens",
+                  "tags": []
+                },
+                {
+                  "name": "Roasted Peppers and Squash",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Vegan Sweet and Sour Tofu with Fried Rice",
                   "tags": [
                     "vegan"
                   ]
@@ -656,34 +658,30 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Lemon Pepper Crusted Tilapia",
+                  "name": "Sesame Garlic Pork Chops",
                   "tags": [
-                    "seafood"
+                    "meat"
                   ]
                 },
                 {
-                  "name": "Rice Pilaf",
+                  "name": "Steamed Rice",
                   "tags": []
                 },
                 {
-                  "name": "Roasted Zucchini, Squash and Red Bell Peppers",
-                  "tags": [
-                    "vegetarian"
-                  ]
-                },
-                {
-                  "name": "Chickpea Tikka Masala",
-                  "tags": []
-                },
-                {
-                  "name": "Basmati Rice",
-                  "tags": []
-                },
-                {
-                  "name": "Vegetable Penne Alfredo",
+                  "name": "Stir-Fried Vegetables",
                   "tags": [
                     "vegetarian"
                   ]
+                },
+                {
+                  "name": "Vegan Shepherd's Pie",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Baked Penne with \"Meat\" Sauce",
+                  "tags": []
                 }
               ]
             },
@@ -738,28 +736,26 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Chicken Cordon Bleu",
+                  "name": "Chicken Fried Chicken",
                   "tags": [
                     "poultry"
                   ]
                 },
                 {
-                  "name": "Beef Lasagna",
+                  "name": "Beef Flank Steak with Poblano Sauce",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Rosemary Pork Loin",
+                  "name": "Barbecue Pork Chops",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Herb and Lemon Cod",
-                  "tags": [
-                    "seafood"
-                  ]
+                  "name": "Lemon Pepper Trout",
+                  "tags": []
                 }
               ]
             },
@@ -882,39 +878,42 @@
               "badge": "Daily Entrees",
               "items": [
                 {
-                  "name": "Honey Sriracha Chicken with Honey Sriracha Glaze",
+                  "name": "Chicken Fried Steak",
+                  "tags": [
+                    "poultry",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Rotisserie Chicken",
                   "tags": [
                     "poultry"
                   ]
                 },
                 {
-                  "name": "Sweet Chili Miso Wings",
+                  "name": "Steamed Corn",
                   "tags": []
                 },
                 {
-                  "name": "Jasmine Rice",
-                  "tags": []
-                },
-                {
-                  "name": "Chinese Five-Spice Potatoes",
+                  "name": "Sauteed Green Beans with Bacon and Onions",
                   "tags": [
-                    "vegetarian"
+                    "meat"
                   ]
                 },
                 {
-                  "name": "Sauteed Greens",
-                  "tags": []
-                },
-                {
-                  "name": "Roasted Peppers and Squash",
+                  "name": "Mashed Potatoes and White Pepper Gravy",
                   "tags": [
-                    "vegetarian"
+                    "meat"
                   ]
                 },
                 {
-                  "name": "Vegan Sweet and Sour Tofu with Fried Rice",
+                  "name": "White Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Vegan Chick'n Fried Steak",
                   "tags": [
-                    "vegan"
+                    "meat"
                   ]
                 }
               ]
@@ -1244,7 +1243,7 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Texarkana Barbecue Pork Chops",
+                  "name": "Barbecue Bacon Cheddar Chopped Steak",
                   "tags": [
                     "meat"
                   ]
@@ -1256,17 +1255,15 @@
                   ]
                 },
                 {
-                  "name": "California Normandy Vegetable Blend",
-                  "tags": [
-                    "vegetarian"
-                  ]
+                  "name": "Seasoned Green Beans",
+                  "tags": []
                 },
                 {
                   "name": "Black Bean and Sweet Potato Enchiladas",
                   "tags": []
                 },
                 {
-                  "name": "Stuffed Shells",
+                  "name": "Corn and Black Bean Stuffed Bell Peppers",
                   "tags": []
                 }
               ]
@@ -1276,7 +1273,7 @@
               "badge": "Specialty Bar",
               "items": [
                 {
-                  "name": "Hot Dog Bar",
+                  "name": "Breakfast Bar",
                   "tags": []
                 }
               ]
@@ -1322,25 +1319,23 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Honey Glazed Chicken",
+                  "name": "Baked Yogurt Chicken",
                   "tags": [
                     "poultry"
                   ]
                 },
                 {
-                  "name": "Country Fried Steak",
+                  "name": "Pot Roast",
+                  "tags": []
+                },
+                {
+                  "name": "Spicy Pork Tips",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Pork Steak with Henry Sauce",
-                  "tags": [
-                    "meat"
-                  ]
-                },
-                {
-                  "name": "Fried Catfish Nuggets",
+                  "name": "Campfire Cod",
                   "tags": [
                     "seafood"
                   ]
@@ -1472,41 +1467,43 @@
               "badge": "Daily Entrees",
               "items": [
                 {
-                  "name": "Blackened Catfish",
+                  "name": "Barbecue Pulled Pork",
                   "tags": [
-                    "seafood"
+                    "meat"
                   ]
                 },
                 {
-                  "name": "Grilled Santa Maria Chicken",
-                  "tags": [
-                    "poultry"
-                  ]
-                },
-                {
-                  "name": "Wild Rice Pilaf",
+                  "name": "Smoked Mesquite Drumsticks",
                   "tags": []
                 },
                 {
-                  "name": "Mashed Potatoes",
+                  "name": "Cornbread with Honey Butter",
+                  "tags": []
+                },
+                {
+                  "name": "Loaded Mashed Potatoes",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Roasted Broccolini",
+                  "name": "Baked Beans",
+                  "tags": []
+                },
+                {
+                  "name": "Air-Fried Balsamic Brussels Sprouts",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Steamed Green Beans",
+                  "name": "Buttered Corn",
                   "tags": []
                 },
                 {
-                  "name": "Vegan Blackened Tofu with Cajun Rice",
+                  "name": "Vegan Pulled \"Pork\"",
                   "tags": [
-                    "vegan"
+                    "meat"
                   ]
                 }
               ]
@@ -1548,9 +1545,9 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Grilled Firecracker Chicken",
+                  "name": "Tortilla Crusted Tilapia",
                   "tags": [
-                    "poultry"
+                    "seafood"
                   ]
                 },
                 {
@@ -1558,21 +1555,21 @@
                   "tags": []
                 },
                 {
-                  "name": "Prince Edward Vegetable Blend",
+                  "name": "California Normandy Vegetable Blend",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Five-Spice Fried Rice with Edamame",
+                  "name": "Vegan Chicken Nuggets",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Vegan Mashed Potatoes",
                   "tags": [
                     "vegan"
-                  ]
-                },
-                {
-                  "name": "Beer Cheddar Macaroni and Cheese",
-                  "tags": [
-                    "vegetarian"
                   ]
                 }
               ]
@@ -1582,7 +1579,7 @@
               "badge": "Specialty Bar",
               "items": [
                 {
-                  "name": "Hot Dog Bar",
+                  "name": "Breakfast Bar",
                   "tags": []
                 }
               ]
@@ -1628,25 +1625,23 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Honey Glazed Chicken",
+                  "name": "Baked Yogurt Chicken",
                   "tags": [
                     "poultry"
                   ]
                 },
                 {
-                  "name": "Country Fried Steak",
+                  "name": "Pot Roast",
+                  "tags": []
+                },
+                {
+                  "name": "Spicy Pork Tips",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Pork Steak with Henry Sauce",
-                  "tags": [
-                    "meat"
-                  ]
-                },
-                {
-                  "name": "Fried Catfish Nuggets",
+                  "name": "Campfire Cod",
                   "tags": [
                     "seafood"
                   ]
@@ -1772,43 +1767,43 @@
               "badge": "Daily Entrees",
               "items": [
                 {
-                  "name": "Barbecue Pulled Pork",
+                  "name": "Ranch Chicken",
                   "tags": [
-                    "meat"
+                    "poultry"
                   ]
                 },
                 {
-                  "name": "Smoked Mesquite Drumsticks",
-                  "tags": []
+                  "name": "Chicken Cordon Bleu",
+                  "tags": [
+                    "poultry"
+                  ]
                 },
                 {
-                  "name": "Cornbread with Honey Butter",
-                  "tags": []
-                },
-                {
-                  "name": "Loaded Mashed Potatoes",
+                  "name": "Au Gratin Potatoes",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Baked Beans",
+                  "name": "Brown Rice",
                   "tags": []
                 },
                 {
-                  "name": "Air-Fried Balsamic Brussels Sprouts",
+                  "name": "Citrus Grilled Broccoli and Cauliflower",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Buttered Corn",
-                  "tags": []
+                  "name": "Air-Fried Buffalo Brussels Sprouts",
+                  "tags": [
+                    "vegetarian"
+                  ]
                 },
                 {
-                  "name": "Vegan Pulled \"Pork\"",
+                  "name": "Vegan Impossible Tenders",
                   "tags": [
-                    "meat"
+                    "vegan"
                   ]
                 }
               ]
@@ -2137,29 +2132,41 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Chili Lime Salmon",
+                  "name": "Grilled Pork Chops",
                   "tags": [
-                    "seafood"
+                    "meat"
                   ]
                 },
                 {
-                  "name": "Fire Roasted Corn and Peppers",
-                  "tags": []
-                },
-                {
-                  "name": "Steamed Broccoli",
+                  "name": "Yukon Gold Mashed Potatoes",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Vegan Shepherd's Pie",
+                  "name": "Pork Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Prince Edward Vegetable Blend",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Cashew and Tofu Stir-Fry",
                   "tags": [
                     "vegan"
                   ]
                 },
                 {
-                  "name": "Cheese Enchiladas",
+                  "name": "Steamed Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Breaded Eggplant with Diced Tomatoes, Cucumber and Feta",
                   "tags": [
                     "vegetarian"
                   ]
@@ -2219,23 +2226,25 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Focaccia Chicken with Sun Dried Tomato Pesto",
+                  "name": "Chicken Bayou",
                   "tags": [
                     "poultry"
                   ]
                 },
                 {
-                  "name": "Johnny Marzetti Beef",
+                  "name": "Beef Dirty Rice",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Stuffed Shells",
-                  "tags": []
+                  "name": "Cajun Fried Pork Cutlets",
+                  "tags": [
+                    "meat"
+                  ]
                 },
                 {
-                  "name": "Baked Salmon with Gazpacho Relish",
+                  "name": "Cajun Baked Salmon",
                   "tags": [
                     "seafood"
                   ]
@@ -2367,39 +2376,43 @@
               "badge": "Daily Entrees",
               "items": [
                 {
-                  "name": "Lasagna",
-                  "tags": [
-                    "vegetarian"
-                  ]
-                },
-                {
-                  "name": "Grilled Chicken Parmesan",
+                  "name": "Chicken Kiev",
                   "tags": [
                     "poultry"
                   ]
                 },
                 {
-                  "name": "Brown Rice",
-                  "tags": []
+                  "name": "Honey Balsamic Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
                 },
                 {
-                  "name": "Pasta Al Fresca",
-                  "tags": []
-                },
-                {
-                  "name": "White Wine Braised Mushrooms and Onions",
+                  "name": "Rosemary Parmesan Smashed Potatoes",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Roasted Ratatouille",
+                  "name": "Lemon Garlic Butter Pasta",
                   "tags": []
                 },
                 {
-                  "name": "Vegan Eggplant Parmesan",
+                  "name": "Garlic, Herb and Parmesan Squash",
                   "tags": [
                     "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Broccoli and Bell Peppers",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Vegan Stuffed Acorn Squash",
+                  "tags": [
+                    "vegan"
                   ]
                 }
               ]
@@ -2441,34 +2454,32 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Bacon Wrapped Meatloaf",
+                  "name": "Garlic and Herb Grilled Chicken with Lemon Dill Cream Sauce",
                   "tags": [
-                    "meat"
+                    "poultry"
                   ]
                 },
                 {
-                  "name": "Yukon Gold Mashed Potatoes",
+                  "name": "Rice Pilaf",
+                  "tags": []
+                },
+                {
+                  "name": "Italian Vegetable Blend",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Brown Gravy",
+                  "name": "Vegan Macaroni and Cheese",
                   "tags": [
-                    "meat"
+                    "vegetarian"
                   ]
                 },
                 {
-                  "name": "Seasoned Green Beans",
-                  "tags": []
-                },
-                {
-                  "name": "Chickpea Noodle Soup",
-                  "tags": []
-                },
-                {
-                  "name": "Corn and Black Bean Stuffed Bell Peppers",
-                  "tags": []
+                  "name": "Sesame Garlic Breaded Cauliflower",
+                  "tags": [
+                    "vegetarian"
+                  ]
                 }
               ]
             },
@@ -2525,23 +2536,25 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Focaccia Chicken with Sun Dried Tomato Pesto",
+                  "name": "Chicken Bayou",
                   "tags": [
                     "poultry"
                   ]
                 },
                 {
-                  "name": "Johnny Marzetti Beef",
+                  "name": "Beef Dirty Rice",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Stuffed Shells",
-                  "tags": []
+                  "name": "Cajun Fried Pork Cutlets",
+                  "tags": [
+                    "meat"
+                  ]
                 },
                 {
-                  "name": "Baked Salmon with Gazpacho Relish",
+                  "name": "Cajun Baked Salmon",
                   "tags": [
                     "seafood"
                   ]
@@ -2667,41 +2680,39 @@
               "badge": "Daily Entrees",
               "items": [
                 {
-                  "name": "Chicken Kiev",
+                  "name": "Grilled AP Chicken",
                   "tags": [
                     "poultry"
                   ]
                 },
                 {
-                  "name": "Honey Balsamic Chicken",
+                  "name": "Lemon Pepper Tilapia",
                   "tags": [
-                    "poultry"
+                    "seafood"
                   ]
                 },
                 {
-                  "name": "Rosemary Parmesan Smashed Potatoes",
-                  "tags": [
-                    "vegetarian"
-                  ]
-                },
-                {
-                  "name": "Lemon Garlic Butter Pasta",
+                  "name": "White Rice",
                   "tags": []
                 },
                 {
-                  "name": "Garlic, Herb and Parmesan Squash",
+                  "name": "Roasted Potato Hash",
+                  "tags": []
+                },
+                {
+                  "name": "Roasted Zucchini and Yellow Squash",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Broccoli and Bell Peppers",
+                  "name": "Roasted Garlic and Herb Broccolini",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Vegan Stuffed Acorn Squash",
+                  "name": "Roasted Lemon Pepper Tofu",
                   "tags": [
                     "vegan"
                   ]
@@ -3032,13 +3043,13 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Vietnamese Chicken Curry with Sweet Potatoes",
+                  "name": "Firecracker Salmon",
                   "tags": [
-                    "poultry"
+                    "seafood"
                   ]
                 },
                 {
-                  "name": "Coconut Rice",
+                  "name": "Creamy Garlic Rice",
                   "tags": []
                 },
                 {
@@ -3048,13 +3059,13 @@
                   ]
                 },
                 {
-                  "name": "Vegan Coconut Cashew Curry",
+                  "name": "Vegan Pad Thai",
                   "tags": [
                     "vegan"
                   ]
                 },
                 {
-                  "name": "Eggplant Parmesan",
+                  "name": "White Cheddar Macaroni and Cheese",
                   "tags": [
                     "vegetarian"
                   ]
@@ -3066,7 +3077,7 @@
               "badge": "Specialty Bar",
               "items": [
                 {
-                  "name": "Barbecue Bar",
+                  "name": "Italian Bar",
                   "tags": []
                 }
               ]
@@ -3112,21 +3123,25 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Sliced Smoked Turkey",
-                  "tags": []
+                  "name": "Orange Glazed Chicken Breast",
+                  "tags": [
+                    "poultry"
+                  ]
                 },
                 {
-                  "name": "Pot Roast",
-                  "tags": []
-                },
-                {
-                  "name": "Grilled Ham Steak with Pineapple Glaze",
+                  "name": "Curry Lime Beef",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Potato Crusted Cod",
+                  "name": "Teriyaki Glazed Pork Loin",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Coconut Shrimp",
                   "tags": [
                     "seafood"
                   ]
@@ -3258,41 +3273,41 @@
               "badge": "Daily Entrees",
               "items": [
                 {
-                  "name": "Char Siu Pork",
-                  "tags": [
-                    "meat"
-                  ]
-                },
-                {
-                  "name": "Orange Chicken",
+                  "name": "Lemon Rosemary Chicken",
                   "tags": [
                     "poultry"
                   ]
                 },
                 {
-                  "name": "Fried Rice",
-                  "tags": []
+                  "name": "Honey Miso Chicken with Honey Garlic Glaze",
+                  "tags": [
+                    "poultry"
+                  ]
                 },
                 {
-                  "name": "Jasmine Rice",
-                  "tags": []
-                },
-                {
-                  "name": "Pot Stickers",
-                  "tags": []
-                },
-                {
-                  "name": "Asian Garlic Green Beans",
-                  "tags": []
-                },
-                {
-                  "name": "Stir-Fried Vegetables",
+                  "name": "Cheddar and Chive Pancakes",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Vegan Fried Rice",
+                  "name": "Brown Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Steamed Carrots and Roasted Beets",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Roasted Winter Squash",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Vegan Stuffed Mushrooms",
                   "tags": [
                     "vegan"
                   ]
@@ -3336,27 +3351,35 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Orange Ginger Tenderloin",
-                  "tags": []
+                  "name": "Teriyaki Flank Steak",
+                  "tags": [
+                    "meat"
+                  ]
                 },
                 {
                   "name": "Steamed Rice",
                   "tags": []
                 },
                 {
-                  "name": "Stir-Fried Vegetables",
+                  "name": "Steamed Broccoli",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Vegan Corn and Green Chili Flautas",
+                  "name": "Barbecue Tofu",
                   "tags": [
                     "vegan"
                   ]
                 },
                 {
-                  "name": "Cheesy Lasagna Rollups",
+                  "name": "Corn on the Cob",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Cheese Enchiladas",
                   "tags": [
                     "vegetarian"
                   ]
@@ -3368,7 +3391,7 @@
               "badge": "Specialty Bar",
               "items": [
                 {
-                  "name": "Barbecue Bar",
+                  "name": "Italian Bar",
                   "tags": []
                 }
               ]
@@ -3414,21 +3437,25 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Sliced Smoked Turkey",
-                  "tags": []
+                  "name": "Orange Glazed Chicken Breast",
+                  "tags": [
+                    "poultry"
+                  ]
                 },
                 {
-                  "name": "Pot Roast",
-                  "tags": []
-                },
-                {
-                  "name": "Grilled Ham Steak with Pineapple Glaze",
+                  "name": "Curry Lime Beef",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Potato Crusted Cod",
+                  "name": "Teriyaki Glazed Pork Loin",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Coconut Shrimp",
                   "tags": [
                     "seafood"
                   ]
@@ -3524,41 +3551,45 @@
               "badge": "Daily Entrees",
               "items": [
                 {
-                  "name": "Lemon Rosemary Chicken",
+                  "name": "Tortellini with Sausage",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Sauteed Lemon Thyme Shrimp",
+                  "tags": [
+                    "seafood"
+                  ]
+                },
+                {
+                  "name": "Grilled Chicken with Bruschetta",
                   "tags": [
                     "poultry"
                   ]
                 },
                 {
-                  "name": "Honey Miso Chicken with Honey Garlic Glaze",
-                  "tags": [
-                    "poultry"
-                  ]
-                },
-                {
-                  "name": "Cheddar and Chive Pancakes",
+                  "name": "Crispy Garlic Parmesan Potatoes",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Brown Rice",
+                  "name": "Garlic Rice",
                   "tags": []
                 },
                 {
-                  "name": "Steamed Carrots and Roasted Beets",
+                  "name": "Grilled Asparagus",
+                  "tags": []
+                },
+                {
+                  "name": "Italian Spaghetti Squash",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Roasted Winter Squash",
-                  "tags": [
-                    "vegetarian"
-                  ]
-                },
-                {
-                  "name": "Vegan Stuffed Mushrooms",
+                  "name": "Vegan Creamy Tomato Pasta",
                   "tags": [
                     "vegan"
                   ]
@@ -3889,10 +3920,9 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Chicken Fried Steak",
+                  "name": "Chicken Fried Chicken",
                   "tags": [
-                    "poultry",
-                    "meat"
+                    "poultry"
                   ]
                 },
                 {
@@ -3908,21 +3938,19 @@
                   ]
                 },
                 {
-                  "name": "Seasoned Green Beans",
-                  "tags": []
+                  "name": "California Normandy Vegetable Blend",
+                  "tags": [
+                    "vegetarian"
+                  ]
                 },
                 {
-                  "name": "Quinoa Tofu Stir-Fry with Peanut Sauce",
+                  "name": "Vegan Corn and Green Chili Flautas",
                   "tags": [
                     "vegan"
                   ]
                 },
                 {
-                  "name": "Steamed Rice",
-                  "tags": []
-                },
-                {
-                  "name": "Roasted Portabellas with Feta and Olives",
+                  "name": "White Bean and Sweet Potato Chili",
                   "tags": []
                 }
               ]
@@ -3980,23 +4008,25 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Arroz con Pollo",
-                  "tags": []
+                  "name": "Chicken Pot Pie",
+                  "tags": [
+                    "poultry"
+                  ]
                 },
                 {
-                  "name": "Mexican Beef Tips",
+                  "name": "Jalapeño Bacon Meatloaf",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Spicy Sweet Pork Ribs",
+                  "name": "Bacon Wrapped Pork Kabobs with Adobo Sauce",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Tortilla Tilapia",
+                  "name": "Beer Battered Cod",
                   "tags": [
                     "seafood"
                   ]
@@ -4104,43 +4134,37 @@
               "badge": "Daily Entrees",
               "items": [
                 {
-                  "name": "Seared Honey Chipotle Chicken",
+                  "name": "Chipotle Ranch Salmon",
+                  "tags": [
+                    "seafood"
+                  ]
+                },
+                {
+                  "name": "Seared Chipotle Orange Chicken",
                   "tags": [
                     "poultry"
                   ]
                 },
                 {
-                  "name": "Grilled Mesquite Chicken",
-                  "tags": [
-                    "poultry"
-                  ]
-                },
-                {
-                  "name": "Jalapeño Gouda Mashed Potatoes",
+                  "name": "Cilantro Lime Sweet Potatoes",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Roasted Cauliflower and Bell Peppers",
-                  "tags": [
-                    "vegetarian"
-                  ]
-                },
-                {
-                  "name": "Roasted Butternut Squash",
-                  "tags": [
-                    "vegetarian"
-                  ]
-                },
-                {
-                  "name": "White Rice",
+                  "name": "Pineapple Coconut Rice",
                   "tags": []
                 },
                 {
-                  "name": "Vegan Southwest Stuffed Peppers",
+                  "name": "Sauteed Peppers, Onions and Squash",
                   "tags": [
-                    "vegan"
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Broccolini with Balsamic Tomatoes",
+                  "tags": [
+                    "vegetarian"
                   ]
                 }
               ]
@@ -4182,25 +4206,31 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Breaded Sole with Lemon Butter Sauce",
-                  "tags": []
+                  "name": "Pesto Pork Tenderloin",
+                  "tags": [
+                    "meat"
+                  ]
                 },
                 {
-                  "name": "Rice Pilaf",
-                  "tags": []
-                },
-                {
-                  "name": "Prince Edward Vegetable Blend",
+                  "name": "Roasted Yukon Gold Potatoes",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "White Bean and Sweet Potato Chili",
-                  "tags": []
+                  "name": "Capri Vegetable Blend",
+                  "tags": [
+                    "vegetarian"
+                  ]
                 },
                 {
-                  "name": "Cauliflower Au Gratin",
+                  "name": "Seasoned Cauliflower Fajitas",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Vegetable Fried Rice",
                   "tags": [
                     "vegetarian"
                   ]
@@ -4260,23 +4290,25 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Arroz con Pollo",
-                  "tags": []
+                  "name": "Chicken Pot Pie",
+                  "tags": [
+                    "poultry"
+                  ]
                 },
                 {
-                  "name": "Mexican Beef Tips",
+                  "name": "Jalapeño Bacon Meatloaf",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Spicy Sweet Pork Ribs",
+                  "name": "Bacon Wrapped Pork Kabobs with Adobo Sauce",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Tortilla Tilapia",
+                  "name": "Beer Battered Cod",
                   "tags": [
                     "seafood"
                   ]
@@ -4412,23 +4444,23 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Pesto Pork Tenderloin",
+                  "name": "Stuffed Bell Peppers with Beef and Rice",
                   "tags": [
                     "meat"
                   ]
                 },
                 {
-                  "name": "Garlic Rice",
-                  "tags": []
-                },
-                {
-                  "name": "Caribbean Vegetable Blend",
+                  "name": "Roasted Red Potatoes",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Lemony Lentil Stew",
+                  "name": "Seasoned Green Beans",
+                  "tags": []
+                },
+                {
+                  "name": "Black Bean and Sweet Potato Enchiladas",
                   "tags": []
                 }
               ]
@@ -4553,28 +4585,26 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Sweet and Sour Chicken",
+                  "name": "Parmesan Crusted Tilapia",
                   "tags": [
-                    "poultry"
+                    "seafood"
                   ]
                 },
                 {
-                  "name": "Steamed Rice",
+                  "name": "Garlic Rice",
                   "tags": []
                 },
                 {
-                  "name": "Stir-Fried Vegetables",
+                  "name": "Prince Edward Vegetable Blend",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Chickpea Tikka Masala",
-                  "tags": []
-                },
-                {
-                  "name": "Basmati Rice",
-                  "tags": []
+                  "name": "Vegan Pad Thai",
+                  "tags": [
+                    "vegan"
+                  ]
                 }
               ]
             },
@@ -4715,21 +4745,33 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Jerked Swai with Apple Pineapple Pico",
-                  "tags": []
+                  "name": "Grilled Pork Chops",
+                  "tags": [
+                    "meat"
+                  ]
                 },
                 {
-                  "name": "Coconut Rice",
-                  "tags": []
-                },
-                {
-                  "name": "California Normandy Vegetable Blend",
+                  "name": "Buttery Mashed Potatoes",
                   "tags": [
                     "vegetarian"
                   ]
                 },
                 {
-                  "name": "Corn and Black Bean Stuffed Bell Peppers",
+                  "name": "Pork Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "California Normandy Blend",
+                  "tags": []
+                },
+                {
+                  "name": "Chickpea Tikka Masala",
+                  "tags": []
+                },
+                {
+                  "name": "Basmati Rice",
                   "tags": []
                 }
               ]
@@ -4854,21 +4896,23 @@
               "badge": "Featured Entrees",
               "items": [
                 {
-                  "name": "Beef Lasagna",
+                  "name": "Orange Ginger Chicken",
                   "tags": [
-                    "meat"
+                    "poultry"
                   ]
                 },
                 {
-                  "name": "Garlic Breadsticks",
+                  "name": "Steamed Rice",
                   "tags": []
                 },
                 {
-                  "name": "Italian Blend",
-                  "tags": []
+                  "name": "Steamed Broccoli",
+                  "tags": [
+                    "vegetarian"
+                  ]
                 },
                 {
-                  "name": "Vegan Lasagna",
+                  "name": "Five-Spice Fried Rice with Edamame",
                   "tags": [
                     "vegan"
                   ]
