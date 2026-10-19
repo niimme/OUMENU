@@ -442,7 +442,7 @@ def build_combined_matrix(raw_parsed):
             'url_dinner': URLS['wagner_dinner']['url'],
             'hours_breakfast': '7:00 AM – 10:30 AM (M–F)',
             'hours_lunch': '11:00 AM – 1:30 PM',
-            'hours_dinner': '5:00 PM – 7:30 PM (Sun–Thu)',
+            'hours_dinner': '5:00 PM – 8:00 PM (Sun–Thu)',
             'summary': 'Located inside Headington Hall (not to be confused with Headington College). Features high-performance scratch cooking with daily made-to-order eggs & waffles, hot breakfast scrambles, fresh lunch/dinner entrees, and custom kitchens.'
         }
     }

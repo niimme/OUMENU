@@ -6,9 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   let menuData = null;
   let activeDay = 'Monday';
-  let activeMealFilter = 'all'; // 'all' (Split View), 'lunch', 'dinner'
-  let currentSearchQuery = '';
-  let activeDietaryTags = new Set();
+  let activeMealFilter = 'all'; // 'all' (Split View), 'breakfast', 'lunch', 'dinner'
 
   // DOM Elements
   const weekLabel = document.getElementById('week-label');
@@ -16,26 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const activeTodayBadge = document.getElementById('active-today-badge');
   const activeDaySubtitle = document.getElementById('active-day-subtitle');
   const splitMenusContainer = document.getElementById('split-menus-container');
-  const breakfastDayLabel = document.getElementById('breakfast-day-label');
-  const lunchDayLabel = document.getElementById('lunch-day-label');
-  const dinnerDayLabel = document.getElementById('dinner-day-label');
-  const breakfastSplitBlock = document.getElementById('breakfast-split-block');
-  const lunchSplitBlock = document.getElementById('lunch-split-block');
-  const dinnerSplitBlock = document.getElementById('dinner-split-block');
-  const breakfastCardsRow = document.getElementById('breakfast-cards-row');
   const lunchCardsRow = document.getElementById('lunch-cards-row');
-  const dinnerCardsRow = document.getElementById('dinner-cards-row');
   const dayNavButtonsContainer = document.getElementById('day-nav-buttons');
-  const searchInput = document.getElementById('dish-search');
-  const clearSearchBtn = document.getElementById('clear-search');
-  const searchMatchCount = document.getElementById('search-match-count');
   const mealFilterContainer = document.getElementById('meal-filter');
-  const dietaryFilterContainer = document.getElementById('dietary-filter');
-  const btnToday = document.getElementById('btn-today-shortcut');
-  const btnPrint = document.getElementById('btn-print');
-  const btnEverydayModal = document.getElementById('btn-everyday-modal');
-  const everydayModal = document.getElementById('everyday-modal');
-  const modalCloseBtn = document.getElementById('modal-close-btn');
 
   // Detect current day
   const todayDayName = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(new Date());
@@ -70,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
       icon: '🏆',
       hoursBreakfast: '7:00 AM – 10:30 AM (M–F)',
       hoursLunch: '11:00 AM – 1:30 PM',
-      hoursDinner: '5:00 PM – 7:30 PM (Sun–Thu)'
+      hoursDinner: '5:00 PM – 8:00 PM (Sun–Thu)'
     }
   ];
 
@@ -85,19 +66,21 @@ document.addEventListener('DOMContentLoaded', () => {
       initApp();
     } catch (err) {
       console.error('Failed to load menu data:', err);
-      lunchCardsRow.innerHTML = `
-        <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: #dc2626; background: #fff; border-radius: 12px;">
-          <h3>Failed to load dining menu data</h3>
-          <p style="margin-top: 0.5rem; color: #6b7280;">Please run <code>python3 scrape_menus.py</code> in the terminal to refresh the local data cache.</p>
-        </div>
-      `;
+      if (lunchCardsRow) {
+        lunchCardsRow.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: #dc2626; background: #fff; border-radius: 12px;">
+            <h3>Failed to load dining menu data</h3>
+            <p style="margin-top: 0.5rem; color: #6b7280;">Please run <code>python3 scrape_menus.py</code> in the terminal to refresh the local data cache.</p>
+          </div>
+        `;
+      }
     }
   }
 
   function initApp() {
     if (!menuData) return;
 
-    if (menuData.week_info) {
+    if (menuData.week_info && weekLabel) {
       weekLabel.textContent = menuData.week_info;
     }
 
@@ -114,69 +97,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function setupEventListeners() {
-    // Search
-    searchInput.addEventListener('input', (e) => {
-      currentSearchQuery = e.target.value.trim().toLowerCase();
-      clearSearchBtn.style.display = currentSearchQuery ? 'block' : 'none';
-      applyFiltersAndHighlights();
-    });
-
-    clearSearchBtn.addEventListener('click', () => {
-      searchInput.value = '';
-      currentSearchQuery = '';
-      clearSearchBtn.style.display = 'none';
-      applyFiltersAndHighlights();
-      searchInput.focus();
-    });
-
-    // Meal Filter (Split View / Lunch Only / Dinner Only)
-    mealFilterContainer.addEventListener('click', (e) => {
-      const btn = e.target.closest('.seg-btn');
-      if (!btn) return;
-      mealFilterContainer.querySelectorAll('.seg-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeMealFilter = btn.dataset.meal;
-      updateMealSectionVisibility();
-      applyFiltersAndHighlights();
-    });
-
-    // Dietary Filter Chips
-    dietaryFilterContainer.addEventListener('click', (e) => {
-      const chip = e.target.closest('.diet-chip');
-      if (!chip) return;
-      const tag = chip.dataset.tag;
-      if (activeDietaryTags.has(tag)) {
-        activeDietaryTags.delete(tag);
-        chip.classList.remove('active');
-      } else {
-        activeDietaryTags.add(tag);
-        chip.classList.add('active');
-      }
-      applyFiltersAndHighlights();
-    });
-
-    // Today Shortcut Button
-    btnToday.addEventListener('click', () => {
-      switchDay(todayDayName);
-    });
-
-    // Everyday Stations Modal
-    btnEverydayModal.addEventListener('click', () => {
-      everydayModal.style.display = 'flex';
-    });
-    modalCloseBtn.addEventListener('click', () => {
-      everydayModal.style.display = 'none';
-    });
-    everydayModal.addEventListener('click', (e) => {
-      if (e.target === everydayModal) {
-        everydayModal.style.display = 'none';
-      }
-    });
-
-    // Print
-    btnPrint.addEventListener('click', () => {
-      window.print();
-    });
+    // Meal Filter (Split View / Breakfast Only / Lunch Only / Dinner Only)
+    if (mealFilterContainer) {
+      mealFilterContainer.addEventListener('click', (e) => {
+        const btn = e.target.closest('.seg-btn');
+        if (!btn) return;
+        mealFilterContainer.querySelectorAll('.seg-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMealFilter = btn.dataset.meal;
+        updateMealSectionVisibility();
+      });
+    }
 
     // Back to top floating button
     const btnBackToTop = document.getElementById('btn-back-to-top');
@@ -199,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Day Navigation
   // =========================================================================
   function renderDayNavButtons() {
+    if (!dayNavButtonsContainer) return;
     dayNavButtonsContainer.innerHTML = '';
 
     // "All Days" button
@@ -248,15 +180,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function switchDay(day) {
     activeDay = day;
-    dayNavButtonsContainer.querySelectorAll('.day-nav-btn').forEach(btn => {
-      const isMatch = btn.dataset.day === day;
-      btn.classList.toggle('active', isMatch);
-      if (isMatch) {
-        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-      }
-    });
+    if (dayNavButtonsContainer) {
+      dayNavButtonsContainer.querySelectorAll('.day-nav-btn').forEach(btn => {
+        const isMatch = btn.dataset.day === day;
+        btn.classList.toggle('active', isMatch);
+        if (isMatch) {
+          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+      });
+    }
     renderDayMenus(day);
-    applyFiltersAndHighlights();
   }
 
   // =========================================================================
@@ -302,8 +235,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderDayMenus(day) {
     if (day === 'all') {
-      activeDayHeading.textContent = 'All Days (Monday – Sunday)';
-      activeTodayBadge.style.display = 'none';
+      if (activeDayHeading) activeDayHeading.textContent = 'All Days (Monday – Sunday)';
+      if (activeTodayBadge) activeTodayBadge.style.display = 'none';
       if (activeDaySubtitle) {
         activeDaySubtitle.innerHTML = `Showing complete menus for <strong>all 7 days</strong> across campus dining locations`;
       }
@@ -348,9 +281,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Single Day View
-    activeDayHeading.textContent = day;
+    if (activeDayHeading) activeDayHeading.textContent = day;
     const isToday = day.toLowerCase() === todayDayName.toLowerCase();
-    activeTodayBadge.style.display = isToday ? 'inline-block' : 'none';
+    if (activeTodayBadge) activeTodayBadge.style.display = isToday ? 'inline-block' : 'none';
     if (activeDaySubtitle) {
       activeDaySubtitle.innerHTML = `Split into dedicated <strong>🥞 Breakfast</strong>, <strong>☀️ Lunch</strong>, and <strong>🌙 Dinner</strong> cards across all 3 dining locations`;
     }
@@ -453,25 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
       station.items.forEach(item => {
         const li = document.createElement('li');
         li.className = 'dish-item';
-        li.dataset.dishName = item.name.toLowerCase();
-        li.dataset.tags = (item.tags || []).join(',');
-
-        let tagsHtml = '';
-        if (item.tags && item.tags.length > 0) {
-          tagsHtml = item.tags.map(tag => {
-            if (tag === 'vegan') return `<span class="dietary-tag tag-vegan" title="Vegan">🌱 Vegan</span>`;
-            if (tag === 'vegetarian') return `<span class="dietary-tag tag-vegetarian" title="Vegetarian">🥗 Veg</span>`;
-            if (tag === 'seafood') return `<span class="dietary-tag tag-seafood" title="Seafood">🐟 Seafood</span>`;
-            if (tag === 'poultry') return `<span class="dietary-tag tag-poultry" title="Poultry">🍗 Poultry</span>`;
-            if (tag === 'meat') return `<span class="dietary-tag tag-meat" title="Meat">🥩 Meat</span>`;
-            return '';
-          }).join('');
-        }
-
-        li.innerHTML = `
-          <span class="dish-name">${escapeHtml(item.name)}</span>
-          <div class="dish-tags">${tagsHtml}</div>
-        `;
+        li.innerHTML = `<span class="dish-name">${escapeHtml(item.name)}</span>`;
         ul.appendChild(li);
       });
 
@@ -508,80 +423,6 @@ document.addEventListener('DOMContentLoaded', () => {
         b.classList.remove('hidden-by-filter');
       }
     });
-  }
-
-  // =========================================================================
-  // Filtering & Highlighting
-  // =========================================================================
-  function applyFiltersAndHighlights() {
-    const cards = document.querySelectorAll('.split-location-card');
-    let totalMatches = 0;
-    const hasSearch = currentSearchQuery.length > 0;
-    const hasDietary = activeDietaryTags.size > 0;
-
-    cards.forEach(card => {
-      let cardHasSearchMatch = false;
-      const dishItems = card.querySelectorAll('.dish-item');
-
-      dishItems.forEach(item => {
-        const dishName = item.dataset.dishName;
-        const tags = item.dataset.tags ? item.dataset.tags.split(',') : [];
-
-        // Search match
-        if (hasSearch) {
-          if (dishName.includes(currentSearchQuery)) {
-            item.classList.add('search-match');
-            cardHasSearchMatch = true;
-            totalMatches++;
-          } else {
-            item.classList.remove('search-match');
-          }
-        } else {
-          item.classList.remove('search-match');
-        }
-
-        // Dietary match
-        if (hasDietary) {
-          const hasAnySelectedTag = Array.from(activeDietaryTags).some(t => tags.includes(t));
-          if (hasAnySelectedTag) {
-            item.classList.add('diet-match');
-          } else {
-            item.classList.remove('diet-match');
-          }
-        } else {
-          item.classList.remove('diet-match');
-        }
-      });
-
-      if (hasSearch) {
-        if (!cardHasSearchMatch) {
-          card.classList.add('dimmed');
-        } else {
-          card.classList.remove('dimmed');
-        }
-      } else {
-        card.classList.remove('dimmed');
-      }
-    });
-
-    if (activeDay === 'all') {
-      document.querySelectorAll('.day-group-section').forEach(sec => {
-        const hasCardMatch = sec.querySelectorAll('.split-location-card:not(.dimmed)').length > 0;
-        if (hasSearch && !hasCardMatch) {
-          sec.classList.add('dimmed-day');
-        } else {
-          sec.classList.remove('dimmed-day');
-        }
-      });
-    }
-
-    if (hasSearch) {
-      searchMatchCount.style.display = 'block';
-      const scopeText = activeDay === 'all' ? 'across the week' : 'today';
-      searchMatchCount.textContent = `${totalMatches} ${totalMatches === 1 ? 'dish' : 'dishes'} found ${scopeText}`;
-    } else {
-      searchMatchCount.style.display = 'none';
-    }
   }
 
   function escapeHtml(text) {

@@ -50,17 +50,6 @@
   --couch-color: #b45309;
   --wagner-color: #0f766e;
 
-  /* Dietary Tags */
-  --tag-vegan-bg: #ecfdf5;
-  --tag-vegan-text: #047857;
-  --tag-veg-bg: #f0fdf4;
-  --tag-veg-text: #15803d;
-  --tag-seafood-bg: #eff6ff;
-  --tag-seafood-text: #1d4ed8;
-  --tag-meat-bg: #fff1f2;
-  --tag-meat-text: #be123c;
-  --tag-poultry-bg: #fff7ed;
-  --tag-poultry-text: #c2410c;
 
   /* Typography & Effects */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -196,27 +185,6 @@ body {
   50% { opacity: 0.6; transform: scale(0.85); }
 }
 
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 0.42rem 0.85rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.82rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  backdrop-filter: blur(8px);
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-1px);
-}
 
 /* ==========================================================================
    Day Navigation & Filter Bar
@@ -238,72 +206,6 @@ body {
   gap: 0.85rem;
 }
 
-/* Search Bar */
-.search-box-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  width: 100%;
-}
-
-.search-input-container {
-  position: relative;
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
-.search-icon {
-  position: absolute;
-  left: 0.95rem;
-  color: var(--text-muted);
-  pointer-events: none;
-}
-
-#dish-search {
-  width: 100%;
-  padding: 0.65rem 2.6rem 0.65rem 2.6rem;
-  font-size: 1rem;
-  font-family: var(--font-body);
-  border: 1.5px solid var(--border-light);
-  border-radius: var(--radius-md);
-  background-color: var(--bg-card);
-  color: var(--text-main);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-#dish-search:focus {
-  outline: none;
-  border-color: var(--ou-crimson);
-  box-shadow: 0 0 0 3px rgba(132, 22, 23, 0.12);
-}
-
-.clear-btn {
-  position: absolute;
-  right: 0.75rem;
-  background: none;
-  border: none;
-  font-size: 1.3rem;
-  color: var(--text-muted);
-  cursor: pointer;
-  padding: 0.2rem 0.4rem;
-  line-height: 1;
-}
-
-.clear-btn:hover {
-  color: var(--text-main);
-}
-
-.search-match-badge {
-  background: var(--ou-crimson-tint);
-  color: var(--ou-crimson);
-  border: 1px solid var(--ou-crimson-border);
-  padding: 0.4rem 0.75rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.82rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
 
 /* Day Navigation Tabs */
 .day-navigation-bar {
@@ -468,34 +370,6 @@ body {
   transform: scale(0.95);
 }
 
-/* Dietary Chips */
-.dietary-chips-container {
-  display: flex;
-  gap: 0.3rem;
-  flex-wrap: wrap;
-}
-
-.diet-chip {
-  padding: 0.3rem 0.6rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  border: 1px solid var(--border-light);
-  background: #ffffff;
-  color: var(--text-secondary);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.diet-chip:hover { background: var(--bg-card-subtle); }
-
-.diet-chip.active {
-  border-color: var(--ou-gold);
-  background: var(--ou-gold-light);
-  color: #92400e;
-  font-weight: 700;
-  box-shadow: 0 0 0 1px var(--ou-gold);
-}
 
 /* ==========================================================================
    Main Content Layout
@@ -581,9 +455,6 @@ body {
   margin-bottom: 0;
 }
 
-.day-group-section.dimmed-day {
-  opacity: 0.35;
-}
 
 .day-group-header {
   display: flex;
@@ -884,52 +755,6 @@ body {
   min-width: 0;
 }
 
-.dish-tags {
-  display: flex;
-  gap: 0.2rem;
-  flex-shrink: 0;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.dietary-tag {
-  font-size: 0.65rem;
-  font-weight: 600;
-  padding: 0.08rem 0.3rem;
-  border-radius: 3px;
-  line-height: 1.2;
-}
-
-.tag-vegan { background: var(--tag-vegan-bg); color: var(--tag-vegan-text); }
-.tag-vegetarian { background: var(--tag-veg-bg); color: var(--tag-veg-text); }
-.tag-seafood { background: var(--tag-seafood-bg); color: var(--tag-seafood-text); }
-.tag-poultry { background: var(--tag-poultry-bg); color: var(--tag-poultry-text); }
-.tag-meat { background: var(--tag-meat-bg); color: var(--tag-meat-text); }
-
-/* Search Match & Dietary Highlighting */
-.dish-item.search-match {
-  background: #fef08a !important;
-  color: #854d0e !important;
-  font-weight: 700;
-  box-shadow: 0 0 0 2px #facc15;
-  border-radius: 4px;
-  animation: pulse-match 1.5s infinite;
-}
-
-@keyframes pulse-match {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.02); }
-}
-
-.dish-item.diet-match {
-  background: var(--ou-gold-light);
-  border: 1px solid var(--ou-gold);
-  border-radius: 4px;
-}
-
-.split-location-card.dimmed {
-  opacity: 0.28;
-}
 
 /* ==========================================================================
    Campus Dining Halls Directory
@@ -1025,94 +850,6 @@ body {
   text-decoration: underline;
 }
 
-/* ==========================================================================
-   Everyday Stations Modal
-   ========================================================================== */
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(4px);
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.modal-dialog {
-  background: #ffffff;
-  border-radius: var(--radius-lg);
-  max-width: 680px;
-  width: 100%;
-  max-height: 85vh;
-  display: flex;
-  flex-direction: column;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border-light);
-}
-
-.modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.modal-header h3 {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--ou-crimson-dark);
-}
-
-.modal-close {
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  color: var(--text-muted);
-  cursor: pointer;
-  line-height: 1;
-}
-
-.modal-close:hover {
-  color: var(--text-main);
-}
-
-.modal-body {
-  padding: 1.5rem;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.modal-location-section h4 {
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  color: var(--ou-crimson-dark);
-  margin-bottom: 0.25rem;
-}
-
-.modal-sub {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-bottom: 0.5rem;
-}
-
-.modal-list {
-  list-style: square inside;
-  font-size: 0.84rem;
-  color: var(--text-secondary);
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.modal-list strong {
-  color: var(--text-main);
-}
 
 /* ==========================================================================
    Footer
@@ -1224,17 +961,9 @@ body {
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-  #btn-print {
-    display: none !important;
-  }
   .status-pill {
     font-size: 0.76rem;
     padding: 0.32rem 0.7rem;
-  }
-  .btn-secondary {
-    padding: 0.38rem 0.75rem;
-    font-size: 0.78rem;
-    min-height: 38px;
   }
 
   .control-panel-wrapper {
@@ -1309,28 +1038,6 @@ body {
     min-height: 40px;
     font-size: 0.78rem;
     text-align: center;
-  }
-  .dietary-chips-container {
-    width: 100%;
-    display: flex;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    gap: 0.35rem;
-    padding-bottom: 4px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .dietary-chips-container::-webkit-scrollbar {
-    display: none;
-  }
-  .diet-chip {
-    flex: 0 0 auto;
-    min-height: 38px;
-    padding: 0.35rem 0.75rem;
-    font-size: 0.8rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
   }
 
   /* Main container */
@@ -1417,34 +1124,8 @@ body {
     flex: 1 1 100%;
     justify-content: center;
   }
-  #btn-today-shortcut,
-  #btn-everyday-modal {
-    flex: 1 1 auto;
-    justify-content: center;
-    padding: 0.38rem 0.65rem;
-    font-size: 0.78rem;
-    min-height: 38px;
-  }
-
   .control-panel-wrapper {
     padding: 0.65rem 0.75rem;
-  }
-  #dish-search {
-    font-size: 1rem; /* Prevents iOS focus zoom */
-    padding: 0.55rem 2.2rem;
-  }
-  .search-icon {
-    left: 0.75rem;
-    width: 16px;
-    height: 16px;
-  }
-  .clear-btn {
-    right: 0.5rem;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   /* Segmented Control Abbreviation switch */
@@ -1476,44 +1157,6 @@ body {
   .dish-item {
     font-size: 0.82rem;
     padding: 0.28rem 0.35rem;
-  }
-  .dietary-tag {
-    font-size: 0.62rem;
-    padding: 0.06rem 0.25rem;
-  }
-
-  /* Modal Mobile Optimization */
-  .modal-backdrop {
-    padding: 0.5rem;
-  }
-  .modal-dialog {
-    max-height: 90vh;
-    border-radius: var(--radius-md);
-    width: 100%;
-  }
-  .modal-header {
-    padding: 0.75rem 1rem;
-  }
-  .modal-header h3 {
-    font-size: 1.1rem;
-  }
-  .modal-close {
-    min-width: 44px;
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .modal-body {
-    padding: 1rem 0.9rem;
-    gap: 1.15rem;
-  }
-  .modal-location-section h4 {
-    font-size: 0.95rem;
-  }
-  .modal-list {
-    font-size: 0.78rem;
-    line-height: 1.45;
   }
 
   .floating-back-to-top {
@@ -1557,7 +1200,6 @@ body {
   .control-panel-wrapper,
   .stations-directory,
   .site-footer,
-  .btn-secondary,
   .floating-back-to-top {
     display: none !important;
   }
