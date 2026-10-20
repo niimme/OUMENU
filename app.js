@@ -6,7 +6,45 @@
 document.addEventListener('DOMContentLoaded', () => {
   let menuData = null;
   let activeDay = 'Monday';
-  let activeMealFilter = 'all'; // 'all' (Split View), 'breakfast', 'lunch', 'dinner'
+
+  // Automatically determine current meal based on time of day (Central Time / America/Chicago)
+  function getCurrentMealByTime() {
+    let hour = 12;
+    let minute = 0;
+    try {
+      const formatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Chicago',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: false
+      });
+      const parts = formatter.formatToParts(new Date());
+      for (const p of parts) {
+        if (p.type === 'hour') hour = parseInt(p.value, 10);
+        if (p.type === 'minute') minute = parseInt(p.value, 10);
+      }
+      if (hour === 24) hour = 0;
+    } catch (e) {
+      const now = new Date();
+      hour = now.getHours();
+      minute = now.getMinutes();
+    }
+
+    const totalMinutes = hour * 60 + minute;
+
+    // Breakfast: 12:00 AM – 10:30 AM
+    // Lunch: 10:30 AM – 3:00 PM (15:00)
+    // Dinner: 3:00 PM – 11:59 PM
+    if (totalMinutes < 10 * 60 + 30) {
+      return 'breakfast';
+    } else if (totalMinutes < 15 * 60) {
+      return 'lunch';
+    } else {
+      return 'dinner';
+    }
+  }
+
+  let activeMealFilter = getCurrentMealByTime(); // Automatically default to current meal of the day
 
   // DOM Elements
   const splitMenusContainer = document.getElementById('split-menus-container');
@@ -14,8 +52,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const dayNavButtonsContainer = document.getElementById('day-nav-buttons');
   const mealFilterContainer = document.getElementById('meal-filter');
 
-  // Detect current day
-  const todayDayName = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(new Date());
+  // Immediately reflect active meal on segmented control buttons
+  if (mealFilterContainer) {
+    mealFilterContainer.querySelectorAll('.seg-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.meal === activeMealFilter);
+    });
+  }
+
+  // Detect current day (Central Time / America/Chicago)
+  let todayDayName = 'Monday';
+  try {
+    todayDayName = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Chicago',
+      weekday: 'long'
+    }).format(new Date());
+  } catch (e) {
+    todayDayName = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(new Date());
+  }
 
   // Location Metadata
   const locationsMeta = [
@@ -80,6 +133,13 @@ document.addEventListener('DOMContentLoaded', () => {
       activeDay = 'Monday';
     }
 
+    // Ensure meal filter UI button reflects the active meal
+    if (mealFilterContainer) {
+      mealFilterContainer.querySelectorAll('.seg-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.meal === activeMealFilter);
+      });
+    }
+
     renderDayNavButtons();
     renderDayMenus(activeDay);
     setupEventListeners();
@@ -95,6 +155,14 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('active');
         activeMealFilter = btn.dataset.meal;
         updateMealSectionVisibility();
+
+        if (activeMealFilter === 'all') {
+          const currentMeal = getCurrentMealByTime();
+          const targetBlock = document.getElementById(`${currentMeal}-split-block`) || document.querySelector(`.${currentMeal}-block`);
+          if (targetBlock) {
+            targetBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
       });
     }
 
