@@ -18,6 +18,6 @@
 
 ## 🛠️ Tech Stack & Architecture
 
-- **Frontend**: HTML5, CSS3 (modern custom properties, responsive flex/grid layouts), and Vanilla JavaScript (ES6+).
+- **Frontend**: React 18, HTML5, and clean modern minimalist CSS (responsive grid layouts, monochromatic typography, and smooth transitions).
 - **Hosting & Deployment**: [Vercel](https://vercel.com) ([https://oumenu.vercel.app](https://oumenu.vercel.app)).
 - **Scraper & Data Pipeline**: Python script (`scrape_menus.py`) with `BeautifulSoup` to parse official University of Oklahoma dining pages into structured `data/menu_data.json`.

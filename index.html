@@ -3,167 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OU Dining Menus | University of Oklahoma</title>
-  <meta name="description" content="University of Oklahoma campus dining menus with day selection and split lunch and dinner cards for Residential Colleges, Couch Restaurants, and Wagner Dining Hall.">
-  <link rel="canonical" href="https://oumenu.vercel.app/">
-  <meta property="og:title" content="OU Dining Menus | University of Oklahoma">
-  <meta property="og:description" content="University of Oklahoma campus dining menus with day selection and split lunch and dinner cards for Residential Colleges, Couch Restaurants, and Wagner Dining Hall.">
-  <meta property="og:url" content="https://oumenu.vercel.app/">
-  <meta property="og:type" content="website">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>OU Dining Menus — University of Oklahoma</title>
+  <meta name="description" content="Minimalist, live weekly dining menus for the University of Oklahoma: Residential Colleges, Couch Restaurants, and Wagner Dining Hall.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- React 18 & Babel Standalone -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
+  <div id="root"></div>
 
-  <!-- Sticky Day Selector & Filter Bar -->
-  <section class="control-panel-wrapper">
-    <div class="control-panel">
-      <!-- Day Navigation Bar -->
-      <div class="day-navigation-bar">
-        <div class="day-nav-label">Day of Week:</div>
-        <div class="day-buttons-group" id="day-nav-buttons">
-          <button class="day-nav-btn all-days-btn" data-day="all">
-            <span class="day-abbr">All</span>
-            <span class="day-full">All Days</span>
-          </button>
-          <button class="day-nav-btn active" data-day="Monday">
-            <span class="day-abbr">Mon 10/19</span>
-            <span class="day-full">Monday, Oct 19</span>
-          </button>
-          <button class="day-nav-btn" data-day="Tuesday">
-            <span class="day-abbr">Tue 10/20</span>
-            <span class="day-full">Tuesday, Oct 20</span>
-          </button>
-          <button class="day-nav-btn" data-day="Wednesday">
-            <span class="day-abbr">Wed 10/21</span>
-            <span class="day-full">Wednesday, Oct 21</span>
-          </button>
-          <button class="day-nav-btn" data-day="Thursday">
-            <span class="day-abbr">Thu 10/22</span>
-            <span class="day-full">Thursday, Oct 22</span>
-          </button>
-          <button class="day-nav-btn" data-day="Friday">
-            <span class="day-abbr">Fri 10/23</span>
-            <span class="day-full">Friday, Oct 23</span>
-          </button>
-          <button class="day-nav-btn" data-day="Saturday">
-            <span class="day-abbr">Sat 10/24</span>
-            <span class="day-full">Saturday, Oct 24</span>
-          </button>
-          <button class="day-nav-btn" data-day="Sunday">
-            <span class="day-abbr">Sun 10/25</span>
-            <span class="day-full">Sunday, Oct 25</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Secondary Filters: Split Meal View -->
-      <div class="filters-row">
-        <!-- Meal Split Switcher -->
-        <div class="filter-group">
-          <label class="filter-label">Meal View:</label>
-          <div class="segmented-control" id="meal-filter">
-            <button class="seg-btn" data-meal="all" title="View all meals in split sections">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
-              <span class="seg-text-full">Split View (All)</span>
-              <span class="seg-text-abbr">All</span>
-            </button>
-            <button class="seg-btn" data-meal="breakfast" title="View Breakfast only">
-              <span class="seg-text-full">Breakfast</span>
-              <span class="seg-text-abbr">Bkfst</span>
-            </button>
-            <button class="seg-btn" data-meal="lunch" title="View Lunch only">
-              <span class="seg-text-full">Lunch</span>
-              <span class="seg-text-abbr">Lunch</span>
-            </button>
-            <button class="seg-btn" data-meal="dinner" title="View Dinner only">
-              <span class="seg-text-full">Dinner</span>
-              <span class="seg-text-abbr">Dinner</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content Container: SPLIT MEAL SECTIONS -->
-  <main class="main-container">
-
-    <!-- Main Menus Split Container -->
-    <div class="split-menus-container" id="split-menus-container">
-      <!-- SECTION 0: BREAKFAST SECTION (3 location cards side-by-side) -->
-      <section class="meal-split-block breakfast-block" id="breakfast-split-block">
-        <div class="meal-split-header breakfast-header">
-          <div class="meal-header-title">
-            <span class="meal-header-text">Breakfast Menus</span>
-            <span class="meal-header-day" id="breakfast-day-label">• Monday, Oct 19</span>
-          </div>
-        </div>
-        <div class="meal-cards-row" id="breakfast-cards-row">
-          <!-- Populated dynamically by app.js -->
-        </div>
-      </section>
-
-      <!-- SECTION 1: LUNCH SECTION (3 location cards side-by-side) -->
-      <section class="meal-split-block lunch-block" id="lunch-split-block">
-        <div class="meal-split-header lunch-header">
-          <div class="meal-header-title">
-            <span class="meal-header-text">Lunch Menus</span>
-            <span class="meal-header-day" id="lunch-day-label">• Monday, Oct 19</span>
-          </div>
-        </div>
-        <div class="meal-cards-row" id="lunch-cards-row">
-          <!-- Populated dynamically by app.js -->
-        </div>
-      </section>
-
-      <!-- SECTION 2: DINNER SECTION (3 location cards side-by-side) -->
-      <section class="meal-split-block dinner-block" id="dinner-split-block">
-        <div class="meal-split-header dinner-header">
-          <div class="meal-header-title">
-            <span class="meal-header-text">Dinner Menus</span>
-            <span class="meal-header-day" id="dinner-day-label">• Monday, Oct 19</span>
-          </div>
-        </div>
-        <div class="meal-cards-row" id="dinner-cards-row">
-          <!-- Populated dynamically by app.js -->
-        </div>
-      </section>
-    </div>
-  </main>
-
-
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-info">
-        <p><strong>The University of Oklahoma &bull; Housing and Food Services</strong></p>
-        <p class="footer-disclaimer">
-          Menus, ingredients, and station offerings are subject to change. For allergen and dietary consultations, contact the OU Registered Dietician and Ingredient Specialist.
-        </p>
-      </div>
-      <div class="footer-source-links">
-        <span class="footer-sources-title">Official Sources:</span>
-        <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-breakfast" target="_blank" rel="noopener">Wagner Breakfast</a> &bull;
-        <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/residential-colleges-lunch-menu" target="_blank" rel="noopener">Res Colleges Lunch</a> &bull;
-        <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/residential-colleges-dinner-menu" target="_blank" rel="noopener">Res Colleges Dinner</a> &bull;
-        <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/couch-restaurants-lunch" target="_blank" rel="noopener">Couch Lunch</a> &bull;
-        <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/couch-restaurants-dinner" target="_blank" rel="noopener">Couch Dinner</a> &bull;
-        <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-lunch" target="_blank" rel="noopener">Wagner Lunch</a> &bull;
-        <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-dinner" target="_blank" rel="noopener">Wagner Dinner</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Floating Back to Top Button for Mobile -->
-  <button id="btn-back-to-top" class="floating-back-to-top" title="Back to top" aria-label="Back to top">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-  </button>
-
-  <script src="app.js"></script>
+  <!-- React Application -->
+  <script type="text/babel" src="app.jsx"></script>
 </body>
 </html>
