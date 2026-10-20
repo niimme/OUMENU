@@ -9,10 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeMealFilter = 'all'; // 'all' (Split View), 'breakfast', 'lunch', 'dinner'
 
   // DOM Elements
-  const weekLabel = document.getElementById('week-label');
-  const activeDayHeading = document.getElementById('active-day-heading');
-  const activeTodayBadge = document.getElementById('active-today-badge');
-  const activeDaySubtitle = document.getElementById('active-day-subtitle');
   const splitMenusContainer = document.getElementById('split-menus-container');
   const lunchCardsRow = document.getElementById('lunch-cards-row');
   const dayNavButtonsContainer = document.getElementById('day-nav-buttons');
@@ -28,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
       cssClass: 'res-card',
       name: 'Residential Colleges',
       sub: 'Headington & Dunham Colleges',
-      icon: '🏛️',
       hoursBreakfast: '8:00 AM – 10:30 AM (M–F)',
       hoursLunch: '11:00 AM – 2:00 PM',
       hoursDinner: '4:30 PM – 8:00 PM'
@@ -38,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
       cssClass: 'couch-card',
       name: 'Couch Restaurants',
       sub: 'Couch Center',
-      icon: '🍽️',
       hoursBreakfast: '7:00 AM – 10:30 AM (M–F)',
       hoursLunch: '10:30 AM – 2:30 PM',
       hoursDinner: '4:30 PM – 9:00 PM'
@@ -48,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
       cssClass: 'wagner-card',
       name: 'Wagner Dining Hall',
       sub: 'Headington Hall (Athletics)',
-      icon: '🏆',
       hoursBreakfast: '7:00 AM – 10:30 AM (M–F)',
       hoursLunch: '11:00 AM – 1:30 PM',
       hoursDinner: '5:00 PM – 8:00 PM (Sun–Thu)'
@@ -79,10 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function initApp() {
     if (!menuData) return;
-
-    if (menuData.week_info && weekLabel) {
-      weekLabel.textContent = menuData.week_info;
-    }
 
     // Default to today if valid, else Monday
     if (menuData.days_order && menuData.days_order.includes(todayDayName)) {
@@ -127,6 +116,51 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
+  // Date Helper for Weekdays
+  // =========================================================================
+  function getDayDate(dayName) {
+    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    const dayIdx = days.indexOf(dayName);
+    if (dayIdx === -1) return null;
+
+    let baseDate = null;
+    if (menuData && menuData.week_info) {
+      const match = menuData.week_info.match(/([A-Za-z]+)\s+(\d{1,2})/);
+      if (match) {
+        const monthStr = match[1];
+        const dayNum = parseInt(match[2], 10);
+        const year = new Date().getFullYear();
+        const monthIdx = new Date(`${monthStr} 1, ${year}`).getMonth();
+        if (!isNaN(monthIdx)) {
+          baseDate = new Date(year, monthIdx, dayNum);
+        }
+      }
+    }
+
+    if (!baseDate || isNaN(baseDate.getTime())) {
+      const now = new Date();
+      const currentDayOfWeek = now.getDay();
+      const distanceToMonday = (currentDayOfWeek + 6) % 7;
+      baseDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() - distanceToMonday);
+    }
+
+    const targetDate = new Date(baseDate);
+    targetDate.setDate(baseDate.getDate() + dayIdx);
+
+    const m = targetDate.getMonth() + 1;
+    const d = targetDate.getDate();
+    const monthShort = targetDate.toLocaleString('en-US', { month: 'short' });
+
+    return {
+      monthNum: m,
+      dayNum: d,
+      monthShort: monthShort,
+      shortStr: `${m}/${d}`, // e.g. "10/19"
+      fullStr: `${monthShort} ${d}` // e.g. "Oct 19"
+    };
+  }
+
+  // =========================================================================
   // Day Navigation
   // =========================================================================
   function renderDayNavButtons() {
@@ -153,13 +187,14 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.className = `day-nav-btn ${day === activeDay ? 'active' : ''}`;
       btn.dataset.day = day;
 
-      const isToday = day.toLowerCase() === todayDayName.toLowerCase();
       const abbr = day.slice(0, 3);
+      const dateInfo = getDayDate(day);
+      const dateShort = dateInfo ? ` ${dateInfo.shortStr}` : '';
+      const dateFull = dateInfo ? `, ${dateInfo.fullStr}` : '';
 
       btn.innerHTML = `
-        <span class="day-abbr">${abbr}</span>
-        <span class="day-full">${day}</span>
-        ${isToday ? '<span style="font-size:0.65rem; margin-left:0.25rem; opacity:0.85;">★</span>' : ''}
+        <span class="day-abbr">${abbr}${dateShort}</span>
+        <span class="day-full">${day}${dateFull}</span>
       `;
 
       btn.addEventListener('click', () => {
@@ -199,27 +234,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const sec = document.createElement('section');
     sec.className = `meal-split-block ${mealType}-block`;
 
-    let icon = '☀️';
     let title = 'Lunch Menus';
-    let hoursPill = '10:30 AM – 2:30 PM (Varies by location)';
     if (mealType === 'breakfast') {
-      icon = '🥞';
       title = 'Breakfast Menus';
-      hoursPill = '7:00 AM – 10:30 AM (Varies by location)';
     } else if (mealType === 'dinner') {
-      icon = '🌙';
       title = 'Dinner Menus';
-      hoursPill = '4:30 PM – 9:00 PM (Varies by location)';
     }
+
+    const dateInfo = getDayDate(day);
+    const dateSuffix = dateInfo ? `, ${dateInfo.fullStr}` : '';
 
     sec.innerHTML = `
       <div class="meal-split-header ${mealType}-header">
         <div class="meal-header-title">
-          <span class="meal-header-icon">${icon}</span>
           <span class="meal-header-text">${title}</span>
-          <span class="meal-header-day">• ${day}</span>
+          <span class="meal-header-day">• ${day}${dateSuffix}</span>
         </div>
-        <span class="meal-header-pill">${hoursPill}</span>
       </div>
       <div class="meal-cards-row"></div>
     `;
@@ -235,12 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderDayMenus(day) {
     if (day === 'all') {
-      if (activeDayHeading) activeDayHeading.textContent = 'All Days (Monday – Sunday)';
-      if (activeTodayBadge) activeTodayBadge.style.display = 'none';
-      if (activeDaySubtitle) {
-        activeDaySubtitle.innerHTML = `Showing complete menus for <strong>all 7 days</strong> across campus dining locations`;
-      }
-
       if (splitMenusContainer) {
         splitMenusContainer.innerHTML = '';
         const days = menuData.days_order || ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -248,6 +272,8 @@ document.addEventListener('DOMContentLoaded', () => {
         days.forEach(d => {
           const isToday = d.toLowerCase() === todayDayName.toLowerCase();
           const isWeekend = d === 'Saturday' || d === 'Sunday';
+          const dateInfo = getDayDate(d);
+          const dateText = dateInfo ? `, ${dateInfo.fullStr}` : '';
 
           const daySec = document.createElement('div');
           daySec.className = 'day-group-section';
@@ -257,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
           header.className = 'day-group-header';
           header.innerHTML = `
             <div class="day-group-title">
-              <h3>📅 ${d}</h3>
+              <h3>${d}${dateText}</h3>
               ${isToday ? '<span class="today-badge">Today</span>' : ''}
             </div>
             <span class="day-group-pill">${isWeekend ? 'Weekend Dining' : 'Weekday Dining'}</span>
@@ -281,13 +307,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Single Day View
-    if (activeDayHeading) activeDayHeading.textContent = day;
-    const isToday = day.toLowerCase() === todayDayName.toLowerCase();
-    if (activeTodayBadge) activeTodayBadge.style.display = isToday ? 'inline-block' : 'none';
-    if (activeDaySubtitle) {
-      activeDaySubtitle.innerHTML = `Split into dedicated <strong>🥞 Breakfast</strong>, <strong>☀️ Lunch</strong>, and <strong>🌙 Dinner</strong> cards across all 3 dining locations`;
-    }
-
     if (splitMenusContainer) {
       splitMenusContainer.innerHTML = '';
       const bRow = menuData.rows.find(r => r.day === day && r.meal === 'breakfast');
@@ -319,7 +338,6 @@ document.addEventListener('DOMContentLoaded', () => {
     headerDiv.innerHTML = `
       <div class="card-venue-top">
         <div class="card-venue-badge">
-          <span class="venue-icon">${loc.icon}</span>
           <span class="venue-sub-tag">${loc.sub}</span>
         </div>
         <span class="venue-status-pill ${isOpen ? 'status-open' : 'status-closed'}">
@@ -347,7 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (locData.note) {
       const subNotice = document.createElement('div');
       subNotice.className = 'empty-menu-notice';
-      subNotice.textContent = `ℹ️ ${locData.note}`;
+      subNotice.textContent = locData.note;
       bodyDiv.appendChild(subNotice);
     }
 

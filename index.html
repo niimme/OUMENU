@@ -17,24 +17,6 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
 </head>
 <body>
-  <!-- Header / Navigation Bar -->
-  <header class="site-header">
-    <div class="header-container">
-      <div class="brand-group">
-        <div class="brand-badge">OU</div>
-        <div class="brand-text">
-          <div class="sub-title">The University of Oklahoma &bull; Housing &amp; Food Services</div>
-          <h1 class="main-title">Campus Dining Menus</h1>
-        </div>
-      </div>
-      <div class="header-actions">
-        <div class="status-pill" id="current-week-pill">
-          <span class="status-dot"></span>
-          <span id="week-label">Loading menu...</span>
-        </div>
-      </div>
-    </div>
-  </header>
 
   <!-- Sticky Day Selector & Filter Bar -->
   <section class="control-panel-wrapper">
@@ -48,32 +30,32 @@
             <span class="day-full">All Days</span>
           </button>
           <button class="day-nav-btn active" data-day="Monday">
-            <span class="day-abbr">Mon</span>
-            <span class="day-full">Monday</span>
+            <span class="day-abbr">Mon 10/19</span>
+            <span class="day-full">Monday, Oct 19</span>
           </button>
           <button class="day-nav-btn" data-day="Tuesday">
-            <span class="day-abbr">Tue</span>
-            <span class="day-full">Tuesday</span>
+            <span class="day-abbr">Tue 10/20</span>
+            <span class="day-full">Tuesday, Oct 20</span>
           </button>
           <button class="day-nav-btn" data-day="Wednesday">
-            <span class="day-abbr">Wed</span>
-            <span class="day-full">Wednesday</span>
+            <span class="day-abbr">Wed 10/21</span>
+            <span class="day-full">Wednesday, Oct 21</span>
           </button>
           <button class="day-nav-btn" data-day="Thursday">
-            <span class="day-abbr">Thu</span>
-            <span class="day-full">Thursday</span>
+            <span class="day-abbr">Thu 10/22</span>
+            <span class="day-full">Thursday, Oct 22</span>
           </button>
           <button class="day-nav-btn" data-day="Friday">
-            <span class="day-abbr">Fri</span>
-            <span class="day-full">Friday</span>
+            <span class="day-abbr">Fri 10/23</span>
+            <span class="day-full">Friday, Oct 23</span>
           </button>
           <button class="day-nav-btn" data-day="Saturday">
-            <span class="day-abbr">Sat</span>
-            <span class="day-full">Saturday</span>
+            <span class="day-abbr">Sat 10/24</span>
+            <span class="day-full">Saturday, Oct 24</span>
           </button>
           <button class="day-nav-btn" data-day="Sunday">
-            <span class="day-abbr">Sun</span>
-            <span class="day-full">Sunday</span>
+            <span class="day-abbr">Sun 10/25</span>
+            <span class="day-full">Sunday, Oct 25</span>
           </button>
         </div>
       </div>
@@ -90,17 +72,14 @@
               <span class="seg-text-abbr">All</span>
             </button>
             <button class="seg-btn" data-meal="breakfast" title="View Breakfast only">
-              <span class="meal-icon breakfast-icon">🥞</span>
               <span class="seg-text-full">Breakfast</span>
               <span class="seg-text-abbr">Bkfst</span>
             </button>
             <button class="seg-btn" data-meal="lunch" title="View Lunch only">
-              <span class="meal-icon lunch-icon">☀️</span>
               <span class="seg-text-full">Lunch</span>
               <span class="seg-text-abbr">Lunch</span>
             </button>
             <button class="seg-btn" data-meal="dinner" title="View Dinner only">
-              <span class="meal-icon dinner-icon">🌙</span>
               <span class="seg-text-full">Dinner</span>
               <span class="seg-text-abbr">Dinner</span>
             </button>
@@ -112,128 +91,48 @@
 
   <!-- Main Content Container: SPLIT MEAL SECTIONS -->
   <main class="main-container">
-    <!-- Active Day Banner -->
-    <div class="active-day-banner">
-      <div class="active-day-title-wrap">
-        <h2 id="active-day-heading" class="active-day-heading">Monday</h2>
-        <span id="active-today-badge" class="today-badge" style="display:none;">Today</span>
-      </div>
-      <div class="active-day-subtitle" id="active-day-subtitle">
-        Split into dedicated <strong>🥞 Breakfast</strong>, <strong>☀️ Lunch</strong>, and <strong>🌙 Dinner</strong> cards across all 3 dining locations
-      </div>
-    </div>
 
     <!-- Main Menus Split Container -->
     <div class="split-menus-container" id="split-menus-container">
-      <!-- SECTION 0: 🥞 BREAKFAST SECTION (3 location cards side-by-side) -->
+      <!-- SECTION 0: BREAKFAST SECTION (3 location cards side-by-side) -->
       <section class="meal-split-block breakfast-block" id="breakfast-split-block">
         <div class="meal-split-header breakfast-header">
           <div class="meal-header-title">
-            <span class="meal-header-icon">🥞</span>
             <span class="meal-header-text">Breakfast Menus</span>
-            <span class="meal-header-day" id="breakfast-day-label">Monday</span>
+            <span class="meal-header-day" id="breakfast-day-label">• Monday, Oct 19</span>
           </div>
-          <span class="meal-header-pill">7:00 AM &ndash; 10:30 AM (Varies by location)</span>
         </div>
         <div class="meal-cards-row" id="breakfast-cards-row">
           <!-- Populated dynamically by app.js -->
         </div>
       </section>
 
-      <!-- SECTION 1: ☀️ LUNCH SECTION (3 location cards side-by-side) -->
+      <!-- SECTION 1: LUNCH SECTION (3 location cards side-by-side) -->
       <section class="meal-split-block lunch-block" id="lunch-split-block">
         <div class="meal-split-header lunch-header">
           <div class="meal-header-title">
-            <span class="meal-header-icon">☀️</span>
             <span class="meal-header-text">Lunch Menus</span>
-            <span class="meal-header-day" id="lunch-day-label">Monday</span>
+            <span class="meal-header-day" id="lunch-day-label">• Monday, Oct 19</span>
           </div>
-          <span class="meal-header-pill">10:30 AM &ndash; 2:30 PM (Varies by location)</span>
         </div>
         <div class="meal-cards-row" id="lunch-cards-row">
           <!-- Populated dynamically by app.js -->
         </div>
       </section>
 
-      <!-- SECTION 2: 🌙 DINNER SECTION (3 location cards side-by-side) -->
+      <!-- SECTION 2: DINNER SECTION (3 location cards side-by-side) -->
       <section class="meal-split-block dinner-block" id="dinner-split-block">
         <div class="meal-split-header dinner-header">
           <div class="meal-header-title">
-            <span class="meal-header-icon">🌙</span>
             <span class="meal-header-text">Dinner Menus</span>
-            <span class="meal-header-day" id="dinner-day-label">Monday</span>
+            <span class="meal-header-day" id="dinner-day-label">• Monday, Oct 19</span>
           </div>
-          <span class="meal-header-pill">4:30 PM &ndash; 9:00 PM (Varies by location)</span>
         </div>
         <div class="meal-cards-row" id="dinner-cards-row">
           <!-- Populated dynamically by app.js -->
         </div>
       </section>
     </div>
-
-    <!-- Location Information & Station Directory -->
-    <section class="stations-directory">
-      <div class="section-title-row">
-        <h2>Campus Dining Halls &amp; Stations Overview</h2>
-        <span class="section-sub">Official venues featured in the University of Oklahoma dining program</span>
-      </div>
-      <div class="directory-cards-container">
-        <!-- Residential Colleges -->
-        <div class="venue-card">
-          <div class="venue-card-header">
-            <span class="venue-icon">🏛️</span>
-            <div>
-              <h3>Residential Colleges</h3>
-              <p class="venue-sub">Headington &amp; Dunham Colleges</p>
-            </div>
-          </div>
-          <p class="venue-desc">
-            Features Dunham’s daily hot scratch entrees, vegan specials, and Headington’s rotating specialty bars (Wing Bar, Breakfast Bar, Mac &amp; Cheese Bar, Seafood Bar) along with everyday made-to-order grill, pizza, salad, and pasta stations.
-          </p>
-          <div class="venue-links">
-            <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/residential-colleges-lunch-menu" target="_blank" rel="noopener" class="venue-link">Official Lunch Page &rarr;</a>
-            <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/residential-colleges-dinner-menu" target="_blank" rel="noopener" class="venue-link">Official Dinner Page &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Couch Restaurants -->
-        <div class="venue-card">
-          <div class="venue-card-header">
-            <span class="venue-icon">🍽️</span>
-            <div>
-              <h3>Couch Restaurants</h3>
-              <p class="venue-sub">All-You-Care-To-Eat Center</p>
-            </div>
-          </div>
-          <p class="venue-desc">
-            The flagship OU dining center home to the <strong>world's only all-you-care-to-eat Chick-fil-A</strong>, wok-cooked Shanghai Stir-Fry, Chef’s Choice entrees, Athens Café (gyros &amp; falafel), Casa Del Sol (burritos &amp; tacos), Sooner Smokehouse BBQ, La Roma Pizza, and The Crimson Creamery.
-          </p>
-          <div class="venue-links">
-            <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/couch-restaurants-lunch" target="_blank" rel="noopener" class="venue-link">Official Lunch Page &rarr;</a>
-            <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/couch-restaurants-dinner" target="_blank" rel="noopener" class="venue-link">Official Dinner Page &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Wagner Dining Hall -->
-        <div class="venue-card">
-          <div class="venue-card-header">
-            <span class="venue-icon">🏆</span>
-            <div>
-              <h3>Wagner Dining Hall</h3>
-              <p class="venue-sub">Inside Headington Hall (Athletic &amp; Campus Dining)</p>
-            </div>
-          </div>
-          <p class="venue-desc">
-            Located inside <strong>Headington Hall</strong> (athletics &amp; student residence &ndash; <em>not to be confused with Headington College</em>). Focuses on fresh, high-quality, nutrient-dense scratch cooking with rotating hot entrees, daily breakfast scrambles, whole grains, Lawry's smashed potatoes, fresh vegetables, custom Made-to-Order stir-fry, pasta, curry, and grill lines, plus full salad and deli bars.
-          </p>
-          <div class="venue-links">
-            <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-breakfast" target="_blank" rel="noopener" class="venue-link">Official Breakfast Page &rarr;</a>
-            <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-lunch" target="_blank" rel="noopener" class="venue-link">Official Lunch Page &rarr;</a>
-            <a href="https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-dinner" target="_blank" rel="noopener" class="venue-link">Official Dinner Page &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
 
