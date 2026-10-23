@@ -1,53 +1,80 @@
 /* ==========================================================================
-   OU Dining Menus - Clean Minimalist React Design System
+   University of Oklahoma — Housing & Food Services Design System
+   Official OU Brand Colors & Typography Theme
    ========================================================================== */
 
 :root {
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  /* Official OU Brand Color Palette */
+  --ou-crimson: #841617;          /* Oklahoma Crimson (Primary) */
+  --ou-crimson-dark: #4e0002;     /* Dark Crimson (Accent) */
+  --ou-crimson-hover: #9c1c1d;    /* Interactive hover crimson */
+  --ou-crimson-tint: rgba(132, 22, 23, 0.08);
+  --ou-crimson-tint-strong: rgba(132, 22, 23, 0.14);
 
-  /* Monochromatic & Crimson Palette */
-  --crimson: #841617;
-  --crimson-light: rgba(132, 22, 23, 0.08);
+  /* Neutrals */
+  --ou-black: #111111;
+  --ou-charcoal: #232323;         /* Dark banner background */
+  --ou-gray-900: #1a1a1a;
+  --ou-gray-800: #2d2d2d;
+  --ou-gray-600: #545454;
+  --ou-gray-500: #737373;
+  --ou-gray-300: #d4d4d8;
+  --ou-gray-200: #e4e4e7;
+  --ou-gray-100: #f4f4f5;
+  --ou-gray-50: #fafafa;
+  --ou-white: #ffffff;
 
-  --bg-app: #fcfcfc;
+  /* Semantic UI Tokens */
+  --bg-app: #f8f9fa;
   --bg-surface: #ffffff;
-  --bg-subtle: #f7f7f8;
+  --bg-subtle: #f4f5f7;
+  --border-light: #e5e7eb;
+  --border-subtle: #eeeeee;
 
-  --border: #e9e9eb;
-  --border-subtle: #f0f0f2;
-  --border-focus: #111111;
-
-  --text-primary: #111111;
-  --text-secondary: #555555;
-  --text-muted: #888888;
-  --text-faint: #b4b4b4;
+  --text-primary: #18181b;
+  --text-secondary: #52525b;
+  --text-muted: #71717a;
 
   --status-open: #15803d;
-  --status-open-bg: #f0fdf4;
-  --status-closed: #71717a;
-  --status-closed-bg: #f4f4f5;
+  --status-open-bg: #ecfdf5;
+  --status-open-border: #a7f3d0;
+  --status-closed: #6b7280;
+  --status-closed-bg: #f3f4f6;
 
+  /* Typography Stack */
+  --font-headline: "Oswald", "Impact", -apple-system, sans-serif;
+  --font-serif: "Roboto Slab", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --radius-xs: 4px;
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
 }
 
-/* Reset */
+/* Reset & Box Sizing */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--bg-app);
   color: var(--text-primary);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* App Shell */
@@ -57,85 +84,244 @@ body {
   flex-direction: column;
 }
 
-/* Site Header */
-.site-header {
-  border-bottom: 1px solid var(--border);
-  background-color: var(--bg-surface);
+/* ==========================================================================
+   1. Official Top Utility Bar (Black / Dark Slate)
+   ========================================================================== */
+.ou-global-bar {
+  background-color: var(--ou-black);
+  color: #d1d5db;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.header-inner {
-  max-width: 1280px;
+.ou-global-inner {
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 6px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.brand {
+.ou-global-links {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-.brand-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: var(--crimson);
+.ou-global-link {
+  color: #e5e7eb;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 11px;
+  transition: color 150ms ease;
+}
+
+.ou-global-link:hover {
+  color: #ffffff;
+}
+
+.ou-global-sep {
+  color: #4b5563;
+  font-size: 11px;
+}
+
+.ou-wordmark-text {
+  font-family: var(--font-serif);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #e5e7eb;
+}
+
+.ou-wordmark-text em {
+  font-style: italic;
+  font-size: 10px;
+  text-transform: lowercase;
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   2. Department Header (White Clean Branding)
+   ========================================================================== */
+.site-header {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.header-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Interlocking OU Monogram Shield */
+.ou-monogram-shield {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--ou-crimson) 0%, var(--ou-crimson-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(132, 22, 23, 0.25);
+  flex-shrink: 0;
+}
+
+.ou-monogram-text {
+  color: var(--ou-white);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
 }
 
 .brand-title {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--text-primary);
+  font-family: var(--font-headline);
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ou-crimson);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.brand-sub {
+  font-family: var(--font-serif);
+  font-size: 11px;
+  color: var(--ou-gray-600);
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+.brand-sub em {
+  font-style: italic;
+  font-size: 10px;
+}
+
+.header-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .brand-badge {
+  font-family: var(--font-headline);
   font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 4px 8px;
+  border-radius: var(--radius-xs);
+  background-color: var(--ou-crimson);
+  color: var(--ou-white);
+}
+
+.week-pill {
+  font-size: 12px;
+  color: var(--text-secondary);
   font-weight: 500;
-  text-transform: uppercase;
+  background-color: var(--ou-gray-100);
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-light);
+}
+
+/* ==========================================================================
+   3. OU Themed Hero Banner (Charcoal / Mongoose Display)
+   ========================================================================== */
+.hero-banner {
+  background-color: var(--ou-charcoal);
+  color: var(--ou-white);
+  border-bottom: 4px solid var(--ou-crimson);
+  padding: 36px 20px 32px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.hero-heading {
+  font-family: var(--font-headline);
+  font-size: 38px;
+  font-weight: 700;
   letter-spacing: 0.05em;
-  padding: 2px 6px;
-  border-radius: var(--radius-sm);
-  background-color: var(--crimson-light);
-  color: var(--crimson);
+  text-transform: uppercase;
+  color: var(--ou-white);
+  line-height: 1.1;
+  margin-bottom: 6px;
 }
 
-.header-meta {
-  font-size: 13px;
-  color: var(--text-muted);
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #d4d4d8;
+  letter-spacing: 0.02em;
 }
 
-/* Sticky Filter Bar */
+/* ==========================================================================
+   4. Sticky Filter Bar
+   ========================================================================== */
 .filter-bar {
   position: sticky;
   top: 0;
   z-index: 40;
-  background-color: rgba(255, 255, 255, 0.94);
+  background-color: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .filter-inner {
-  max-width: 1280px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 10px 24px;
+  padding: 10px 20px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
 }
 
-/* Segmented Control Groups */
+/* Horizontal Scroll Container for Days */
+.day-tabs-scroll {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+
+.day-tabs-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 .segmented-group {
   display: inline-flex;
   align-items: center;
-  background-color: var(--bg-subtle);
-  border: 1px solid var(--border);
+  background-color: var(--ou-gray-100);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   padding: 3px;
   gap: 2px;
@@ -145,7 +331,7 @@ body {
   border: none;
   background: transparent;
   color: var(--text-secondary);
-  font-family: inherit;
+  font-family: var(--font-body);
   font-size: 13px;
   font-weight: 500;
   padding: 6px 12px;
@@ -154,52 +340,55 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  transition: all 120ms ease;
+  transition: all 140ms ease;
   white-space: nowrap;
+  user-select: none;
 }
 
 .tab-btn:hover {
   color: var(--text-primary);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .tab-btn.is-active {
-  background-color: var(--bg-surface);
-  color: var(--text-primary);
+  background-color: var(--ou-crimson);
+  color: var(--ou-white);
   font-weight: 600;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(132, 22, 23, 0.3);
 }
 
 .tab-date {
   font-size: 11px;
-  color: var(--text-muted);
+  opacity: 0.85;
+}
+
+.tab-btn.is-active .tab-date {
+  color: #fca5a5;
 }
 
 .today-dot {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: var(--crimson);
+  background-color: var(--ou-crimson);
 }
 
-.day-tabs-scroll {
-  overflow-x: auto;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
+.tab-btn.is-active .today-dot {
+  background-color: var(--ou-white);
 }
 
-.day-tabs-scroll::-webkit-scrollbar {
-  display: none;
-}
-
-/* Main Content */
+/* ==========================================================================
+   5. Main Content Layout
+   ========================================================================== */
 .content-container {
   flex: 1;
-  max-width: 1280px;
+  max-width: 1240px;
   width: 100%;
   margin: 0 auto;
-  padding: 28px 24px 48px;
+  padding: 28px 20px 56px;
 }
 
+/* Notices */
 .state-notice {
   text-align: center;
   padding: 80px 20px;
@@ -207,23 +396,23 @@ body {
 }
 
 .state-notice.error {
-  color: #b91c1c;
+  color: var(--ou-crimson);
 }
 
 .notice-sub {
   margin-top: 6px;
   font-size: 12px;
-  color: var(--text-faint);
+  color: var(--text-muted);
 }
 
 .loading-spinner {
-  width: 24px;
-  height: 24px;
-  border: 2px solid var(--border);
-  border-top-color: var(--text-primary);
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--border-light);
+  border-top-color: var(--ou-crimson);
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
-  margin: 0 auto 12px;
+  margin: 0 auto 14px;
 }
 
 @keyframes spin {
@@ -232,7 +421,7 @@ body {
 
 /* Day Block */
 .day-block {
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .day-block:last-child {
@@ -241,8 +430,8 @@ body {
 
 .day-block-header {
   padding-bottom: 12px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border);
+  margin-bottom: 22px;
+  border-bottom: 2px solid var(--border-light);
 }
 
 .day-heading-wrap {
@@ -252,31 +441,36 @@ body {
 }
 
 .day-heading {
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
+  font-family: var(--font-headline);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ou-crimson);
 }
 
 .day-heading-date {
   font-size: 14px;
+  font-weight: 500;
   color: var(--text-muted);
 }
 
 .today-pill {
+  font-family: var(--font-headline);
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 2px 7px;
-  border-radius: var(--radius-sm);
-  background-color: var(--crimson-light);
-  color: var(--crimson);
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+  background-color: var(--ou-crimson-tint);
+  color: var(--ou-crimson);
+  border: 1px solid var(--ou-crimson-tint-strong);
 }
 
 /* Meal Section */
 .meal-section {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .meal-section:last-child {
@@ -286,15 +480,20 @@ body {
 .meal-section-header {
   display: flex;
   align-items: baseline;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 14px;
 }
 
 .meal-section-title {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--text-primary);
+  font-family: var(--font-headline);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ou-charcoal);
+  border-left: 4px solid var(--ou-crimson);
+  padding-left: 8px;
+  line-height: 1;
 }
 
 .meal-section-meta {
@@ -302,78 +501,103 @@ body {
   color: var(--text-muted);
 }
 
-/* Location Grid (3-column on desktop) */
+/* Location Grid (3-column on desktop, responsive) */
 .location-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  gap: 18px;
 }
 
 /* Location Card */
 .location-card {
   background-color: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  border-top: 3px solid var(--ou-crimson);
+  border-radius: var(--radius-md);
   padding: 18px;
   display: flex;
   flex-direction: column;
-  transition: border-color 150ms ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
 .location-card:hover {
-  border-color: #d1d1d6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
 }
 
 .location-card.is-closed {
-  background-color: #fafafb;
-  border-color: var(--border-subtle);
+  background-color: var(--ou-gray-50);
+  border-top-color: var(--ou-gray-300);
+  opacity: 0.85;
+}
+
+.location-card.is-closed:hover {
+  transform: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .location-card-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
 }
 
 .location-title {
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--text-primary);
-  line-height: 1.25;
+  font-family: var(--font-headline);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ou-charcoal);
+  line-height: 1.2;
 }
 
 .location-sub {
   font-size: 12px;
   color: var(--text-muted);
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 .status-tag {
+  font-family: var(--font-headline);
   font-size: 11px;
   font-weight: 600;
-  padding: 2px 7px;
-  border-radius: var(--radius-sm);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
   flex-shrink: 0;
 }
 
 .status-open {
   background-color: var(--status-open-bg);
   color: var(--status-open);
+  border: 1px solid var(--status-open-border);
 }
 
 .status-closed {
   background-color: var(--status-closed-bg);
   color: var(--status-closed);
+  border: 1px solid var(--border-light);
 }
 
 .location-hours {
   font-size: 12px;
-  color: var(--text-muted);
+  font-weight: 500;
+  color: var(--text-secondary);
   margin-top: 8px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.location-hours::before {
+  content: "🕒";
+  font-size: 11px;
 }
 
 .location-menu-body {
@@ -386,31 +610,34 @@ body {
   font-size: 13px;
   color: var(--text-muted);
   font-style: italic;
-  padding: 16px 0;
+  padding: 20px 0;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: var(--radius-sm);
 }
 
 .notice-note {
   font-size: 12px;
-  color: var(--text-secondary);
-  background-color: var(--bg-subtle);
-  border-left: 2px solid var(--text-muted);
-  padding: 6px 10px;
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--ou-crimson-dark);
+  background-color: var(--ou-crimson-tint);
+  border-left: 3px solid var(--ou-crimson);
+  padding: 8px 10px;
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
   margin-bottom: 14px;
+  line-height: 1.4;
 }
 
 .notice-empty {
   font-size: 13px;
-  color: var(--text-faint);
+  color: var(--text-muted);
   font-style: italic;
-  padding: 12px 0;
+  padding: 16px 0;
   text-align: center;
 }
 
 /* Station Groups */
 .station-group {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .station-group:last-child {
@@ -418,12 +645,23 @@ body {
 }
 
 .station-title {
+  font-family: var(--font-body);
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  color: var(--ou-crimson);
   margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.station-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-subtle);
 }
 
 .dish-list {
@@ -434,7 +672,7 @@ body {
   font-size: 13px;
   color: var(--text-primary);
   line-height: 1.45;
-  padding: 3px 0;
+  padding: 4px 0;
   border-bottom: 1px dashed var(--border-subtle);
 }
 
@@ -442,23 +680,29 @@ body {
   border-bottom: none;
 }
 
-/* Site Footer */
+/* ==========================================================================
+   6. Site Footer (Official Crimson & Neutrals)
+   ========================================================================== */
 .site-footer {
-  border-top: 1px solid var(--border);
-  background-color: var(--bg-surface);
-  padding: 24px;
+  border-top: 3px solid var(--ou-crimson);
+  background-color: var(--ou-charcoal);
+  color: #d4d4d8;
+  padding: 28px 20px;
 }
 
 .footer-inner {
-  max-width: 1280px;
+  max-width: 1240px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 14px;
   font-size: 12px;
-  color: var(--text-muted);
+}
+
+.footer-copy {
+  color: #a1a1aa;
 }
 
 .footer-links {
@@ -468,13 +712,15 @@ body {
 }
 
 .footer-links a {
-  color: var(--text-secondary);
+  color: #f4f4f5;
   text-decoration: none;
-  transition: color 120ms ease;
+  font-weight: 500;
+  transition: color 140ms ease;
 }
 
 .footer-links a:hover {
-  color: var(--text-primary);
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 /* Floating Scroll to Top */
@@ -482,59 +728,165 @@ body {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: var(--text-primary);
-  color: var(--bg-surface);
+  background-color: var(--ou-crimson);
+  color: var(--ou-white);
   border: none;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 14px rgba(132, 22, 23, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 150ms ease, transform 150ms ease;
+  transition: background-color 150ms ease, transform 150ms ease;
   z-index: 50;
 }
 
 .scroll-top-btn:hover {
+  background-color: var(--ou-crimson-hover);
   transform: translateY(-2px);
 }
 
-/* Responsive Breakpoints */
+/* ==========================================================================
+   7. Mobile & Responsive Compatibility (Phones, Foldables, Tablets)
+   ========================================================================== */
 @media (max-width: 1024px) {
   .location-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .hero-heading {
+    font-size: 32px;
+  }
 }
 
-@media (max-width: 680px) {
-  .header-inner,
-  .filter-inner,
-  .content-container,
-  .footer-inner {
-    padding-left: 16px;
-    padding-right: 16px;
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 24px 16px 20px;
   }
 
-  .location-grid {
-    grid-template-columns: 1fr;
+  .hero-heading {
+    font-size: 26px;
+    letter-spacing: 0.03em;
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+  }
+
+  .brand-title {
+    font-size: 18px;
+  }
+
+  .ou-monogram-shield {
+    width: 38px;
+    height: 38px;
+  }
+
+  .ou-monogram-text {
+    font-size: 18px;
+  }
+
+  .header-badge-group {
+    display: none; /* Keep header concise on mobile */
   }
 
   .filter-inner {
     flex-direction: column;
     align-items: stretch;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .day-tabs-scroll {
+    width: 100%;
+    padding-bottom: 2px;
+  }
+
+  .day-tabs-scroll .segmented-group {
+    width: max-content;
+    min-width: 100%;
+  }
+
+  .meal-filter-group {
+    width: 100%;
   }
 
   .meal-filter-group .segmented-group {
     width: 100%;
-    justify-content: space-between;
+    display: flex;
   }
 
   .meal-filter-group .tab-btn {
     flex: 1;
     justify-content: center;
+    padding: 7px 4px;
+    font-size: 12px;
+  }
+
+  .content-container {
+    padding: 16px 12px 40px;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .location-card {
+    padding: 14px;
+  }
+
+  .location-title {
+    font-size: 16px;
+  }
+
+  .day-heading {
+    font-size: 22px;
+  }
+
+  .meal-section-title {
+    font-size: 18px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
   }
 }
+
+@media (max-width: 480px) {
+  .ou-wordmark-text {
+    font-size: 10px;
+  }
+
+  .brand-title {
+    font-size: 16px;
+  }
+
+  .brand-sub {
+    font-size: 10px;
+  }
+
+  .hero-heading {
+    font-size: 22px;
+  }
+
+  .tab-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .scroll-top-btn {
+    bottom: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+

@@ -286,19 +286,57 @@ function App() {
 
   return (
     <div className="app-shell">
-      {/* Header */}
+      {/* Official OU Top Utility Bar */}
+      <div className="ou-global-bar">
+        <div className="ou-global-inner">
+          <div className="ou-global-links">
+            <a href="https://www.ou.edu" target="_blank" rel="noopener noreferrer" className="ou-global-link" title="OU Home">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              </svg>
+              <span>OU.EDU</span>
+            </a>
+            <span className="ou-global-sep">|</span>
+            <a href="https://www.ou.edu/housingandfood" target="_blank" rel="noopener noreferrer" className="ou-global-link">
+              Housing &amp; Food
+            </a>
+          </div>
+          <div className="ou-wordmark-text">
+            The UNIVERSITY <em>of</em> OKLAHOMA
+          </div>
+        </div>
+      </div>
+
+      {/* Main OU Department Header */}
       <header className="site-header">
         <div className="header-inner">
-          <div className="brand">
-            <span className="brand-dot" />
-            <h1 className="brand-title">OU Dining</h1>
-            <span className="brand-badge">Live</span>
+          <div className="brand-lockup">
+            <div className="ou-monogram-shield">
+              <span className="ou-monogram-text">OU</span>
+            </div>
+            <div className="brand-text">
+              <h1 className="brand-title">HOUSING &amp; FOOD SERVICES</h1>
+              <p className="brand-sub">The UNIVERSITY <em>of</em> OKLAHOMA</p>
+            </div>
           </div>
-          {menuData?.week_info && (
-            <div className="header-meta">{menuData.week_info}</div>
-          )}
+          <div className="header-badge-group">
+            <span className="brand-badge">LIVE DINING MENUS</span>
+            {menuData?.week_info && (
+              <span className="week-pill">{menuData.week_info}</span>
+            )}
+          </div>
         </div>
       </header>
+
+      {/* Hero Banner with Official Theme */}
+      <section className="hero-banner">
+        <div className="hero-inner">
+          <h2 className="hero-heading">CAMPUS DINING MENUS</h2>
+          <p className="hero-subtitle">
+            Residential Colleges • Couch Restaurants • Wagner Dining Hall
+          </p>
+        </div>
+      </section>
 
       {/* Sticky Filter Bar */}
       <div className="filter-bar">
