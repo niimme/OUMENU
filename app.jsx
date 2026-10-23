@@ -19,8 +19,8 @@ const LOCATIONS_META = [
     name: 'Couch Restaurants',
     sub: 'Couch Center',
     hoursBreakfast: '7:00 AM – 10:30 AM (M–F)',
-    hoursLunch: '10:30 AM – 2:30 PM',
-    hoursDinner: '4:30 PM – 9:00 PM'
+    hoursLunch: '11:00 AM – 2:30 PM',
+    hoursDinner: '4:30 PM – 8:00 PM'
   },
   {
     key: 'wagner_dining_hall',
