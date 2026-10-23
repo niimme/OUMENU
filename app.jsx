@@ -12,7 +12,9 @@ const LOCATIONS_META = [
     sub: 'Headington & Dunham Colleges',
     hoursBreakfast: '8:00 AM – 10:30 AM (M–F)',
     hoursLunch: '11:00 AM – 2:00 PM',
-    hoursDinner: '4:30 PM – 8:00 PM'
+    hoursDinner: '4:30 PM – 8:00 PM (M–F) • 4:00 PM – 7:00 PM (Weekends)',
+    hoursDinnerWeekday: '4:30 PM – 8:00 PM',
+    hoursDinnerWeekend: '4:00 PM – 7:00 PM'
   },
   {
     key: 'couch_restaurants',
@@ -28,7 +30,7 @@ const LOCATIONS_META = [
     sub: 'Headington Hall (Athletics)',
     hoursBreakfast: '7:00 AM – 10:30 AM (M–F)',
     hoursLunch: '11:00 AM – 1:30 PM',
-    hoursDinner: '5:00 PM – 8:00 PM (Sun–Thu)'
+    hoursDinner: '4:30 PM – 8:00 PM (Sun–Thu)'
   }
 ];
 
@@ -138,11 +140,20 @@ function StationGroup({ station }) {
   );
 }
 
-function LocationCard({ loc, mealType, locData }) {
+function LocationCard({ loc, mealType, day, locData }) {
   const isOpen = locData && locData.available;
+  const isWeekend = day === 'Saturday' || day === 'Sunday';
+
   let hours = loc.hoursLunch;
-  if (mealType === 'breakfast') hours = loc.hoursBreakfast;
-  else if (mealType === 'dinner') hours = loc.hoursDinner;
+  if (mealType === 'breakfast') {
+    hours = loc.hoursBreakfast;
+  } else if (mealType === 'dinner') {
+    if (loc.key === 'residential_colleges') {
+      hours = isWeekend ? loc.hoursDinnerWeekend : loc.hoursDinnerWeekday;
+    } else {
+      hours = loc.hoursDinner;
+    }
+  }
 
   const validStations = useMemo(() => {
     if (!locData || !locData.stations) return [];
@@ -212,6 +223,7 @@ function MealSection({ day, dateInfo, mealType, rowData }) {
               key={loc.key}
               loc={loc}
               mealType={mealType}
+              day={day}
               locData={locData}
             />
           );

@@ -416,7 +416,7 @@ def build_combined_matrix(raw_parsed):
             'url_dinner': URLS['res_dinner']['url'],
             'hours_breakfast': '8:00 AM – 10:30 AM (M–F)',
             'hours_lunch': '11:00 AM – 2:00 PM',
-            'hours_dinner': '4:30 PM – 8:00 PM',
+            'hours_dinner': '4:30 PM – 8:00 PM (M–F) • 4:00 PM – 7:00 PM (Weekends)',
             'summary': 'Dunham College features daily rotating hot entrees, vegan specialties, and breakfast hot line. Headington College hosts made-to-order omelets & breakfast sandwiches, specialty bars, and everyday classics.'
         },
         'couch_restaurants': {
@@ -442,7 +442,7 @@ def build_combined_matrix(raw_parsed):
             'url_dinner': URLS['wagner_dinner']['url'],
             'hours_breakfast': '7:00 AM – 10:30 AM (M–F)',
             'hours_lunch': '11:00 AM – 1:30 PM',
-            'hours_dinner': '5:00 PM – 8:00 PM (Sun–Thu)',
+            'hours_dinner': '4:30 PM – 8:00 PM (Sun–Thu)',
             'summary': 'Located inside Headington Hall (not to be confused with Headington College). Features high-performance scratch cooking with daily made-to-order eggs & waffles, hot breakfast scrambles, fresh lunch/dinner entrees, and custom kitchens.'
         }
     }
