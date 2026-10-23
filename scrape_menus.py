@@ -429,7 +429,7 @@ def build_combined_matrix(raw_parsed):
             'url_dinner': URLS['couch_dinner']['url'],
             'hours_breakfast': '7:00 AM – 10:30 AM (M–F)',
             'hours_lunch': '11:00 AM – 2:30 PM',
-            'hours_dinner': '4:30 PM – 8:00 PM',
+            'hours_dinner': '4:30 PM – 8:00 PM (M–F) • 4:30 PM – 7:00 PM (Weekends)',
             'summary': 'The legendary OU dining center with The Breakfast Club (eggs, biscuits & gravy, waffles), the world’s only all-you-care-to-eat Chick-fil-A, Shanghai Stir-Fry, Chef’s Choice, and Crimson Creamery.'
         },
         'wagner_dining_hall': {

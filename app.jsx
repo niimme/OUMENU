@@ -22,7 +22,9 @@ const LOCATIONS_META = [
     sub: 'Couch Center',
     hoursBreakfast: '7:00 AM – 10:30 AM (M–F)',
     hoursLunch: '11:00 AM – 2:30 PM',
-    hoursDinner: '4:30 PM – 8:00 PM'
+    hoursDinner: '4:30 PM – 8:00 PM (M–F) • 4:30 PM – 7:00 PM (Weekends)',
+    hoursDinnerWeekday: '4:30 PM – 8:00 PM',
+    hoursDinnerWeekend: '4:30 PM – 7:00 PM'
   },
   {
     key: 'wagner_dining_hall',
@@ -148,8 +150,10 @@ function LocationCard({ loc, mealType, day, locData }) {
   if (mealType === 'breakfast') {
     hours = loc.hoursBreakfast;
   } else if (mealType === 'dinner') {
-    if (loc.key === 'residential_colleges') {
-      hours = isWeekend ? loc.hoursDinnerWeekend : loc.hoursDinnerWeekday;
+    if (loc.hoursDinnerWeekend && isWeekend) {
+      hours = loc.hoursDinnerWeekend;
+    } else if (loc.hoursDinnerWeekday && !isWeekend) {
+      hours = loc.hoursDinnerWeekday;
     } else {
       hours = loc.hoursDinner;
     }
