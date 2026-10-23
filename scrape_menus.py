@@ -644,6 +644,55 @@ def build_combined_matrix(raw_parsed):
         'rows': rows
     }
 
+def save_to_history(matrix_data):
+    """
+    Archives the current weekly menu to data/history/<filename>.json
+    and maintains an index file at data/history/index.json.
+    """
+    history_dir = os.path.join('data', 'history')
+    os.makedirs(history_dir, exist_ok=True)
+
+    week_info = matrix_data.get('week_info', 'Unknown Week')
+    # Generate clean slug e.g. "week_of_october_19_25"
+    slug = re.sub(r'[^a-zA-Z0-9]+', '_', week_info.strip()).strip('_').lower()
+    if not slug:
+        slug = "current_rotation"
+
+    archive_filename = f"{slug}.json"
+    archive_path = os.path.join(history_dir, archive_filename)
+
+    with open(archive_path, 'w', encoding='utf-8') as f:
+        json.dump(matrix_data, f, indent=2, ensure_ascii=False)
+    print(f"Archived menu to {archive_path}")
+
+    # Maintain an index.json of all past archived weeks
+    index_path = os.path.join(history_dir, 'index.json')
+    history_index = []
+    if os.path.exists(index_path):
+        try:
+            with open(index_path, 'r', encoding='utf-8') as f:
+                history_index = json.load(f)
+        except Exception:
+            history_index = []
+
+    # Update or add current entry
+    existing = next((item for item in history_index if item['filename'] == archive_filename), None)
+    entry = {
+        'week_info': week_info,
+        'filename': archive_filename,
+        'path': f"data/history/{archive_filename}",
+        'last_updated': matrix_data.get('last_updated', '')
+    }
+
+    if existing:
+        existing.update(entry)
+    else:
+        history_index.insert(0, entry)
+
+    with open(index_path, 'w', encoding='utf-8') as f:
+        json.dump(history_index, f, indent=2, ensure_ascii=False)
+    print(f"Updated archive index at {index_path} ({len(history_index)} recorded week(s))")
+
 def main():
     os.makedirs('data', exist_ok=True)
     raw_parsed = {}
@@ -669,6 +718,9 @@ def main():
         
     print(f"Saved complete matrix data to {output_path}!")
     print(f"Total rows generated: {len(matrix_data['rows'])}")
+
+    # Store in history archive
+    save_to_history(matrix_data)
 
 if __name__ == '__main__':
     main()

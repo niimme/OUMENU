@@ -247,6 +247,36 @@ body {
   border: 1px solid var(--border-light);
 }
 
+.week-selector-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.week-select {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ou-charcoal);
+  background-color: var(--ou-gray-100);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  padding: 4px 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 140ms ease;
+}
+
+.week-select:hover {
+  background-color: #ffffff;
+  border-color: var(--ou-crimson);
+}
+
+.week-select:focus {
+  border-color: var(--ou-crimson);
+  box-shadow: 0 0 0 2px var(--ou-crimson-tint);
+}
+
 /* ==========================================================================
    3. OU Themed Hero Banner (Charcoal / Mongoose Display)
    ========================================================================== */

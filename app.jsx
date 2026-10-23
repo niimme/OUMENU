@@ -225,15 +225,28 @@ function App() {
   const [menuData, setMenuData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [historyList, setHistoryList] = useState([]);
+  const [selectedFile, setSelectedFile] = useState('data/menu_data.json');
 
   const today = useMemo(() => getTodayName(), []);
   const [activeDay, setActiveDay] = useState(today);
   const [activeMeal, setActiveMeal] = useState(() => getCurrentMealByTime());
   const [showScrollTop, setShowScrollTop] = useState(false);
 
+  // Load history index
+  useEffect(() => {
+    fetch(`data/history/index.json?v=${Date.now()}`, { cache: 'no-cache' })
+      .then(res => res.ok ? res.json() : [])
+      .then(list => setHistoryList(Array.isArray(list) ? list : []))
+      .catch(() => setHistoryList([]));
+  }, []);
+
+  // Fetch chosen menu file (current or archived week)
   useEffect(() => {
     let isMounted = true;
-    fetch(`data/menu_data.json?v=${Date.now()}`, { cache: 'no-cache' })
+    setLoading(true);
+    setError(null);
+    fetch(`${selectedFile}?v=${Date.now()}`, { cache: 'no-cache' })
       .then(res => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
@@ -257,7 +270,7 @@ function App() {
     return () => {
       isMounted = false;
     };
-  }, [today]);
+  }, [selectedFile, today]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -320,9 +333,31 @@ function App() {
             </div>
           </div>
           <div className="header-badge-group">
-            <span className="brand-badge">LIVE DINING MENUS</span>
-            {menuData?.week_info && (
-              <span className="week-pill">{menuData.week_info}</span>
+            <span className="brand-badge">
+              {selectedFile === 'data/menu_data.json' ? 'LIVE DINING MENUS' : 'ARCHIVED MENU'}
+            </span>
+            {historyList.length > 0 ? (
+              <div className="week-selector-wrap">
+                <select
+                  className="week-select"
+                  value={selectedFile}
+                  onChange={(e) => setSelectedFile(e.target.value)}
+                  aria-label="Select menu week"
+                >
+                  <option value="data/menu_data.json">
+                    Current: {menuData?.week_info || 'Live Week'}
+                  </option>
+                  {historyList
+                    .filter((h) => h.path !== 'data/menu_data.json')
+                    .map((item) => (
+                      <option key={item.filename} value={item.path}>
+                        Past: {item.week_info}
+                      </option>
+                    ))}
+                </select>
+              </div>
+            ) : (
+              menuData?.week_info && <span className="week-pill">{menuData.week_info}</span>
             )}
           </div>
         </div>

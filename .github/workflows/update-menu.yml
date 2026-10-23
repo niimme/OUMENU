@@ -36,10 +36,10 @@ jobs:
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          if git status --porcelain data/menu_data.json | grep -q 'data/menu_data.json'; then
-            echo "New menu data detected. Committing and pushing..."
-            git add data/menu_data.json
-            git commit -m "Auto-update dining menus [skip ci]"
+          if git status --porcelain data/ | grep -q 'data/'; then
+            echo "New menu data or history archive detected. Committing and pushing..."
+            git add data/
+            git commit -m "Auto-update dining menus and history archive [skip ci]"
             git push
           else
             echo "No changes in menu data. Skipping commit."
