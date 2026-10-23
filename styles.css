@@ -816,12 +816,27 @@ body {
     height: 38px;
   }
 
-  .ou-monogram-text {
-    font-size: 18px;
+  .header-badge-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
-  .header-badge-group {
-    display: none; /* Keep header concise on mobile */
+  .header-badge-group .brand-badge {
+    display: none; /* Hide the badge on mobile to save space */
+  }
+
+  .week-selector-wrap {
+    max-width: 155px;
+  }
+
+  .week-select {
+    font-size: 11px;
+    padding: 4px 6px;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .filter-inner {
@@ -890,16 +905,50 @@ body {
 }
 
 @media (max-width: 480px) {
+  .header-inner {
+    padding: 10px 14px;
+    gap: 8px;
+  }
+
+  .brand-lockup {
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ou-monogram-shield {
+    width: 34px;
+    height: 34px;
+  }
+
+  .ou-monogram-text {
+    font-size: 16px;
+  }
+
   .ou-wordmark-text {
     font-size: 10px;
   }
 
   .brand-title {
-    font-size: 16px;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .brand-sub {
-    font-size: 10px;
+    font-size: 9px;
+  }
+
+  .week-selector-wrap {
+    max-width: 130px;
+    flex-shrink: 0;
+  }
+
+  .week-select {
+    font-size: 11px;
+    padding: 4px 6px;
   }
 
   .hero-heading {
