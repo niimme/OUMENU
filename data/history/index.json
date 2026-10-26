@@ -1,5 +1,11 @@
 [
   {
+    "week_info": "Week of October 26 - November 1",
+    "filename": "week_of_october_26_november_1.json",
+    "path": "data/history/week_of_october_26_november_1.json",
+    "last_updated": "Current Weekly Rotation"
+  },
+  {
     "week_info": "Week of October 19 - 25",
     "filename": "week_of_october_19_25.json",
     "path": "data/history/week_of_october_19_25.json",

@@ -1,0 +1,4981 @@
+{
+  "week_info": "Week of October 26 - November 1",
+  "last_updated": "Current Weekly Rotation",
+  "locations_meta": {
+    "residential_colleges": {
+      "id": "residential_colleges",
+      "name": "Residential Colleges",
+      "sub": "Headington College & Dunham College",
+      "icon": "",
+      "url_breakfast": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/restaurants.html#residential",
+      "url_lunch": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/residential-colleges-lunch-menu",
+      "url_dinner": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/residential-colleges-dinner-menu",
+      "hours_breakfast": "8:00 AM – 10:30 AM (M–F)",
+      "hours_lunch": "11:00 AM – 2:00 PM",
+      "hours_dinner": "4:30 PM – 8:00 PM (M–F) • 4:00 PM – 7:00 PM (Weekends)",
+      "summary": "Dunham College features daily rotating hot entrees, vegan specialties, and breakfast hot line. Headington College hosts made-to-order omelets & breakfast sandwiches, specialty bars, and everyday classics."
+    },
+    "couch_restaurants": {
+      "id": "couch_restaurants",
+      "name": "Couch Restaurants",
+      "sub": "All-You-Care-To-Eat Dining Center",
+      "icon": "",
+      "url_breakfast": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/restaurants.html#couch-restaurants",
+      "url_lunch": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/couch-restaurants-lunch",
+      "url_dinner": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/couch-restaurants-dinner",
+      "hours_breakfast": "7:00 AM – 10:30 AM (M–F)",
+      "hours_lunch": "11:00 AM – 2:30 PM",
+      "hours_dinner": "4:30 PM – 8:00 PM (M–F) • 4:30 PM – 7:00 PM (Weekends)",
+      "summary": "The legendary OU dining center with The Breakfast Club (eggs, biscuits & gravy, waffles), the world’s only all-you-care-to-eat Chick-fil-A, Shanghai Stir-Fry, Chef’s Choice, and Crimson Creamery."
+    },
+    "wagner_dining_hall": {
+      "id": "wagner_dining_hall",
+      "name": "Wagner Dining Hall",
+      "sub": "Headington Hall (Athletic & Campus Dining)",
+      "icon": "",
+      "url_breakfast": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-breakfast",
+      "url_lunch": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-lunch",
+      "url_dinner": "https://www.ou.edu/housingandfood/dining/restaurants-and-catering/wagner-dining-hall-dinner",
+      "hours_breakfast": "7:00 AM – 10:30 AM (M–F)",
+      "hours_lunch": "11:00 AM – 1:30 PM",
+      "hours_dinner": "4:30 PM – 8:00 PM (Sun–Thu)",
+      "summary": "Located inside Headington Hall (not to be confused with Headington College). Features high-performance scratch cooking with daily made-to-order eggs & waffles, hot breakfast scrambles, fresh lunch/dinner entrees, and custom kitchens."
+    }
+  },
+  "days_order": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ],
+  "rows": [
+    {
+      "id": "monday_breakfast",
+      "day": "Monday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made-to-Order Omelet & Sandwich Station",
+              "badge": "Chef Specialty Bar",
+              "items": [
+                {
+                  "name": "Custom Made-to-Order Omelets (Cheese, Bacon, Ham, Fresh Vegetables)",
+                  "tags": [
+                    "vegetarian",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Made-to-Order Breakfast Sandwiches (Brioche, Bagel, English Muffin)",
+                  "tags": [
+                    "meat",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Syrup",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Dunham Hot Line & Classics",
+              "badge": "Breakfast Entrees",
+              "items": [
+                {
+                  "name": "Fluffy Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Breakfast Potatoes & Hash Browns",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Crisp Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Country Breakfast Sausage Patties",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Fruit, Yogurt & Bakery Bar",
+              "badge": "Fresh Morning Bar",
+              "items": [
+                {
+                  "name": "Greek Yogurt Parfait Bar with Granola & Mixed Berries",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Melons & Fruit",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Steel-Cut Warm Oatmeal with Toppings Bar",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Freshly Baked Breakfast Pastries & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "The Breakfast Club Hot Line",
+              "badge": "Featured Breakfast",
+              "items": [
+                {
+                  "name": "Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits with Creamy Country Sausage Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Breakfast Sausage Links",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Golden Hash Browns & Breakfast Potatoes",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Waffle & Pancake Station",
+              "badge": "Made-to-Order",
+              "items": [
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Maple Syrup & Fruit",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Morning Continental & Bakery",
+              "badge": "Continental Bar",
+              "items": [
+                {
+                  "name": "Warm Steel-Cut Oatmeal with Brown Sugar & Raisins",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Morning Pastries, Danishes & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Fruit Selection",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Cereal & Chilled Milk Bar",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made To Order",
+              "badge": "Custom Breakfast",
+              "items": [
+                {
+                  "name": "Made to Order Eggs, Waffles and More.",
+                  "tags": [
+                    "vegetarian",
+                    "custom"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Breakfast",
+              "items": [
+                {
+                  "name": "Egg Scramble of the Day",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Oatmeal",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Ham Steaks",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Triangle Hashbrowns",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "monday_lunch",
+      "day": "Monday",
+      "meal": "lunch",
+      "meal_label": "Lunch",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Hawaiian Flank Steak w/ Apple Pineapple Pico",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Cilantro Lime Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Caribbean Blend",
+                  "tags": []
+                },
+                {
+                  "name": "Garlic Sesame Noodles",
+                  "tags": []
+                },
+                {
+                  "name": "Vegetable Lasagna",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Headington Chef's Rotation",
+              "badge": "Specialty Bar",
+              "items": [
+                {
+                  "name": "Wing Bar",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Chef's Choice Entrees",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Chicken Drummies",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Apricot Glazed Pork Chops",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Marinated Flank Steak w/ Mushroom Demi",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Lemon Pepper Trout",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Shanghai Stir-Fry",
+              "badge": "Asian Cuisine",
+              "items": [
+                {
+                  "name": "Beef & Broccoli",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Chicken Teriyaki Stir Fry",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Vegetable Stir Fry",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Chicken Nuggets",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Fried Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Steamed Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Egg Roll",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Spring Roll",
+                  "tags": []
+                },
+                {
+                  "name": "Pork Potstickers",
+                  "tags": [
+                    "meat"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chef Roy's Ramen",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Entrees",
+              "items": [
+                {
+                  "name": "Bourbon Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Andouille Peppers and Onions",
+                  "tags": []
+                },
+                {
+                  "name": "Fried Catfish",
+                  "tags": [
+                    "seafood"
+                  ]
+                },
+                {
+                  "name": "Creole Green Beans",
+                  "tags": []
+                },
+                {
+                  "name": "Cajun Red Beans and White Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Vegan Beyond Sausages with Peppers and Onions",
+                  "tags": [
+                    "meat"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Made To Order",
+              "badge": "Custom Kitchen",
+              "items": [
+                {
+                  "name": "Made to Order: Stir-Fry/Grill/Pasta/Curry",
+                  "tags": [
+                    "custom"
+                  ]
+                },
+                {
+                  "name": "Make Your Own: Salad/Deli",
+                  "tags": [
+                    "custom"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "monday_dinner",
+      "day": "Monday",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Lemon Pepper Crusted Tilapia",
+                  "tags": [
+                    "seafood"
+                  ]
+                },
+                {
+                  "name": "Rice Pilaf",
+                  "tags": []
+                },
+                {
+                  "name": "Roasted Zucchini, Squash, & Red Bell Peppers",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Chickpea Tikka Masala",
+                  "tags": []
+                },
+                {
+                  "name": "Basmati Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Vegetable Penne Alfredo",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Headington Chef's Rotation",
+              "badge": "Specialty Bar",
+              "items": [
+                {
+                  "name": "Wing Bar",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Chef's Choice Entrees",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Chicken Drummies",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Apricot Glazed Pork Chops",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Marinated Flank Steak w/ Mushroom Demi",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Lemon Pepper Trout",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Shanghai Stir-Fry",
+              "badge": "Asian Cuisine",
+              "items": [
+                {
+                  "name": "Beef & Broccoli",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Chicken Teriyaki Stir Fry",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Vegetable Stir Fry",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Chicken Nuggets",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Fried Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Steamed Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Egg Roll",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Spring Roll",
+                  "tags": []
+                },
+                {
+                  "name": "Pork Potstickers",
+                  "tags": [
+                    "meat"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Entrees",
+              "items": [
+                {
+                  "name": "Blackened Catfish",
+                  "tags": [
+                    "seafood"
+                  ]
+                },
+                {
+                  "name": "Grilled Santa Maria Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Wild Rice Pilaf",
+                  "tags": []
+                },
+                {
+                  "name": "Mashed Potatoes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Roasted Broccolini",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Steamed Green Beans",
+                  "tags": []
+                },
+                {
+                  "name": "Vegan Blackened Tofu with Cajun Rice",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Made To Order",
+              "badge": "Custom Kitchen",
+              "items": [
+                {
+                  "name": "Made to Order: Stir-Fry/Grill/Pasta/Curry",
+                  "tags": [
+                    "custom"
+                  ]
+                },
+                {
+                  "name": "Make Your Own: Salad/Deli",
+                  "tags": [
+                    "custom"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "tuesday_breakfast",
+      "day": "Tuesday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made-to-Order Omelet & Sandwich Station",
+              "badge": "Chef Specialty Bar",
+              "items": [
+                {
+                  "name": "Custom Made-to-Order Omelets (Cheese, Bacon, Ham, Fresh Vegetables)",
+                  "tags": [
+                    "vegetarian",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Made-to-Order Breakfast Sandwiches (Brioche, Bagel, English Muffin)",
+                  "tags": [
+                    "meat",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Syrup",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Dunham Hot Line & Classics",
+              "badge": "Breakfast Entrees",
+              "items": [
+                {
+                  "name": "Fluffy Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Breakfast Potatoes & Hash Browns",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Crisp Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Country Breakfast Sausage Patties",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Fruit, Yogurt & Bakery Bar",
+              "badge": "Fresh Morning Bar",
+              "items": [
+                {
+                  "name": "Greek Yogurt Parfait Bar with Granola & Mixed Berries",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Melons & Fruit",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Steel-Cut Warm Oatmeal with Toppings Bar",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Freshly Baked Breakfast Pastries & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "The Breakfast Club Hot Line",
+              "badge": "Featured Breakfast",
+              "items": [
+                {
+                  "name": "Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits with Creamy Country Sausage Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Breakfast Sausage Links",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Golden Hash Browns & Breakfast Potatoes",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Waffle & Pancake Station",
+              "badge": "Made-to-Order",
+              "items": [
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Maple Syrup & Fruit",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Morning Continental & Bakery",
+              "badge": "Continental Bar",
+              "items": [
+                {
+                  "name": "Warm Steel-Cut Oatmeal with Brown Sugar & Raisins",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Morning Pastries, Danishes & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Fruit Selection",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Cereal & Chilled Milk Bar",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made To Order",
+              "badge": "Custom Breakfast",
+              "items": [
+                {
+                  "name": "Made to Order Eggs, Waffles and More.",
+                  "tags": [
+                    "vegetarian",
+                    "custom"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Breakfast",
+              "items": [
+                {
+                  "name": "Breakfast Chicken Sausage Links",
+                  "tags": [
+                    "poultry",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Egg Scramble of the Day",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "French Toast",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Oatmeal",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Potato Cubes",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "tuesday_lunch",
+      "day": "Tuesday",
+      "meal": "lunch",
+      "meal_label": "Lunch",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Texarkana BBQ Pork Chops",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Roasted Red Potatoes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "California Normandy Blend",
+                  "tags": []
+                },
+                {
+                  "name": "Black Bean & Sweet Potato Enchiladas",
+                  "tags": []
+                },
+                {
+                  "name": "Stuffed Shells",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Headington Chef's Rotation",
+              "badge": "Specialty Bar",
+              "items": [
+                {
+                  "name": "Hot Dog Bar",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Chef's Choice Entrees",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Baked Mexican Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Jalapeno Meatballs",
+                  "tags": []
+                },
+                {
+                  "name": "Bacon Wrapped Pork Kabobs w/ Adobo Sauce",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Baja Tilapia",
+                  "tags": [
+                    "seafood"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Shanghai Stir-Fry",
+              "badge": "Asian Cuisine",
+              "items": [
+                {
+                  "name": "Sesame Garlic Beef",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Chicken with Mushroom",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Vegetable Lo Mein",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Chicken Nuggets",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Fried Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Steamed Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Egg Roll",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Spring Roll",
+                  "tags": []
+                },
+                {
+                  "name": "Pork Potstickers",
+                  "tags": [
+                    "meat"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chef Roy's Ramen",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Entrees",
+              "items": [
+                {
+                  "name": "Garlic and Herb Roasted Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Grilled Honey Miso Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Mashed Potatoes Au Gratin",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Steamed Broccoli",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Grilled Asparagus with Balsamic Tomatoes",
+                  "tags": []
+                },
+                {
+                  "name": "Brown Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Vegan Maple Miso Tofu",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Made To Order",
+              "badge": "Custom Kitchen",
+              "items": [
+                {
+                  "name": "Made to Order: Stir-Fry/Grill/Pasta/Curry",
+                  "tags": [
+                    "custom"
+                  ]
+                },
+                {
+                  "name": "Make Your Own: Salad/Deli",
+                  "tags": [
+                    "custom"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "tuesday_dinner",
+      "day": "Tuesday",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Grilled Firecracker Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Wild Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Prince Edward Blend",
+                  "tags": []
+                },
+                {
+                  "name": "5-Spice Fried Rice w/ Edamame",
+                  "tags": []
+                },
+                {
+                  "name": "Beer Cheddar Mac & Cheese",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Headington Chef's Rotation",
+              "badge": "Specialty Bar",
+              "items": [
+                {
+                  "name": "Hot Dog Bar",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Chef's Choice Entrees",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Baked Mexican Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Jalapeno Meatballs",
+                  "tags": []
+                },
+                {
+                  "name": "Bacon Wrapped Pork Kabobs w/ Adobo Sauce",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Baja Tilapia",
+                  "tags": [
+                    "seafood"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Shanghai Stir-Fry",
+              "badge": "Asian Cuisine",
+              "items": [
+                {
+                  "name": "Sesame Garlic Beef",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Chicken with Mushroom",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Vegetable Lo Mein",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Chicken Nuggets",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Fried Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Steamed Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Egg Roll",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Spring Roll",
+                  "tags": []
+                },
+                {
+                  "name": "Pork Potstickers",
+                  "tags": [
+                    "meat"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Entrees",
+              "items": [
+                {
+                  "name": "Lasagna",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Grilled Chicken Parm",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Brown Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Al Fresca",
+                  "tags": []
+                },
+                {
+                  "name": "White Wine Braised Mushrooms and Onions",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Roasted Ratatouille",
+                  "tags": []
+                },
+                {
+                  "name": "Vegan Stuffed Peppers",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Made To Order",
+              "badge": "Custom Kitchen",
+              "items": [
+                {
+                  "name": "Made to Order: Stir-Fry/Grill/Pasta/Curry",
+                  "tags": [
+                    "custom"
+                  ]
+                },
+                {
+                  "name": "Make Your Own: Salad/Deli",
+                  "tags": [
+                    "custom"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "wednesday_breakfast",
+      "day": "Wednesday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made-to-Order Omelet & Sandwich Station",
+              "badge": "Chef Specialty Bar",
+              "items": [
+                {
+                  "name": "Custom Made-to-Order Omelets (Cheese, Bacon, Ham, Fresh Vegetables)",
+                  "tags": [
+                    "vegetarian",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Made-to-Order Breakfast Sandwiches (Brioche, Bagel, English Muffin)",
+                  "tags": [
+                    "meat",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Syrup",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Dunham Hot Line & Classics",
+              "badge": "Breakfast Entrees",
+              "items": [
+                {
+                  "name": "Fluffy Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Breakfast Potatoes & Hash Browns",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Crisp Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Country Breakfast Sausage Patties",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Fruit, Yogurt & Bakery Bar",
+              "badge": "Fresh Morning Bar",
+              "items": [
+                {
+                  "name": "Greek Yogurt Parfait Bar with Granola & Mixed Berries",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Melons & Fruit",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Steel-Cut Warm Oatmeal with Toppings Bar",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Freshly Baked Breakfast Pastries & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "The Breakfast Club Hot Line",
+              "badge": "Featured Breakfast",
+              "items": [
+                {
+                  "name": "Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits with Creamy Country Sausage Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Breakfast Sausage Links",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Golden Hash Browns & Breakfast Potatoes",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Waffle & Pancake Station",
+              "badge": "Made-to-Order",
+              "items": [
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Maple Syrup & Fruit",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Morning Continental & Bakery",
+              "badge": "Continental Bar",
+              "items": [
+                {
+                  "name": "Warm Steel-Cut Oatmeal with Brown Sugar & Raisins",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Morning Pastries, Danishes & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Fruit Selection",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Cereal & Chilled Milk Bar",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made To Order",
+              "badge": "Custom Breakfast",
+              "items": [
+                {
+                  "name": "Made to Order Eggs, Waffles and More.",
+                  "tags": [
+                    "vegetarian",
+                    "custom"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Breakfast",
+              "items": [
+                {
+                  "name": "Breakfast Sausage",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Egg Scramble of the Day",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Oatmeal",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Shredded Hashbrowns",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "wednesday_lunch",
+      "day": "Wednesday",
+      "meal": "lunch",
+      "meal_label": "Lunch",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Chili Lime Salmon",
+                  "tags": [
+                    "seafood"
+                  ]
+                },
+                {
+                  "name": "Fire Roasted Corn & Peppers",
+                  "tags": []
+                },
+                {
+                  "name": "Steamed Broccoli",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Vegan Shepherd's Pie",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Cheese Enchiladas",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Headington Chef's Rotation",
+              "badge": "Specialty Bar",
+              "items": [
+                {
+                  "name": "Macaroni and Cheese Bar",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Chef's Choice Entrees",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Chicken & Sausage Jambalaya",
+                  "tags": [
+                    "poultry",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Sweet & Spicy Boneless Pork Ribs",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Cajun Smothered Pork chops",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Cajun Baked Salmon",
+                  "tags": [
+                    "seafood"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Shanghai Stir-Fry",
+              "badge": "Asian Cuisine",
+              "items": [
+                {
+                  "name": "Mongolian Beef",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Chicken Mango",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Sauteed Mushrooms Asian",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Chicken Nuggets",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Fried Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Steamed Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Egg Roll",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Spring Roll",
+                  "tags": []
+                },
+                {
+                  "name": "Pork Potstickers",
+                  "tags": [
+                    "meat"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chef Roy's Ramen",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Entrees",
+              "items": [
+                {
+                  "name": "San Antonio Grilled Pork Chops",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Buttermilk Pickle Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Fried Okra",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Grilled Corn on the cobb",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hush Puppies",
+                  "tags": []
+                },
+                {
+                  "name": "Smashed Potatoes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Vegan Grilled BBQ Tofu",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Made To Order",
+              "badge": "Custom Kitchen",
+              "items": [
+                {
+                  "name": "Made to Order: Stir-Fry/Grill/Pasta/Curry",
+                  "tags": [
+                    "custom"
+                  ]
+                },
+                {
+                  "name": "Make Your Own: Salad/Deli",
+                  "tags": [
+                    "custom"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "wednesday_dinner",
+      "day": "Wednesday",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Bacon Wrapped Meatloaf",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Yukon Gold Mashed Potatoes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Brown Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Seasoned Green Beans",
+                  "tags": []
+                },
+                {
+                  "name": "Chickpea Noodle Soup",
+                  "tags": []
+                },
+                {
+                  "name": "Corn & Black Bean Stuffed Bell Peppers",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Headington Chef's Rotation",
+              "badge": "Specialty Bar",
+              "items": [
+                {
+                  "name": "Macaroni and Cheese Bar",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Chef's Choice Entrees",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Chicken & Sausage Jambalaya",
+                  "tags": [
+                    "poultry",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Sweet & Spicy Boneless Pork Ribs",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Cajun Smothered Pork chops",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Cajun Baked Salmon",
+                  "tags": [
+                    "seafood"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Shanghai Stir-Fry",
+              "badge": "Asian Cuisine",
+              "items": [
+                {
+                  "name": "Mongolian Beef",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Chicken Mango",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Sauteed Mushrooms Asian",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Chicken Nuggets",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Fried Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Steamed Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Egg Roll",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Spring Roll",
+                  "tags": []
+                },
+                {
+                  "name": "Pork Potstickers",
+                  "tags": [
+                    "meat"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Entrees",
+              "items": [
+                {
+                  "name": "Char Siu Pork",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Orange Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Fried Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Jasmine Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Pot Stickers",
+                  "tags": []
+                },
+                {
+                  "name": "Asian Garlic Green Beans",
+                  "tags": []
+                },
+                {
+                  "name": "Stir Fry Veg",
+                  "tags": []
+                },
+                {
+                  "name": "Vegan Fried Rice",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Made To Order",
+              "badge": "Custom Kitchen",
+              "items": [
+                {
+                  "name": "Made to Order: Stir-Fry/Grill/Pasta/Curry",
+                  "tags": [
+                    "custom"
+                  ]
+                },
+                {
+                  "name": "Make Your Own: Salad/Deli",
+                  "tags": [
+                    "custom"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "thursday_breakfast",
+      "day": "Thursday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made-to-Order Omelet & Sandwich Station",
+              "badge": "Chef Specialty Bar",
+              "items": [
+                {
+                  "name": "Custom Made-to-Order Omelets (Cheese, Bacon, Ham, Fresh Vegetables)",
+                  "tags": [
+                    "vegetarian",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Made-to-Order Breakfast Sandwiches (Brioche, Bagel, English Muffin)",
+                  "tags": [
+                    "meat",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Syrup",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Dunham Hot Line & Classics",
+              "badge": "Breakfast Entrees",
+              "items": [
+                {
+                  "name": "Fluffy Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Breakfast Potatoes & Hash Browns",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Crisp Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Country Breakfast Sausage Patties",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Fruit, Yogurt & Bakery Bar",
+              "badge": "Fresh Morning Bar",
+              "items": [
+                {
+                  "name": "Greek Yogurt Parfait Bar with Granola & Mixed Berries",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Melons & Fruit",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Steel-Cut Warm Oatmeal with Toppings Bar",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Freshly Baked Breakfast Pastries & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "The Breakfast Club Hot Line",
+              "badge": "Featured Breakfast",
+              "items": [
+                {
+                  "name": "Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits with Creamy Country Sausage Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Breakfast Sausage Links",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Golden Hash Browns & Breakfast Potatoes",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Waffle & Pancake Station",
+              "badge": "Made-to-Order",
+              "items": [
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Maple Syrup & Fruit",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Morning Continental & Bakery",
+              "badge": "Continental Bar",
+              "items": [
+                {
+                  "name": "Warm Steel-Cut Oatmeal with Brown Sugar & Raisins",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Morning Pastries, Danishes & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Fruit Selection",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Cereal & Chilled Milk Bar",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made To Order",
+              "badge": "Custom Breakfast",
+              "items": [
+                {
+                  "name": "Made to Order Eggs, Waffles and More.",
+                  "tags": [
+                    "vegetarian",
+                    "custom"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Breakfast",
+              "items": [
+                {
+                  "name": "Breakfast Pork Sausage Links",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Egg Scramble of the Day",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "French Toast",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Oatmeal",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Sweet Potato Breakfast Nuggets",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "thursday_lunch",
+      "day": "Thursday",
+      "meal": "lunch",
+      "meal_label": "Lunch",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Vietnamese Chicken Curry w/ Sweet Potatoes",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Coconut Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Roasted Zucchini, Squash, Onions, & Carrots",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Vegan Coconut Cashew Curry",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Eggplant Parmesan",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Headington Chef's Rotation",
+              "badge": "Specialty Bar",
+              "items": [
+                {
+                  "name": "BBQ Bar",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Chef's Choice Entrees",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Chicken Parmesan",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Italian Beef and Rice Casserole",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Italian Sausage & Peppers",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Tilapia Gorganzola",
+                  "tags": [
+                    "seafood"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Shanghai Stir-Fry",
+              "badge": "Asian Cuisine",
+              "items": [
+                {
+                  "name": "Beef Szechuan",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Chicken Pineapple Stir Fry",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Vegetable Lo Mein",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Chicken Nuggets",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Fried Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Steamed Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Egg Roll",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Spring Roll",
+                  "tags": []
+                },
+                {
+                  "name": "Pork Potstickers",
+                  "tags": [
+                    "meat"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chef Roy's Ramen",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Entrees",
+              "items": [
+                {
+                  "name": "Honey Garlic Chicken with Honey Garlic Glaze",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Garlic and Herb Tilapia",
+                  "tags": [
+                    "seafood"
+                  ]
+                },
+                {
+                  "name": "Herbed Brown Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Steak Fries",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Tuscan Rub Cauliflower",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Sauteed Brussels",
+                  "tags": []
+                },
+                {
+                  "name": "Roasted Maple Balsamic Tofu",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Made To Order",
+              "badge": "Custom Kitchen",
+              "items": [
+                {
+                  "name": "Made to Order: Stir-Fry/Grill",
+                  "tags": [
+                    "custom"
+                  ]
+                },
+                {
+                  "name": "Make Your Own: Salad/Deli",
+                  "tags": [
+                    "custom"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "thursday_dinner",
+      "day": "Thursday",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Orange Ginger Tenderloin",
+                  "tags": []
+                },
+                {
+                  "name": "Steamed Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Stir Fried Vegetables",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Vegan Corn & Green Chili Flautas",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Cheesy Lasagna Rollups",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Headington Chef's Rotation",
+              "badge": "Specialty Bar",
+              "items": [
+                {
+                  "name": "BBQ Bar",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Chef's Choice Entrees",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Chicken Parmesan",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Italian Beef and Rice Casserole",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Italian Sausage & Peppers",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Tilapia Gorganzola",
+                  "tags": [
+                    "seafood"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Shanghai Stir-Fry",
+              "badge": "Asian Cuisine",
+              "items": [
+                {
+                  "name": "Baked Parmesan Chicken Leg",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Marinated Flank Steak",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Baked Salmon",
+                  "tags": [
+                    "seafood"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Entrees",
+              "items": [
+                {
+                  "name": "Seared Honey Chipotle Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Grilled Mesquite Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Jalapeno Gouda Mashed Potatoes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Roasted Cauliflower and Bell Peppers",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Roasted Butternut Squash",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Vegan Mac n Cheese",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Made To Order",
+              "badge": "Custom Kitchen",
+              "items": [
+                {
+                  "name": "Made to Order: Stir-Fry/Grill/Pasta/Curry",
+                  "tags": [
+                    "custom"
+                  ]
+                },
+                {
+                  "name": "Make Your Own: Salad/Deli",
+                  "tags": [
+                    "custom"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "friday_breakfast",
+      "day": "Friday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made-to-Order Omelet & Sandwich Station",
+              "badge": "Chef Specialty Bar",
+              "items": [
+                {
+                  "name": "Custom Made-to-Order Omelets (Cheese, Bacon, Ham, Fresh Vegetables)",
+                  "tags": [
+                    "vegetarian",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Made-to-Order Breakfast Sandwiches (Brioche, Bagel, English Muffin)",
+                  "tags": [
+                    "meat",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Syrup",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Dunham Hot Line & Classics",
+              "badge": "Breakfast Entrees",
+              "items": [
+                {
+                  "name": "Fluffy Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Breakfast Potatoes & Hash Browns",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Crisp Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Country Breakfast Sausage Patties",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Fruit, Yogurt & Bakery Bar",
+              "badge": "Fresh Morning Bar",
+              "items": [
+                {
+                  "name": "Greek Yogurt Parfait Bar with Granola & Mixed Berries",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Melons & Fruit",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Steel-Cut Warm Oatmeal with Toppings Bar",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Freshly Baked Breakfast Pastries & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "The Breakfast Club Hot Line",
+              "badge": "Featured Breakfast",
+              "items": [
+                {
+                  "name": "Farm Fresh Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Warm Buttermilk Biscuits with Creamy Country Sausage Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Applewood Smoked Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Breakfast Sausage Links",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Golden Hash Browns & Breakfast Potatoes",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Waffle & Pancake Station",
+              "badge": "Made-to-Order",
+              "items": [
+                {
+                  "name": "Fresh Made-to-Order Belgian Waffles with Warm Maple Syrup & Fruit",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Golden Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Morning Continental & Bakery",
+              "badge": "Continental Bar",
+              "items": [
+                {
+                  "name": "Warm Steel-Cut Oatmeal with Brown Sugar & Raisins",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Morning Pastries, Danishes & Muffins",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Fresh Cut Seasonal Fruit Selection",
+                  "tags": [
+                    "vegan",
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Assorted Cereal & Chilled Milk Bar",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made To Order",
+              "badge": "Custom Breakfast",
+              "items": [
+                {
+                  "name": "Made to Order Eggs, Waffles and More.",
+                  "tags": [
+                    "vegetarian",
+                    "custom"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Breakfast",
+              "items": [
+                {
+                  "name": "Egg Scramble of the Day",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Scrambled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Hard Boiled Eggs",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Buttermilk Pancakes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Oatmeal",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Jalapeño Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Bacon",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Triangle Hashbrowns",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "friday_lunch",
+      "day": "Friday",
+      "meal": "lunch",
+      "meal_label": "Lunch",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Chicken Fried Steak",
+                  "tags": [
+                    "poultry",
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Buttery Mashed Potatoes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Cream Gravy",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Seasoned Green Beans",
+                  "tags": []
+                },
+                {
+                  "name": "Quinoa Tofu Stir Fry w/ Peanut Sauce",
+                  "tags": [
+                    "vegan"
+                  ]
+                },
+                {
+                  "name": "Steamed Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Roasted Portabellas w/ Feta & Olives",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Headington Chef's Rotation",
+              "badge": "Specialty Bar",
+              "items": [
+                {
+                  "name": "Seafood Bar",
+                  "tags": [
+                    "seafood"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Chef's Choice Entrees",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Fried Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Beef Goulash",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Country Style Pork Ribs",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Fried Shrimp",
+                  "tags": [
+                    "seafood"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Shanghai Stir-Fry",
+              "badge": "Asian Cuisine",
+              "items": [
+                {
+                  "name": "Fried Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Mexican Style Beef Tips",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Apricot Glazed Pork Loin",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Beer Battered Cod",
+                  "tags": [
+                    "seafood"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chef Roy's Ramen",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Hot Line Entrées & Sides",
+              "badge": "Daily Entrees",
+              "items": [
+                {
+                  "name": "Hawaiian Chicken with Pineapple Salsa",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Coconut Shrimp",
+                  "tags": [
+                    "seafood"
+                  ]
+                },
+                {
+                  "name": "Roasted Jerk Sweet Potatoes",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Jasmine Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Sauteed Peas, peppers, and mushrooms",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Roasted Tropical Sazon Zucchini and Yellow Squash",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Vegan Caribbean Chili",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Made To Order",
+              "badge": "Custom Kitchen",
+              "items": [
+                {
+                  "name": "Made to Order: Stir-Fry/Grill/Pasta/Curry",
+                  "tags": [
+                    "custom"
+                  ]
+                },
+                {
+                  "name": "Make Your Own: Salad/Deli",
+                  "tags": [
+                    "custom"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "friday_dinner",
+      "day": "Friday",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Breaded Sole w/ lemon butter sauce",
+                  "tags": []
+                },
+                {
+                  "name": "Rice Pilaf",
+                  "tags": []
+                },
+                {
+                  "name": "Prince Edward Blend",
+                  "tags": []
+                },
+                {
+                  "name": "White Bean & Sweet Potato Chili",
+                  "tags": []
+                },
+                {
+                  "name": "Cauliflower Au Gratin",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Headington Chef's Rotation",
+              "badge": "Specialty Bar",
+              "items": [
+                {
+                  "name": "Seafood Bar",
+                  "tags": [
+                    "seafood"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Chef's Choice Entrees",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Fried Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Beef Goulash",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Country Style Pork Ribs",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Fried Shrimp",
+                  "tags": [
+                    "seafood"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Shanghai Stir-Fry",
+              "badge": "Asian Cuisine",
+              "items": [
+                {
+                  "name": "Fried Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Meatballs",
+                  "tags": []
+                },
+                {
+                  "name": "Hawaiian Ham Steak",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Baked Cod",
+                  "tags": [
+                    "seafood"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": false,
+          "note": "Closed (Dinner served Sun-Thu only; Closed weekends)",
+          "stations": []
+        }
+      }
+    },
+    {
+      "id": "saturday_breakfast",
+      "day": "Saturday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": false,
+          "note": "Weekend Brunch opens at 11:00 AM (Dinner 4:00 PM – 7:00 PM)",
+          "stations": []
+        },
+        "couch_restaurants": {
+          "available": false,
+          "note": "Weekend Brunch opens at 10:00 AM (Dinner 4:30 PM – 7:00 PM)",
+          "stations": []
+        },
+        "wagner_dining_hall": {
+          "available": false,
+          "note": "Closed Saturdays",
+          "stations": []
+        }
+      }
+    },
+    {
+      "id": "saturday_lunch",
+      "day": "Saturday",
+      "meal": "lunch",
+      "meal_label": "Lunch",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Pesto Pork Tenderloin",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Garlic Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Caribbean Blend",
+                  "tags": []
+                },
+                {
+                  "name": "Lemony Lentil Stew",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "Open with Weekend Stations & Crimson Creamery",
+          "stations": [
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chef Roy's Ramen",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": false,
+          "note": "Closed (Dinner served Sun-Thu only; Closed weekends)",
+          "stations": []
+        }
+      }
+    },
+    {
+      "id": "saturday_dinner",
+      "day": "Saturday",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Sweet & Sour Chicken",
+                  "tags": [
+                    "poultry"
+                  ]
+                },
+                {
+                  "name": "Steamed Rice",
+                  "tags": []
+                },
+                {
+                  "name": "Stir Fried Vegetables",
+                  "tags": [
+                    "vegetarian"
+                  ]
+                },
+                {
+                  "name": "Chickpea Tikka Masala",
+                  "tags": []
+                },
+                {
+                  "name": "Basmati Rice",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "Open with Weekend Stations & Crimson Creamery",
+          "stations": [
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": false,
+          "note": "Closed (Dinner served Sun-Thu only; Closed weekends)",
+          "stations": []
+        }
+      }
+    },
+    {
+      "id": "sunday_breakfast",
+      "day": "Sunday",
+      "meal": "breakfast",
+      "meal_label": "Breakfast",
+      "locations": {
+        "residential_colleges": {
+          "available": false,
+          "note": "Weekend Brunch opens at 11:00 AM (Dinner 4:00 PM – 7:00 PM)",
+          "stations": []
+        },
+        "couch_restaurants": {
+          "available": false,
+          "note": "Weekend Brunch opens at 10:00 AM (Dinner 4:30 PM – 7:00 PM)",
+          "stations": []
+        },
+        "wagner_dining_hall": {
+          "available": false,
+          "note": "Breakfast & Lunch Closed (Sunday Dinner: 4:30 PM – 8:00 PM)",
+          "stations": []
+        }
+      }
+    },
+    {
+      "id": "sunday_lunch",
+      "day": "Sunday",
+      "meal": "lunch",
+      "meal_label": "Lunch",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Jerked Swai w/ Apple Pineapple Pico",
+                  "tags": []
+                },
+                {
+                  "name": "Coconut Rice",
+                  "tags": []
+                },
+                {
+                  "name": "California Normandy",
+                  "tags": []
+                },
+                {
+                  "name": "Corn & Black Bean Stuffed Bell Peppers",
+                  "tags": []
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "Open with Weekend Stations & Crimson Creamery",
+          "stations": [
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chef Roy's Ramen",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": false,
+          "note": "Closed (Dinner served Sun-Thu only; Closed weekends)",
+          "stations": []
+        }
+      }
+    },
+    {
+      "id": "sunday_dinner",
+      "day": "Sunday",
+      "meal": "dinner",
+      "meal_label": "Dinner",
+      "locations": {
+        "residential_colleges": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Dunham Hot Line",
+              "badge": "Featured Entrees",
+              "items": [
+                {
+                  "name": "Beef Lasagna",
+                  "tags": [
+                    "meat"
+                  ]
+                },
+                {
+                  "name": "Garlic Breadsticks",
+                  "tags": []
+                },
+                {
+                  "name": "Italian Blend",
+                  "tags": []
+                },
+                {
+                  "name": "Vegan Lasagna",
+                  "tags": [
+                    "vegan"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Everyday Classics",
+              "badge": "Daily Stations",
+              "items": [
+                {
+                  "name": "Salad Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Pasta Bar",
+                  "tags": []
+                },
+                {
+                  "name": "Stir-Fry",
+                  "tags": []
+                },
+                {
+                  "name": "Deli Bar",
+                  "tags": []
+                },
+                {
+                  "name": "The Grill",
+                  "tags": []
+                },
+                {
+                  "name": "Pizza by the slice",
+                  "tags": []
+                }
+              ]
+            }
+          ]
+        },
+        "couch_restaurants": {
+          "available": true,
+          "note": "Open with Weekend Stations & Crimson Creamery",
+          "stations": [
+            {
+              "title": "Restaurant Stations",
+              "badge": "All-You-Care-To-Eat",
+              "items": [
+                {
+                  "name": "Vegetation Station",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Athens Café",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Dot's Deli",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Casa Del Sol",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Chick-fil-A",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "The Crimson Creamery",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "Sooner Smokehouse",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                },
+                {
+                  "name": "La Roma Pizza & Pasta",
+                  "tags": [
+                    "all-you-care-to-eat"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "wagner_dining_hall": {
+          "available": true,
+          "note": "",
+          "stations": [
+            {
+              "title": "Made To Order",
+              "badge": "Custom Kitchen",
+              "items": [
+                {
+                  "name": "Made To Order: Pizza/Pasta/Curry/Stir-Fry/Breakfast",
+                  "tags": [
+                    "custom"
+                  ]
+                },
+                {
+                  "name": "Make Your Own: Salad/Deli",
+                  "tags": [
+                    "custom"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
