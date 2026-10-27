@@ -464,45 +464,6 @@ function App() {
               </div>
 
               <div className="drawer-section">
-                <div className="drawer-section-title">Quick Week Switch</div>
-                <button
-                  type="button"
-                  className={`drawer-link-btn ${isLive ? 'is-active' : ''}`}
-                  onClick={() => {
-                    setSelectedFile('data/menu_data.json');
-                    setDrawerOpen(false);
-                  }}
-                >
-                  <span className="drawer-link-icon">🍽️</span>
-                  <div className="drawer-link-text">
-                    <span className="drawer-link-main">Current Live Menu</span>
-                    <span className="drawer-link-sub">{currentWeekTitle}</span>
-                  </div>
-                  <span className="drawer-tag">LIVE</span>
-                </button>
-
-                {pastWeeks.length > 0 && (
-                  <div className="drawer-sublinks">
-                    <div className="drawer-sublinks-label">Past Archives</div>
-                    {pastWeeks.map((item) => (
-                      <button
-                        key={item.filename}
-                        type="button"
-                        className={`drawer-archive-btn ${selectedFile === item.path ? 'is-active' : ''}`}
-                        onClick={() => {
-                          setSelectedFile(item.path);
-                          setDrawerOpen(false);
-                        }}
-                      >
-                        <span className="drawer-archive-icon">📁</span>
-                        <span>{item.week_info}</span>
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <div className="drawer-section">
                 <div className="drawer-section-title">Dining Hall Locations</div>
                 <div className="drawer-info-card">
                   <strong>Residential Colleges</strong>
