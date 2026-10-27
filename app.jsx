@@ -280,7 +280,6 @@ function App() {
   const today = useMemo(() => getTodayName(), []);
   const [activeDay, setActiveDay] = useState(today);
   const [activeMeal, setActiveMeal] = useState(() => getCurrentMealByTime());
-  const [showScrollTop, setShowScrollTop] = useState(false);
 
   // Load history index
   useEffect(() => {
@@ -325,13 +324,6 @@ function App() {
     };
   }, [selectedFile, today]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 300);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Close drawer with Escape key
   useEffect(() => {
@@ -411,33 +403,6 @@ function App() {
             </div>
           </div>
 
-          <div className="navbar-right">
-            <span className={`status-pill ${isLive ? 'status-pill-live' : 'status-pill-archive'}`}>
-              <span className="status-indicator-dot" />
-              {isLive ? 'Live Menus' : 'Archived'}
-            </span>
-
-            {pastWeeks.length > 0 && (
-              <div className="week-selector-wrap">
-                <select
-                  className="week-select"
-                  value={selectedFile}
-                  onChange={(e) => setSelectedFile(e.target.value)}
-                  aria-label="Select menu week"
-                >
-                  <option value="data/menu_data.json">
-                    Current: {currentWeekTitle}
-                  </option>
-                  {pastWeeks.map((item) => (
-                    <option key={item.filename} value={item.path}>
-                      Past: {item.week_info}
-                    </option>
-                  ))}
-                </select>
-                <span className="select-chevron" aria-hidden="true">▾</span>
-              </div>
-            )}
-          </div>
         </div>
       </header>
 
@@ -466,8 +431,40 @@ function App() {
             </div>
 
             <div className="drawer-body">
+              {/* Select Menu Week Dropdown inside Drawer */}
               <div className="drawer-section">
-                <div className="drawer-section-title">Menu Schedules</div>
+                <div className="drawer-section-title">Select Menu Week</div>
+                <div className="drawer-week-selector-wrap">
+                  <select
+                    className="drawer-week-select"
+                    value={selectedFile}
+                    onChange={(e) => {
+                      setSelectedFile(e.target.value);
+                      setDrawerOpen(false);
+                    }}
+                    aria-label="Select menu week"
+                  >
+                    <option value="data/menu_data.json">
+                      Current: {currentWeekTitle}
+                    </option>
+                    {pastWeeks.map((item) => (
+                      <option key={item.filename} value={item.path}>
+                        Past: {item.week_info}
+                      </option>
+                    ))}
+                  </select>
+                  <span className="drawer-select-chevron" aria-hidden="true">▾</span>
+                </div>
+                <div className="drawer-week-status">
+                  <span className={`status-pill ${isLive ? 'status-pill-live' : 'status-pill-archive'}`}>
+                    <span className="status-indicator-dot" />
+                    {isLive ? 'Viewing Live Menus' : 'Viewing Archived Week'}
+                  </span>
+                </div>
+              </div>
+
+              <div className="drawer-section">
+                <div className="drawer-section-title">Quick Week Switch</div>
                 <button
                   type="button"
                   className={`drawer-link-btn ${isLive ? 'is-active' : ''}`}
@@ -486,7 +483,7 @@ function App() {
 
                 {pastWeeks.length > 0 && (
                   <div className="drawer-sublinks">
-                    <div className="drawer-sublinks-label">Past Week Archives</div>
+                    <div className="drawer-sublinks-label">Past Archives</div>
                     {pastWeeks.map((item) => (
                       <button
                         key={item.filename}
@@ -714,17 +711,6 @@ function App() {
         </div>
       </footer>
 
-      {/* 5. Floating Scroll to Top */}
-      {showScrollTop && (
-        <button
-          type="button"
-          className="scroll-top-btn"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          aria-label="Back to top"
-        >
-          ↑
-        </button>
-      )}
     </div>
   );
 }
