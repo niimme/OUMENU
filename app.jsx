@@ -502,15 +502,6 @@ function App() {
                   <span>Housing &amp; Food Services</span>
                   <span>↗</span>
                 </a>
-                <a
-                  href="https://github.com/niimme/OUMENU"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="drawer-ext-link"
-                >
-                  <span>Source Code on GitHub</span>
-                  <span>↗</span>
-                </a>
               </div>
             </div>
           </div>
@@ -659,14 +650,6 @@ function App() {
               rel="noopener noreferrer"
             >
               Official Dining
-            </a>
-            <span className="footer-sep">•</span>
-            <a
-              href="https://github.com/niimme/OUMENU"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Source Code
             </a>
           </div>
         </div>
