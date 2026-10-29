@@ -30,7 +30,7 @@ const LOCATIONS_META = [
   {
     key: 'wagner_dining_hall',
     name: 'Wagner Dining Hall',
-    sub: 'Headington Hall (Athletics)',
+    sub: 'Headington Hall',
     hoursBreakfast: '7:00 AM – 10:30 AM (M–F)',
     hoursLunch: '11:00 AM – 1:30 PM',
     hoursDinner: '4:30 PM – 8:00 PM (Sun–Thu)'
@@ -477,7 +477,7 @@ function App() {
                 </div>
                 <div className="drawer-info-card">
                   <strong>Wagner Dining Hall</strong>
-                  <p>Headington Hall (Athletic Dining)</p>
+                  <p>Headington Hall</p>
                   <span className="drawer-hours-badge">Breakfast: 7am–10:30am • Lunch: 11am–1:30pm • Dinner: 4:30pm–8pm</span>
                 </div>
               </div>
