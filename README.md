@@ -2,9 +2,9 @@
 
 ## 🌟 Features
 
-- 📅 **Day-by-Day Menu Selector**: Switch effortlessly between Monday through Sunday menus with auto-detection for the current day.
-- 🍱 **Split Meal View & Individual Meal Filters**: Seamlessly toggle between **Split View (All)**, **🥞 Breakfast**, **☀️ Lunch**, and **🌙 Dinner** cards across all venues.
-- 📱 **Mobile & Responsive**: Built with responsive CSS.
+- **Day-by-Day Menu Selector**: Switch effortlessly between Monday through Sunday menus with auto-detection for the current day.
+- **Split Meal View & Individual Meal Filters**: Seamlessly toggle between **Split View (All)**, **Breakfast**, **Lunch**, and **Dinner** cards across all venues.
+- **Archive Menus**: Option to view between past weeks to get an idea of what each dining hall provides.
 
 ---
 
